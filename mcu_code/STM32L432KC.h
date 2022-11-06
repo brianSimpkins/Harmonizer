@@ -22,7 +22,7 @@
 // Global defines
 
 #define HSI_FREQ 16000000 // HSI clock is 16 MHz
-#define MSI_FREQ 4000000  // HSI clock is 4 MHz
+#define MSI_FREQ 4000000  // MSI clock is 4 MHz
 
 
 #endif
