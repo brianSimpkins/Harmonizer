@@ -1,6 +1,5 @@
-Output/Debug/Obj/harmonizer/STM32L432KC_GPIO.o: \
-  C:\Users\kevin\code\Harmonizer\mcu_code\STM32L432KC_GPIO.c \
-  C:\Users\kevin\code\Harmonizer\mcu_code\STM32L432KC_RCC.h \
+Output/Debug/Obj/harmonizer/STM32L432KC_ADC.o: \
+  C:\Users\kevin\code\Harmonizer\mcu_code\STM32L432KC_ADC.c \
   C:\Users\kevin\AppData\Local\SEGGER\SEGGER\ Embedded\ Studio\v3\packages\libraries\libcxx\include\stdint.h \
   C:\Users\kevin\AppData\Local\SEGGER\SEGGER\ Embedded\ Studio\v3\packages\libraries\libcxx\include\__config \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 6.34a\include\stdint.h \
@@ -15,4 +14,4 @@ Output/Debug/Obj/harmonizer/STM32L432KC_GPIO.o: \
   C:\Users\kevin\code\Harmonizer\mcu_code\CMSIS_5\CMSIS\Core\Include\cmsis_gcc.h \
   C:\Users\kevin\code\Harmonizer\mcu_code\CMSIS_5\CMSIS\Core\Include\mpu_armv7.h \
   C:\Users\kevin\code\Harmonizer\mcu_code\STM32L4xx\Device\Include\system_stm32l4xx.h \
-  C:\Users\kevin\code\Harmonizer\mcu_code\STM32L432KC_GPIO.h
+  C:\Users\kevin\code\Harmonizer\mcu_code\STM32L432KC_ADC.h

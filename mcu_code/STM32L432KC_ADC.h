@@ -11,8 +11,9 @@
 // Definitions
 ///////////////////////////////////////////////////////////////////////////////
 void initADC();
-
-void calibrate();
+void calibrateADC();
+void runADC();
+uint16_t readADC();
 
 
 #endif
