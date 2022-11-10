@@ -11,6 +11,10 @@
 // Functions //
 ///////////////
 
-void configureFlash();
+void adc_init(int channel_num);
+
+void adc_start();
+
+uint16_t adc_read();
 
 #endif

@@ -31,11 +31,16 @@ int main(void) {
   // Configure PA5 to Analog
   pinMode(PA5, GPIO_ANALOG);
 
-  
+  uint16_t samples[128];
+
+
+  adc_init(10);
+
+  adc_start();
 
   // Loop:
-  while (1) {
-    
+  for(int i = 0; i < 128; ++i) {
+    samples[i] = adc_read();
   }
 
 }
