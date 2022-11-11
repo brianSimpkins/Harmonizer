@@ -12,11 +12,13 @@
 //configure ADC clock
 void initADC(){
     //turn on CLK to ADC
-    RCC->AHB2ENR |= _VAL2FLD(RCC_AHB2ENR_ADCEN, 0b1);
+    RCC->AHB2ENR |= _VAL2FLD(RCC_AHB2ENR_ADCEN, 0x1);
 
     //option 1 from p.378 (input clock from specific clock source)
     ADC1_COMMON->CCR |= _VAL2FLD(ADC_CCR_CKMODE, ADC_CCR_CKMODE_0);
     
+    // Set ADC_SQR1_SQ1 to channel 10
+    ADC1->SQR1 |= (10 << ADC_SQR1_SQ1_Pos);
     //TODO: Add clk prescalar modification code here
 
     //TODO: Add ADC sample time modification code here
@@ -34,13 +36,15 @@ void initADC(){
 void calibrateADC(){
     //Ensure ADC not in deep power down
     ADC1->CR &= ~ADC_CR_DEEPPWD;
-    while (_FLD2VAL(ADC_CR_DEEPPWD,ADC1->CR));
+    //while (_FLD2VAL(ADC_CR_DEEPPWD,ADC1->CR));
     //enable ADC Voltage regulator
     ADC1->CR |= _VAL2FLD(ADC_CR_ADVREGEN, 0b1);
     
     //wait for ADVREGEN enable
-    while (!_FLD2VAL(ADC_CR_ADVREGEN, ADC1->CR));
-
+    //while (!_FLD2VAL(ADC_CR_ADVREGEN, ADC1->CR));
+    
+    //clear ADCALDIF
+    ADC1->CR &= ~(ADC_CR_ADCALDIF);
     //write 1 to calibrate ADC
     ADC1->CR |= _VAL2FLD(ADC_CR_ADCAL, 0b1);
     
