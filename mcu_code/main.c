@@ -29,7 +29,7 @@ int main(void) {
 
     //set pin A0 to analog mode (this is done on RESET)
     //GPIOA->MODER |= _VAL2FLD(GPIO_MODER_MODE0_0,0b0);
-
+    
     //configure channel 5 for adc regular sequence thing
     ADC1->SQR1 |= _VAL2FLD(ADC_SQR1_SQ1,0x5);
     initADC();

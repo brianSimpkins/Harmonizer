@@ -2,7 +2,11 @@
 <session>
  <Bookmarks/>
  <Breakpoints groups="Breakpoints" active_group="Breakpoints">
+  <BreakpointListItem trigger="" line="26" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="main.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="28" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="main.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="35" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="main.c" useHWbreakpoint="false"/>
   <BreakpointListItem trigger="" line="36" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="main.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="37" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="main.c" useHWbreakpoint="false"/>
   <Exceptions set="MemManage;UsageFault_Coprocessor;UsageFault_CheckingError;UsageFault_StateError;BusFault;ExceptionEntryReturnFault;HardFault"/>
  </Breakpoints>
  <ExecutionProfileWindow/>
@@ -67,11 +71,12 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="75" useTextEdit="1" path="STM32L432KC_ADC.c" left="0" selected="1" top="52" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="18" useTextEdit="1" path="STM32L432KC_ADC.h" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="24" useTextEdit="1" path="main.c" left="0" top="14" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="219" useTextEdit="1" path="SEGGER_THUMB_Startup.s" left="0" top="180" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="35" useTextEdit="1" path="STM32L432KC_RCC.c" left="0" top="4" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="24" y="60" useTextEdit="1" path="STM32L432KC_ADC.c" left="0" selected="1" top="52" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="4" y="18" useTextEdit="1" path="STM32L432KC_ADC.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="25" useTextEdit="1" path="main.c" left="0" top="8" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="198" useTextEdit="1" path="SEGGER_THUMB_Startup.s" left="0" top="179" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="36" useTextEdit="1" path="STM32L432KC_RCC.c" left="0" top="4" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="19" y="271" useTextEdit="1" path="STM32L4xx/Source/stm32l432xx_Vectors.s" left="0" top="245" codecName="Default"/>
  </Files>
  <EMStudioWindow activeProject="harmonizer" fileDialogDefaultFilter="*.asm;*.s;*.inc" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="C:/Users/brian/OneDrive/Documents/2022Fall/E155/Harmonizer/mcu_code/SEGGER_THUMB_Startup.s&#xa;C:/Users/kevin/code/Harmonizer/mcu_code/SEGGER_THUMB_Startup.s&#xa;C:/Users/brian/OneDrive/Documents/2022Fall/E155/Harmonizer/mcu_code/STM32L4xx/Source/stm32l432xx_Vectors.s&#xa;&#xa;C:/Users/brian/OneDrive/Documents/2022Fall/E155/Harmonizer/mcu_code/STM32L4xx/Source/STM32L4xx_Startup.s&#xa;C:/Users/kevin/code/Harmonizer/mcu_code/SEGGER_THUMB_Startup.s" fileDialogInitialDirectory="C:/Users/kevin/code/Harmonizer/mcu_code" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>
