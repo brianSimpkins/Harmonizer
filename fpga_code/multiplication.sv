@@ -1,6 +1,6 @@
 // this module multiplies 16-bit a and b, and returns a 16-bit rounded output
-module multiplier (input logic signed [15:0]  in1, in2,
-                   output logic signed [15:0] out);
+module multiplier (input logic signed [15:0]    in1, in2,
+                   output logic signed [15:0]   out);
 
    logic [31:0] result; // 16-bit times 16-bit makes 32-bit
 
@@ -15,8 +15,8 @@ endmodule
 
 
 // performs complex multiplication 
-module complex_multiplier (input logic [31:0]  b, twiddle,
-                           output logic [31:0] out);
+module complex_multiplier (input logic [31:0]   b, twiddle,
+                           output logic [31:0]  out);
 
    logic signed [15:0] real_b, real_twiddle, imag_b, imag_twiddle, real_out, imag_out;
 
@@ -49,8 +49,8 @@ endmodule
 
 
 // perform the butterfly arithmetic for a, b, and a twiddle
-module butterfly_unit (input logic [31:0] a, b, twiddle,
-                       output logic [31:0] a_out, b_out);
+module butterfly_unit (input logic [31:0]    a, b, twiddle,
+                       output logic [31:0]   a_out, b_out);
 
    logic signed [15:0] real_a, imag_a, real_bmult, imag_bmult, real_a_out, imag_a_out, real_b_out, imag_b_out;
 
@@ -82,8 +82,8 @@ module butterfly_unit (input logic [31:0] a, b, twiddle,
 endmodule
 
 // reverse bits for address ordering
-module reverse_bits (input logic [5:0] bits_in,
-                     output logic [5:0] bits_out);
+module reverse_bits (input logic [5:0]    bits_in,
+                     output logic [5:0]   bits_out);
 
     logic b0, b1, b2, b3, b4, b5;
 
