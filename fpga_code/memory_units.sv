@@ -33,6 +33,5 @@ module twiddle_rom (input logic clk,
 	always_ff @(posedge clk) begin
 		twiddle <= mem[twiddle_address];
 	end
-endmodule
 
 endmodule

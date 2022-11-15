@@ -66,7 +66,8 @@ module processing_agu (input logic [5:0] 	fft_level, butterfly_iter,
       mask      = {6'b100000} >>> fft_level;
 
 		// mask j
-      twiddleadr = mask & butterfly_iter;
+      twiddle_address = mask & butterfly_iter;
+		
    end
 endmodule
 

@@ -30,14 +30,15 @@ module fft_controller (input logic 				clk, reset, start, load,
 	assign done = fft_level == 6;
 
 	// output counter for address
-	always_ff @(posedge slow_clk)
+	always_ff @(posedge slow_clk) begin
      if      (reset) out_address <= 0;
      else if (done)  out_address <= out_address + 1'b1;
+	end
 
 	agu address_generator(load, processing, done, fft_level, butterfly_iter, load_address, out_address,
 								 address_0_a, address_1_a, address_0_b, address_1_b, twiddle_address);
 
-	// if load is high, write to ram 0
+	// if load is high, write data_in to ram 0
    assign write_data_a = load ? data_in : a_out;
    assign write_data_b = load ? data_in : b_out;
 
@@ -51,11 +52,13 @@ module fft_controller (input logic 				clk, reset, start, load,
    assign a = fft_level[0] ? read_data_1_a : read_data_0_a;
    assign b = fft_level[0] ? read_data_1_b : read_data_0_b;
 
+	// get our twiddle factors
 	twiddle_rom twiddle_gen(clk, twiddle_address,
 									twiddle);
 
+	// perform the operation
 	butterfly_unit butt(a, b, twiddle,
-							  a_out, b_out)
+							  a_out, b_out);
 
 	assign write_0 =  (fftLevel[0] & processing) | load;
    assign write_1 =  ~fftLevel[0] & processing;
