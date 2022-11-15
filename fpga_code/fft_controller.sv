@@ -5,7 +5,8 @@ module fft_controller (input logic 				clk, reset, start, load,
                        output logic 			done,
                        output logic [31:0] 	data_out);
 
-   logic				slow_clk, processing, write_0, write_1;
+   logic				slow_clk = 0;
+   logic				processing, write_0, write_1;
    logic [5:0]		fft_level, fly_iter, address_0_a, address_0_b, address_1_a, address_1_b, address_out;
    logic [4:0]		twiddle_address;
    logic [31:0]	twiddle, a, b, a_out, b_out, write_data_a, write_data_b;
