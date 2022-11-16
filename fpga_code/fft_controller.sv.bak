@@ -18,7 +18,7 @@ module fft_controller (input logic 				clk, reset, start, load,
    end
 
 	// start 'processing' with a pulse from 'start'
-	always_ff @(posedge slow_clk) begin
+	always_ff @(posedge clk) begin
 		if      (start) processing <= 1;
 		else if (reset || done)  processing <= 0;
    end

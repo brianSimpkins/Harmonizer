@@ -1,0 +1,6 @@
+#Start recording tcl command: 11/15/2022 22:24:15
+#Project Location: C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code; Project name: FFT
+prj_open "C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/FFT.rdf"
+prj_run PAR -impl fft
+prj_run Export -impl fft
+#Stop recording: 11/16/2022 00:22:21

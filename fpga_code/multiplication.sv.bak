@@ -24,10 +24,10 @@ module butterfly_unit (input logic [31:0]    a, b, twiddle,
    assign imag_b_out = imag_a - imag_bmult;
 
    // compose a
-   assign a_out = {real_a_out, imag_a_out};
+   assign aout = {real_a_out, imag_a_out};
 
    // compose b
-   assign b_out = {real_b_out, imag_b_out};
+   assign bout = {real_b_out, imag_b_out};
    
 endmodule
 

@@ -7,7 +7,7 @@ module agu (input logic load, processing, done,
 
 	// first deal with loading address
 	logic [5:0] load_address_rev;
-	bit_reverse load_logic(load_address, load_address_rev);
+	reverse_bits load_logic(load_address, load_address_rev);
 
 	// then deal with standard processing address
 	logic [5:0] address_a, address_b;
@@ -47,7 +47,7 @@ module processing_agu (input logic [5:0] 	fft_level, butterfly_iter,
 	logic [5:0]         temp_a, temp_b;
 
 	// must be signed for sign extending
-   logic signed [5:0]  mask;
+   logic signed [5:0]  mask, mask_shift;
    
    always_comb begin
 
@@ -63,10 +63,11 @@ module processing_agu (input logic [5:0] 	fft_level, butterfly_iter,
 
 		// zero out 6 - 1 - i
 		// so five zeros minus fft_level
-      mask      = {6'b100000} >>> fft_level;
+      mask = 6'b100000;
+	  mask_shift = mask >>> fft_level;
 
 		// mask j
-      twiddle_address = mask & butterfly_iter;
+      twiddle_address = mask_shift & butterfly_iter;
 		
    end
 endmodule

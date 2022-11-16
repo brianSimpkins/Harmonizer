@@ -32,9 +32,9 @@ module fft_testbench();
    // start of test: load `input_data`, `expected_out`, open output file, reset fft module.
    initial
      begin
-	$readmemh("simulation/test_in.memh", input_data);
-	$readmemh("simulation/gt_test_out.memh", expected_out);
-        f = $fopen("simulation/test_out.memh", "w"); // write computed values.
+	$readmemh("rom/test_in.memh", input_data);
+	$readmemh("rom/gt_test_out.memh", expected_out);
+        f = $fopen("rom/test_out.memh", "w"); // write computed values.
 	idx=0; reset=1; #40; reset=0;
      end	
 
