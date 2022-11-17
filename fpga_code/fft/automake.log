@@ -1,0 +1,273 @@
+    <postMsg mid="35901328" type="Info" dynamic="2" nav    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(1): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_addsub.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="1"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_addsub.v(40): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/adder_subtractor/rtl/lscc_add_sub.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_addsub.v" arg3="40"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(2): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_add.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="2"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_add.v(50): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/adder/rtl/lscc_adder.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_add.v" arg3="50"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(3): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_complex_mult.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="3"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_complex_mult.v(52): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/complex_mult/rtl/lscc_complex_mult.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_complex_mult.v" arg3="52"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(4): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_counter.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="4"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_counter.v(39): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/counter/rtl/lscc_cntr.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_counter.v" arg3="39"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(5): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="5"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo.v(44): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/fifo/rtl/lscc_fifo.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo.v" arg3="44"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(6): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo_dc.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="6"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo_dc.v(47): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/fifo_dc/rtl/lscc_fifo_dc.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo_dc.v" arg3="47"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(7): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_mac.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="7"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_mac.v(52): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/mult_accumulate/rtl/lscc_mult_accumulate.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_mac.v" arg3="52"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(8): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsubsum.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="8"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsubsum.v(53): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsubsum.v" arg3="53"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(9): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsub.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="9"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsub.v(52): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/mult_add_sub/rtl/lscc_mult_add_sub.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsub.v" arg3="52"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(10): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_mult.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="10"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_mult.v(51): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/multiplier/rtl/lscc_multiplier.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_mult.v" arg3="51"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(11): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="11"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp.v(48): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dp/rtl/lscc_ram_dp.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp.v" arg3="48"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(12): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="12"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq.v(45): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dq/rtl/lscc_ram_dq.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq.v" arg3="45"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(13): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_rom.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="13"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_rom.v(45): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/rom/rtl/lscc_rom.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_rom.v" arg3="45"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(14): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_sub.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="14"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_sub.v(50): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/subtractor/rtl/lscc_subtractor.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_sub.v" arg3="50"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(15): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp_be.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="15"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp_be.v(49): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dp/rtl/lscc_ram_dp.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp_be.v" arg3="49"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(16): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq_be.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="16"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq_be.v(45): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dq/rtl/lscc_ram_dq.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq_be.v" arg3="45"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(17): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_dsp.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="17"  />
+Analyzing Verilog file c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv. VERI-1482
+Analyzing Verilog file c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/fft_controller.sv. VERI-1482
+Analyzing Verilog file c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/memory_units.sv. VERI-1482
+Analyzing Verilog file c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/multiplication.sv. VERI-1482
+Analyzing Verilog file c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/spi.sv. VERI-1482
+Analyzing VHDL file c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd. VHDL-1481
+Analyzing VHDL file c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd
+
+    <postMsg mid="35921014" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd(4): " arg1="components" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd" arg3="4"  />
+    <postMsg mid="35921504" type="Info" dynamic="2" navigation="0" arg0="" arg1="C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/fft"  />
+Top module language type = Verilog.
+Top module name (Verilog, mixed language): fft_controller
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/fft_controller.sv(2): " arg1="fft_controller" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/fft_controller.sv" arg3="2"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/fft_controller.sv(71): " arg1="fft_counter" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/fft_controller.sv" arg3="71"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv(3): " arg1="agu" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv" arg3="3"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv(75): " arg1="reverse_bits" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv" arg3="75"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv(42): " arg1="processing_agu" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv" arg3="42"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv(60): " arg1="32" arg2="6" arg3="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv" arg4="60"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv(69): " arg1="6" arg2="5" arg3="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv" arg4="69"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/memory_units.sv(4): " arg1="ram" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/memory_units.sv" arg3="4"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/memory_units.sv(23): " arg1="twiddle_rom" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/memory_units.sv" arg3="23"  />
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/memory_units.sv(28): " arg1="mem" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/memory_units.sv" arg3="28"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/multiplication.sv(2): " arg1="butterfly_unit" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/multiplication.sv" arg3="2"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/multiplication.sv(36): " arg1="complex_multiplier" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/multiplication.sv" arg3="36"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/multiplication.sv(70): " arg1="multiplier" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/multiplication.sv" arg3="70"  />
+                                                         
+
+
+### Number of Logic Cells: 5280
+
+
+### Number of RAM Blocks: 30
+
+
+### Number of DSP Blocks: 8
+
+
+### Number of PLLs: 1
+
+
+### Number of IO Pins: 61
+
+
+##########################################################
+
+
+                                                         
+
+
+    <postMsg mid="35931038" type="Warning" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/memory_units.sv(28): " arg1="mem_original_ramnet" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/memory_units.sv" arg3="28"  />
+
+
+
+    <postMsg mid="1009990" type="Error" dynamic="1" navigation="0" arg0="EBR with more than one write port is not supported for the target device"  />
+child process exited abnormally
+Fail to run synthesis -f FFT_fft_lattice.synproj -gui -msgset C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/promote.xml 
+
+"C:/lscc/radiant/3.2/tcltk/windows/bin/tclsh" "FFT_fft_synthesize.tcl"
+
+synthesis -f FFT_fft_lattice.synproj
+synthesis:  version Radiant Software (64-bit) 3.2.0.18.0
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
+Tue Nov 15 22:24:26 2022
+
+
+Command Line:  C:\lscc\radiant\3.2\ispfpga\bin\nt64\synthesis.exe -f FFT_fft_lattice.synproj -gui -msgset C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/promote.xml 
+
+INFO - synthesis: Lattice Synthesis Engine Launched.
+Synthesis options:
+The -a option is iCE40UP.
+The -t option is SG48.
+The -sp option is High-Performance_1.2V.
+The -p option is iCE40UP5K.
+                                                          
+
+
+##########################################################
+
+
+### Lattice Family     : iCE40UP
+
+
+### Device             : iCE40UP5K
+
+
+### Package            : SG48
+
+
+### Performance Grade  : High-Performance_1.2V
+
+
+                                                         
+
+
+    <postMsg mid="35001786" type="Info" dynamic="0" navigation="0"  />
+Optimization goal = Area
+Top-level module name = fft_controller.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output HDL file name = FFT_fft.vm.
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-path C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code (searchpath added)
+-path C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/fft (searchpath added)
+-path C:/lscc/radiant/3.2/ispfpga/ice40tp/data (searchpath added)
+Mixed language design
+Verilog design file = C:/lscc/radiant/3.2/ip/pmi/pmi_iCE40UP.v
+Verilog design file = C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/address_gen.sv
+Verilog design file = C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/fft_controller.sv
+Verilog design file = C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/memory_units.sv
+Verilog design file = C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/multiplication.sv
+Verilog design file = C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/spi.sv
+VHDL library = pmi
+VHDL design file = C:/lscc/radiant/3.2/ip/pmi/pmi_iCE40UP.vhd
+    <postMsg mid="35002033" type="Warning" dynamic="1" navigation="0" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv"  />
+    <postMsg mid="35002033" type="Warning" dynamic="1" navigation="0" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/fft_controller.sv"  />
+    <postMsg mid="35002033" type="Warning" dynamic="1" navigation="0" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/memory_units.sv"  />
+    <postMsg mid="35002033" type="Warning" dynamic="1" navigation="0" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/multiplication.sv"  />
+    <postMsg mid="35002033" type="Warning" dynamic="1" navigation="0" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/spi.sv"  />
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Compile design.
+Compile Design Begin
+Analyzing Verilog file c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v. VERI-1482
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(1): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_addsub.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="1"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_addsub.v(40): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/adder_subtractor/rtl/lscc_add_sub.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_addsub.v" arg3="40"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(2): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_add.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="2"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_add.v(50): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/adder/rtl/lscc_adder.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_add.v" arg3="50"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(3): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_complex_mult.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="3"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_complex_mult.v(52): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/complex_mult/rtl/lscc_complex_mult.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_complex_mult.v" arg3="52"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(4): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_counter.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="4"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_counter.v(39): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/counter/rtl/lscc_cntr.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_counter.v" arg3="39"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(5): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="5"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo.v(44): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/fifo/rtl/lscc_fifo.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo.v" arg3="44"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(6): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo_dc.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="6"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo_dc.v(47): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/fifo_dc/rtl/lscc_fifo_dc.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo_dc.v" arg3="47"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(7): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_mac.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="7"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_mac.v(52): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/mult_accumulate/rtl/lscc_mult_accumulate.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_mac.v" arg3="52"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(8): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsubsum.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="8"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsubsum.v(53): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsubsum.v" arg3="53"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(9): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsub.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="9"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsub.v(52): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/mult_add_sub/rtl/lscc_mult_add_sub.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsub.v" arg3="52"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(10): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_mult.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="10"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_mult.v(51): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/multiplier/rtl/lscc_multiplier.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_mult.v" arg3="51"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(11): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="11"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp.v(48): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dp/rtl/lscc_ram_dp.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp.v" arg3="48"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(12): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="12"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq.v(45): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dq/rtl/lscc_ram_dq.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq.v" arg3="45"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(13): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_rom.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="13"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_rom.v(45): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/rom/rtl/lscc_rom.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_rom.v" arg3="45"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(14): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_sub.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="14"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_sub.v(50): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/subtractor/rtl/lscc_subtractor.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_sub.v" arg3="50"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(15): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp_be.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="15"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp_be.v(49): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dp/rtl/lscc_ram_dp.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp_be.v" arg3="49"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(16): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq_be.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="16"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq_be.v(45): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dq/rtl/lscc_ram_dq.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq_be.v" arg3="45"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(17): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_dsp.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="17"  />
+Analyzing Verilog file c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv. VERI-1482
+Analyzing Verilog file c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/fft_controller.sv. VERI-1482
+Analyzing Verilog file c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/memory_units.sv. VERI-1482
+Analyzing Verilog file c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/multiplication.sv. VERI-1482
+Analyzing Verilog file c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/spi.sv. VERI-1482
+Analyzing VHDL file c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd. VHDL-1481
+Analyzing VHDL file c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd
+
+    <postMsg mid="35921014" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd(4): " arg1="components" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd" arg3="4"  />
+    <postMsg mid="35921504" type="Info" dynamic="2" navigation="0" arg0="" arg1="C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/fft"  />
+Top module language type = Verilog.
+Top module name (Verilog, mixed language): fft_controller
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/fft_controller.sv(2): " arg1="fft_controller" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/fft_controller.sv" arg3="2"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/fft_controller.sv(71): " arg1="fft_counter" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/fft_controller.sv" arg3="71"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv(3): " arg1="agu" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv" arg3="3"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv(75): " arg1="reverse_bits" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv" arg3="75"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv(42): " arg1="processing_agu" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv" arg3="42"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv(60): " arg1="32" arg2="6" arg3="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv" arg4="60"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv(69): " arg1="6" arg2="5" arg3="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/address_gen.sv" arg4="69"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/memory_units.sv(4): " arg1="ram" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/memory_units.sv" arg3="4"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/memory_units.sv(23): " arg1="twiddle_rom" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/memory_units.sv" arg3="23"  />
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/memory_units.sv(28): " arg1="mem" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/memory_units.sv" arg3="28"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/multiplication.sv(2): " arg1="butterfly_unit" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/multiplication.sv" arg3="2"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/multiplication.sv(36): " arg1="complex_multiplier" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/multiplication.sv" arg3="36"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/multiplication.sv(70): " arg1="multiplier" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/multiplication.sv" arg3="70"  />
+                                                         
+
+
+### Number of Logic Cells: 5280
+
+
+### Number of RAM Blocks: 30
+
+
+### Number of DSP Blocks: 8
+
+
+### Number of PLLs: 1
+
+
+### Number of IO Pins: 61
+
+
+##########################################################
+
+
+                                                         
+
+
+    <postMsg mid="35931038" type="Warning" dynamic="2" navigation="2" arg0="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/memory_units.sv(28): " arg1="mem_original_ramnet" arg2="c:/users/bsimpkins/documents/harmonizer-adc_brian/fpga_code/memory_units.sv" arg3="28"  />
+
+
+
+    <postMsg mid="1009990" type="Error" dynamic="1" navigation="0" arg0="EBR with more than one write port is not supported for the target device"  />
+child process exited abnormally
+Fail to run synthesis -f FFT_fft_lattice.synproj -gui -msgset C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/promote.xml 

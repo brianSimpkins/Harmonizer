@@ -1,0 +1,312 @@
+m255
+K4
+z2
+!s11f vlog 2021.4 2021.10, Oct 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code
+vagu
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1668586910
+!i10b 1
+!s100 o2>G7hja0`M]EDn[oJJ3E3
+IN@X_LHNYdU0z3YkR5>oSZ3
+S1
+R0
+Z3 w1668586805
+Z4 8C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/address_gen.sv
+Z5 FC:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/address_gen.sv
+!i122 48
+L0 3 37
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OT;L;2021.4;73
+r1
+!s85 0
+31
+Z8 !s108 1668586910.000000
+Z9 !s107 C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/address_gen.sv|
+Z10 !s90 -reportprogress|300|-work|work|C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/address_gen.sv|
+!s101 -O0
+!i113 1
+Z11 o-work work -O0
+Z12 tCvgOpt 0
+vbutterfly_unit
+R1
+R2
+!i10b 1
+!s100 0SJH[_=SeDioM_Di@Y]LK3
+I<0Zj=b3S3nKWfI=SAMOV60
+S1
+R0
+Z13 w1668554088
+Z14 8C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/multiplication.sv
+Z15 FC:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/multiplication.sv
+!i122 51
+L0 2 31
+R6
+R7
+r1
+!s85 0
+31
+R8
+Z16 !s107 C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/multiplication.sv|
+Z17 !s90 -reportprogress|300|-work|work|C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/multiplication.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+vcomplex_multiplier
+R1
+R2
+!i10b 1
+!s100 OTV5d41_BQj2g[MQF;:mT1
+I^;cNn_l1Jblj2mcbb@WMo2
+S1
+R0
+R13
+R14
+R15
+!i122 51
+L0 36 31
+R6
+R7
+r1
+!s85 0
+31
+R8
+R16
+R17
+!s101 -O0
+!i113 1
+R11
+R12
+vfft_controller
+R1
+R2
+!i10b 1
+!s100 X^Wa8C^m?3=7[^;=Nf?TA3
+I;NNZ9n79Z4?T0`:9[DVQe0
+S1
+R0
+Z18 w1668581172
+Z19 8C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/fft_controller.sv
+Z20 FC:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/fft_controller.sv
+!i122 49
+L0 2 67
+R6
+R7
+r1
+!s85 0
+31
+R8
+Z21 !s107 C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/fft_controller.sv|
+Z22 !s90 -reportprogress|300|-work|work|C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/fft_controller.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+vfft_counter
+R1
+R2
+!i10b 1
+!s100 GOo<OAXF`>LkM?J4W7;B10
+I39@DhPb;kl98G?OVRY=bV2
+S1
+R0
+R18
+R19
+R20
+!i122 49
+L0 71 21
+R6
+R7
+r1
+!s85 0
+31
+R8
+R21
+R22
+!s101 -O0
+!i113 1
+R11
+R12
+vfft_testbench
+R1
+Z23 !s110 1668586911
+!i10b 1
+!s100 13aCJ5OHVkMY`A6Q09<]@2
+I>hJkd8k>gH77hj5SS<30H2
+S1
+R0
+w1668552856
+8C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/testbench.sv
+FC:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/testbench.sv
+!i122 53
+L0 3 74
+R6
+R7
+r1
+!s85 0
+31
+!s108 1668586911.000000
+!s107 C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/testbench.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/testbench.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+vmultiplier
+R1
+R2
+!i10b 1
+!s100 klkXd`nYPz8kSEIgEGQe70
+IlXCQQJSnLngW4j^kWGPPa0
+S1
+R0
+R13
+R14
+R15
+!i122 51
+L0 70 13
+R6
+R7
+r1
+!s85 0
+31
+R8
+R16
+R17
+!s101 -O0
+!i113 1
+R11
+R12
+vprocessing_agu
+R1
+R2
+!i10b 1
+!s100 5a:CG>^iWFhAHbl5NkYUO2
+I6RCVPZcMlCLMjS_`_J@j83
+S1
+R0
+R3
+R4
+R5
+!i122 48
+L0 42 32
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+vram
+R1
+R2
+!i10b 1
+!s100 aEG62JKNSUA_Fz5N9d]140
+I<WlZCH^1?lU[@0hcg<<k12
+S1
+R0
+Z24 w1668553120
+Z25 8C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/memory_units.sv
+Z26 FC:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/memory_units.sv
+!i122 50
+L0 4 17
+R6
+R7
+r1
+!s85 0
+31
+R8
+Z27 !s107 C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/memory_units.sv|
+Z28 !s90 -reportprogress|300|-work|work|C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/memory_units.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+vreverse_bits
+R1
+R2
+!i10b 1
+!s100 GbWKIST2ie]F86e9KG5jm0
+IHQKo07fzIi?KU:?>YmG252
+S1
+R0
+R3
+R4
+R5
+!i122 48
+L0 76 9
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+vspi
+R1
+!s125 LATTICE_CONN
+R23
+!i10b 1
+!s100 0K?l^5;UIaBo@A=laAOfg2
+IzXXNRMB<VTbJ6agZ8c>1m2
+S1
+R0
+w1668552293
+8C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/spi.sv
+FC:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/spi.sv
+!i122 52
+L0 1 2
+R6
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/spi.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/spi.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+vtwiddle_rom
+R1
+R2
+!i10b 1
+!s100 6<P6L8a?hRQfaEj3KIzK=2
+I6nh`z4cR:ffeDRP`mV?8I3
+S1
+R0
+R24
+R25
+R26
+!i122 50
+L0 23 15
+R6
+R7
+r1
+!s85 0
+31
+R8
+R27
+R28
+!s101 -O0
+!i113 1
+R11
+R12

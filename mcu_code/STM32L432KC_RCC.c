@@ -4,11 +4,11 @@
 #include "STM32L432KC_RCC.h"
 
 void configurePLL() {
-   // Set clock to 80 MHz
+   // Set clock to 4 MHz
    // Output freq = (src_clk) * (N/M) / P
-   // (4 MHz) * (80/2) * 2  = 80 MHz
+   // (4 MHz) * (8/4) / 2  = 4 MHz
    // M:, N:, P:
-   // Use HSI as PLLSRC
+   // Use MSI as PLLSRC
 
    RCC->CR &= ~_FLD2VAL(RCC_CR_PLLON, RCC->CR); // Turn off PLL
    while (_FLD2VAL(RCC_CR_PLLRDY, 1) != 0); // Wait till PLL is unlocked (e.g., off)
@@ -16,8 +16,8 @@ void configurePLL() {
    // Load configuration
    RCC->PLLCFGR |= _VAL2FLD(RCC_PLLCFGR_PLLSRC, RCC_PLLCFGR_PLLSRC_MSI);
    RCC->PLLCFGR |= _VAL2FLD(RCC_PLLCFGR_PLLM, 0b001); // M = 2
-   RCC->PLLCFGR |= _VAL2FLD(RCC_PLLCFGR_PLLN, 80);    // N = 80
-   RCC->PLLCFGR |= _VAL2FLD(RCC_PLLCFGR_PLLR, 0b00);  // R = 2
+   RCC->PLLCFGR |= _VAL2FLD(RCC_PLLCFGR_PLLN, 8);    // N = 8
+   RCC->PLLCFGR |= _VAL2FLD(RCC_PLLCFGR_PLLR, 0b01);  // R = 4
    RCC->PLLCFGR |= RCC_PLLCFGR_PLLREN;                // Enable PLLCLK output
 
    // Enable PLL and wait until it's locked
@@ -31,6 +31,7 @@ void configureClock(){
 
   // Select PLL as clock source
   RCC->CFGR = RCC_CFGR_SW_PLL | (RCC->CFGR & ~RCC_CFGR_SW);
+
   while((RCC->CFGR & RCC_CFGR_SWS) != RCC_CFGR_SWS_PLL);
 
   SystemCoreClockUpdate();
