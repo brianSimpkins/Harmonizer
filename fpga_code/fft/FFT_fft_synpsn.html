@@ -1,6 +1,6 @@
 <HTML>
 <HEAD>
-<TITLE>Lattice TCL Log</TITLE>
+<TITLE></TITLE>
 <link href="file:///C:/lscc/radiant/3.2/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
 <link href="file:///C:/lscc/radiant/3.2/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
 <style type="text/css">
@@ -40,43 +40,23 @@ if (a)
 <BODY>
 
 <DIV id="content" onclick="hideTocList()"><PRE>
-<A name="pn221115154343"></A><B><U><big>pn221115154343</big></U></B>
-#Start recording tcl command: 11/15/2022 14:47:44
-#Project Location: C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code; Project name: FFT
-prj_create -name "FFT" -impl "fft" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "lse"
-prj_add_source "C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/address_gen.sv" "C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/fft_controller.sv" "C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/memory_units.sv" "C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/multiplication.sv" "C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/spi.sv"
-prj_save 
-#Stop recording: 11/15/2022 15:43:43
-
-
-
-<A name="pn221116002221"></A><B><U><big>pn221116002221</big></U></B>
-#Start recording tcl command: 11/15/2022 22:24:15
-#Project Location: C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code; Project name: FFT
-prj_open "C:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code/FFT.rdf"
-prj_run PAR -impl fft
-prj_run Export -impl fft
-#Stop recording: 11/16/2022 00:22:21
-
-
-
-<A name="pn221117151200"></A><B><U><big>pn221117151200</big></U></B>
-#Start recording tcl command: 11/17/2022 14:42:27
-#Project Location: C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code; Project name: FFT
-prj_open "C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/FFT.rdf"
-#Stop recording: 11/17/2022 15:12:00
-
+POSTSYN: Post Synthesis Process Radiant Software (64-bit) 3.2.0.18.0
+Command Line: postsyn -a iCE40UP -p iCE40UP5K -t SG48 -sp High-Performance_1.2V -oc Industrial -top -w -o FFT_fft_syn.udb -gui -msgset C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/promote.xml FFT_fft.vm 
+   Architecture:     iCE40UP
+   Device:           iCE40UP5K
+   Package:          SG48
+   Performance:      High-Performance_1.2V
+Reading input file 'FFT_fft.vm' ...
+Removing unused logic ...
+Starting design annotation....
+Writing output file 'FFT_fft_syn.udb'.
+POSTSYN finished successfully.
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 34 MB
 
 
 </PRE></DIV>
-
-<DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
-<UL id="toc_list">
-<LI><A href=#pn221115154343>pn221115154343</A></LI>
-<LI><A href=#pn221116002221>pn221116002221</A></LI>
-<LI><A href=#pn221117151200>pn221117151200</A></LI>
-</UL>
-</DIV>
 
 <button id="back_to_top" class="radiant" onclick="scrollToTop()">&lt;</button>
 <script type="text/javascript">

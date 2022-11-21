@@ -2,20 +2,19 @@
 // 6-bit addresses for 64-point FFT
 // will introduce 1 cycle of lag
 module ram (input logic          clk, write,
-            input logic [5:0]    address_a, address_b,
-            input logic [31:0]   d_a, d_b,
-            output logic [31:0]  q_a, q_b);
+            input logic [5:0]    write_address, read_address,
+            input logic [31:0]   d,
+            output logic [31:0]  q);
 
    logic [31:0] mem [63:0];
 
    always_ff @(posedge clk)
-     if (write) begin
-          mem[address_a] <= d_a;
-          mem[address_b] <= d_b;
-       end
+		if (write) begin
+			mem[write_address] <= d;
+		end
 
-   assign q_a = mem[address_a];
-   assign q_b = mem[address_b];
+   always_ff @(posedge clk)
+		q <= mem[read_address];
 
 endmodule
 
