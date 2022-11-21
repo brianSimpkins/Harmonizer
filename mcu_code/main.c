@@ -18,29 +18,42 @@ uint16_t samples[64];
 uint16_t output_real[32];
 uint16_t output_imag[32];
 
-char output_ready = 1;
+uint16_t volume;
+
+bool output_ready = false;
 
 
 int main(void) {
   configureFlash();
   configureClock();
+
   enable_timers();
 
-  gpioEnable(GPIO_PORT_A);
+  // timer 2, 15, 16
+  init_music_timers();
 
+  // timer 2 - channel 1 - PA15 AF1
+
+  // timer 15 - channel 1 - PA2 AF14
+
+  // timer 16 - channel 1 - PA6 AF14
+
+  
   // configure PA5 to Analog
+  gpioEnable(GPIO_PORT_A);
   pinMode(PA5, GPIO_ANALOG);
-
   // channel 10 correlates to PA5
   adc_init(10);
-
   // turn on the peripheral
   adc_start();
 
-  // loop:
+  // loop: should be replaced with TIM6 interrupt
   for(int i = 0; i < 64; ++i) {
     samples[i] = adc_read();
   }
+
+
+
 
   // determine fundamental frequency
   if(output_ready) {
@@ -65,6 +78,8 @@ int main(void) {
     // ms = 1 / freq
     // ms = 32 / i * 400
     int32_t max_frequency = (int) 32 / (max_index * 400);
+
+    set_volume(volume);
 
     play_note(max_frequency);
 
