@@ -16,7 +16,6 @@
 #include "STM32L432KC_RCC.h"
 #include "STM32L432KC_TIM.h"
 #include "STM32L432KC_FLASH.h"
-#include "STM32L432KC_USART.h"
 #include "STM32L432KC_SPI.h"
 #include "STM32L432KC_ADC.h"
 

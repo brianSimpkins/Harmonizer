@@ -1,51 +1,72 @@
 /*********************************************************************
-*                    SEGGER Microcontroller GmbH                     *
+*                    Brian Simpkins and Kevin Kim                    *
 *                        The Embedded Experts                        *
 **********************************************************************
 
--------------------------- END-OF-HEADER -----------------------------
-
 File    : main.c
-Purpose : Generic application start
+Purpose : Interface with FPGA and Microphone, control the speakers
 
-*/
+*********************************************************************/
 
 #include <stdio.h>
 #include <stdlib.h>
 
 #include "STM32L432KC.h"
 
-/*********************************************************************
-*
-*       main()
-*
-*  Function description
-*   Application entry point.
-*/
+
+uint16_t samples[64];
+uint16_t output_real[32];
+uint16_t output_imag[32];
+
+char output_ready = 1;
+
+
 int main(void) {
   configureFlash();
   configureClock();
+  enable_timers();
 
   gpioEnable(GPIO_PORT_A);
 
-  // Configure PA5 to Analog
+  // configure PA5 to Analog
   pinMode(PA5, GPIO_ANALOG);
 
-  uint16_t samples[10000];
-
-
+  // channel 10 correlates to PA5
   adc_init(10);
 
+  // turn on the peripheral
   adc_start();
 
-  while(1) {
+  // loop:
+  for(int i = 0; i < 64; ++i) {
+    samples[i] = adc_read();
+  }
 
-    // Loop:
-    for(int i = 0; i < 10000; ++i) {
-      samples[i] = adc_read();
+  // determine fundamental frequency
+  if(output_ready) {
+
+    int32_t max_magnitude = 0;
+    int32_t max_index = 0;
+
+    // loop through output
+    // 0th index is meaningless for us
+    for(int i = 1; i < 32; ++i) {
+      int32_t magnitude = (output_real[i] * output_real[i]) + 
+                          (output_imag[i] * output_imag[i]);
+
+      if(magnitude > max_magnitude) {
+        max_magnitude = magnitude;
+        max_index = i;
+      }
     }
 
-    printf("Hello");
+    // assume 800hz sample rate, 64-point fft
+    // freq = i * 400 / 32
+    // ms = 1 / freq
+    // ms = 32 / i * 400
+    int32_t max_frequency = (int) 32 / (max_index * 400);
+
+    play_note(max_frequency);
 
   }
 
