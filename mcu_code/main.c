@@ -1,51 +1,87 @@
 /*********************************************************************
-*                    SEGGER Microcontroller GmbH                     *
+*                    Brian Simpkins and Kevin Kim                    *
 *                        The Embedded Experts                        *
 **********************************************************************
 
--------------------------- END-OF-HEADER -----------------------------
-
 File    : main.c
-Purpose : Generic application start
+Purpose : Interface with FPGA and Microphone, control the speakers
 
-*/
+*********************************************************************/
 
 #include <stdio.h>
 #include <stdlib.h>
 
 #include "STM32L432KC.h"
 
-/*********************************************************************
-*
-*       main()
-*
-*  Function description
-*   Application entry point.
-*/
+
+uint16_t samples[64];
+uint16_t output_real[32];
+uint16_t output_imag[32];
+
+uint16_t volume;
+
+bool output_ready = false;
+
+
 int main(void) {
   configureFlash();
   configureClock();
 
+  enable_timers();
+
+  // timer 2, 15, 16
+  init_music_timers();
+
+  // timer 2 - channel 1 - PA15 AF1
+
+  // timer 15 - channel 1 - PA2 AF14
+
+  // timer 16 - channel 1 - PA6 AF14
+
+  
+  // configure PA5 to Analog
   gpioEnable(GPIO_PORT_A);
-
-  // Configure PA5 to Analog
   pinMode(PA5, GPIO_ANALOG);
-
-  uint16_t samples[10000];
-
-
+  // channel 10 correlates to PA5
   adc_init(10);
-
+  // turn on the peripheral
   adc_start();
 
-  while(1) {
+  // loop: should be replaced with TIM6 interrupt
+  for(int i = 0; i < 64; ++i) {
+    samples[i] = adc_read();
+  }
 
-    // Loop:
-    for(int i = 0; i < 10000; ++i) {
-      samples[i] = adc_read();
+
+
+
+  // determine fundamental frequency
+  if(output_ready) {
+
+    int32_t max_magnitude = 0;
+    int32_t max_index = 0;
+
+    // loop through output
+    // 0th index is meaningless for us
+    for(int i = 1; i < 32; ++i) {
+      int32_t magnitude = (output_real[i] * output_real[i]) + 
+                          (output_imag[i] * output_imag[i]);
+
+      if(magnitude > max_magnitude) {
+        max_magnitude = magnitude;
+        max_index = i;
+      }
     }
 
-    printf("Hello");
+    // assume 800hz sample rate, 64-point fft
+    // freq = i * 400 / 32
+    // ms = 1 / freq
+    // ms = 32 / i * 400
+    int32_t max_frequency = (int) 32 / (max_index * 400);
+
+    set_volume(volume);
+
+    play_note(max_frequency);
 
   }
 

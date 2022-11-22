@@ -2,7 +2,7 @@
 // and modified for a 64-point fft that uses ICE40 BRAM (1 cycle of latency per iteration)
 module fft_testbench();
    
-   logic clk, slow_clk;
+   logic clk, ram_clk, slow_clk;
    logic start, load, done, reset;
    logic signed [15:0] expected_re, expected_im, wd_re, wd_im;
    logic [31:0]        rd, wd;
@@ -26,15 +26,20 @@ module fft_testbench();
 
    always
      begin
-	    slow_clk = 1; #10; slow_clk=0; #10;
+	    ram_clk = 1; #10; ram_clk=0; #10;
+     end
+
+   always
+     begin
+	    slow_clk = 1; #20; slow_clk=0; #20;
      end
    
    // start of test: load `input_data`, `expected_out`, open output file, reset fft module.
    initial
      begin
-	$readmemh("simulation/test_in.memh", input_data);
-	$readmemh("simulation/gt_test_out.memh", expected_out);
-        f = $fopen("simulation/test_out.memh", "w"); // write computed values.
+	$readmemh("simulation/test_in_square.memh", input_data);
+	$readmemh("simulation/gt_test_out_square.memh", expected_out);
+        f = $fopen("simulation/test_out_square.memh", "w"); // write computed values.
 	idx=0; reset=1; #40; reset=0;
      end	
 

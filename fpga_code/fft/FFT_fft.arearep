@@ -1,0 +1,153 @@
+----------------------------------------------------------------------
+Report for cell fft_controller.TECH
+Register bits:  21 of 5280 (0.398%)
+I/O cells:      26
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B        10          100.0
+                               CCU2        95          100.0
+                            FD1P3XZ        21          100.0
+                                 IB        18          100.0
+                               LUT4       321          100.0
+                              MAC16         4          100.0
+                                 OB         9          100.0
+SUB MODULES
+                                agu         1
+                     butterfly_unit         1
+                 complex_multiplier         1
+                        fft_counter         1
+                         multiplier         1
+                      multiplier_U0         1
+                      multiplier_U1         1
+                      multiplier_U2         1
+                     processing_agu         1
+                                ram         1
+                             ram_U3         1
+                             ram_U4         1
+                             ram_U5         1
+                        twiddle_rom         1
+                              TOTAL       492
+----------------------------------------------------------------------
+Report for cell ram_U4.v1
+Instance Path : ram0_b
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         2           20.0
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell ram_U3.v1
+Instance Path : ram1_a
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         2           20.0
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell ram_U5.v1
+Instance Path : ram0_a
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         2           20.0
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell fft_counter.v1
+Instance Path : counter
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         8            8.4
+                            FD1P3XZ        12           57.1
+                                 IB         1            5.6
+                              TOTAL        21
+----------------------------------------------------------------------
+Report for cell ram.v1
+Instance Path : ram1_b
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         2           20.0
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell agu.v1
+Instance Path : address_generator
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         4            4.2
+                               LUT4        68           21.2
+SUB MODULES
+                     processing_agu         1
+                              TOTAL        73
+----------------------------------------------------------------------
+Report for cell processing_agu.v1
+Instance Path : address_generator.standard_logic
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         4            4.2
+                               LUT4        44           13.7
+                              TOTAL        48
+----------------------------------------------------------------------
+Report for cell butterfly_unit.v1
+Instance Path : butt
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        79           83.2
+                               LUT4        51           15.9
+                              MAC16         4          100.0
+SUB MODULES
+                 complex_multiplier         1
+                         multiplier         1
+                      multiplier_U0         1
+                      multiplier_U1         1
+                      multiplier_U2         1
+                              TOTAL       139
+----------------------------------------------------------------------
+Report for cell complex_multiplier.v1
+Instance Path : butt.mult
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        45           47.4
+                               LUT4        19            5.9
+                              MAC16         4          100.0
+SUB MODULES
+                         multiplier         1
+                      multiplier_U0         1
+                      multiplier_U1         1
+                      multiplier_U2         1
+                              TOTAL        72
+----------------------------------------------------------------------
+Report for cell multiplier.v1
+Instance Path : butt.mult.m_real_twiddle
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        18           18.9
+                               LUT4         2            0.6
+                              MAC16         1           25.0
+                              TOTAL        21
+----------------------------------------------------------------------
+Report for cell multiplier_U0.v1
+Instance Path : butt.mult.m_real_b
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              MAC16         1           25.0
+                              TOTAL         1
+----------------------------------------------------------------------
+Report for cell multiplier_U1.v1
+Instance Path : butt.mult.m_real
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        18           18.9
+                               LUT4         1            0.3
+                              MAC16         1           25.0
+                              TOTAL        20
+----------------------------------------------------------------------
+Report for cell multiplier_U2.v1
+Instance Path : butt.mult.m_imag
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         9            9.5
+                              MAC16         1           25.0
+                              TOTAL        10
+----------------------------------------------------------------------
+Report for cell twiddle_rom.v1
+Instance Path : twiddle_gen
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         2           20.0
+                              TOTAL         2

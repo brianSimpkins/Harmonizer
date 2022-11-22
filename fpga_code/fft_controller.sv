@@ -5,17 +5,23 @@ module fft_controller (input logic 				clk, reset, start, load,
                        output logic 			done,
                        output logic [31:0] 	data_out);
 
-   logic				slow_clk = 0;
+   logic [1:0]    clk_counter = 0;
+   logic				slow_clk, ram_clk;
    logic				processing, write_0, write_1;
-   logic [5:0]		fft_level, butterfly_iter, address_0_a, address_0_b, address_1_a, address_1_b, out_address;
+   logic [5:0]		fft_level, butterfly_iter, address_0_a, address_0_b, write_address_0, address_1_a, address_1_b, write_address_1, out_address;
    logic [4:0]		twiddle_address;
-   logic [31:0]	twiddle, a, b, a_out, b_out, write_data_a, write_data_b;
+   logic [31:0]	twiddle, a, b, a_out, b_out, write_data_a, write_data_b, write_data;
    logic [31:0]	read_data_0_a, read_data_0_b, read_data_1_a, read_data_1_b;
 
-	// clock to fix 1-cycle latency in BRAM
 	always_ff @(posedge clk) begin
-		slow_clk = ~slow_clk;
-   end
+		clk_counter = clk_counter + 1;
+	end
+	
+	// clock to multiplex RAM input
+	assign ram_clk = clk_counter[0];
+	
+	// clock to fix latency in ERAM
+	assign slow_clk = clk_counter[1];
 
 	// start 'processing' with a pulse from 'start'
 	always_ff @(posedge slow_clk) begin
@@ -42,19 +48,29 @@ module fft_controller (input logic 				clk, reset, start, load,
 	// if load is high, write data_in to ram 0
    assign write_data_a = load ? data_in : a_out;
    assign write_data_b = load ? data_in : b_out;
+   
+   assign write_data = ram_clk ? write_data_a : write_data_b;
+   assign write_address_0 = ram_clk ? address_0_a : address_0_b;
+   assign write_address_1 = ram_clk ? address_1_a : address_1_b;
 
-	ram ram0(clk, write_0, address_0_a, address_0_b, write_data_a, write_data_b,
-				read_data_0_a, read_data_0_b);
+	ram ram0_a(clk, write_0, write_address_0, address_0_a, write_data,
+				  read_data_0_a);
+				
+	ram ram0_b(clk, write_0, write_address_0, address_0_b, write_data,
+				  read_data_0_b);
 
-	ram ram1(clk, write_1, address_1_a, address_1_b, write_data_a, write_data_b,
-				read_data_1_a, read_data_1_b);
+	ram ram1_a(clk, write_1, write_address_1, address_1_a, write_data,
+				  read_data_1_a);
+				
+	ram ram1_b(clk, write_1, write_address_1, address_1_b, write_data,
+				  read_data_1_b);
 
    // read from correct ram for butterfly input
    assign a = fft_level[0] ? read_data_1_a : read_data_0_a;
    assign b = fft_level[0] ? read_data_1_b : read_data_0_b;
 
 	// get our twiddle factors
-	twiddle_rom twiddle_gen(clk, twiddle_address,
+	twiddle_rom twiddle_gen(ram_clk, twiddle_address,
 									twiddle);
 
 	// perform the operation

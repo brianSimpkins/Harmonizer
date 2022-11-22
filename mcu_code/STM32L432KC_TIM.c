@@ -4,9 +4,17 @@
 #include "STM32L432KC_TIM.h"
 #include "STM32L432KC_RCC.h"
 
+void enable_timers() {
+  RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
+  RCC->APB1ENR1 |= RCC_APB1ENR1_TIM6EN;
+  RCC->APB2ENR  |= RCC_APB2ENR_TIM15EN;
+  RCC->APB2ENR  |= RCC_APB2ENR_TIM16EN;
+
+}
+
 void initTIM(TIM_TypeDef * TIMx){
-  // Set prescaler to give 1 ms time base
-  uint32_t psc_div = (uint32_t) ((SystemCoreClock/1e3));
+  // Set prescaler to give 10 miscrosecond time base
+  uint32_t psc_div = (uint32_t) ((SystemCoreClock/1e5));
 
   // Set prescaler division factor
   TIMx->PSC = (psc_div - 1);
@@ -17,10 +25,14 @@ void initTIM(TIM_TypeDef * TIMx){
 }
 
 void delay_millis(TIM_TypeDef * TIMx, uint32_t ms){
-  TIMx->ARR = ms;// Set timer max count
+  TIMx->ARR = (ms * 100);// Set timer max count
   TIMx->EGR |= 1;     // Force update
   TIMx->SR &= ~(0x1); // Clear UIF
   TIMx->CNT = 0;      // Reset count
 
   while(!(TIMx->SR & 1)); // Wait for UIF to go high
+}
+
+void init_music(TIM_TypeDef * TIMx) {
+  
 }

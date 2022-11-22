@@ -18,6 +18,9 @@ void adc_init(int channel_num) {
   // Set ADC_SQR1_SQ1 to channel 10
   ADC1->SQR1 |= (10 << ADC_SQR1_SQ1_Pos);
 
+  // Set resolution to 10-bit
+  ADC1->CFGR |= (01 << ADC_CFGR_RES_Pos);
+
   // Ensure DEEPPWD = 0 and ADVREGEN = 1
   ADC1->CR &= ~(ADC_CR_DEEPPWD);
   ADC1->CR |= ADC_CR_ADVREGEN;
