@@ -30,7 +30,9 @@ int main(void) {
   enable_timers();
 
   // timer 2, 15, 16
-  init_music_timers();
+  init_musical_timer(TIM2);
+  init_musical_timer(TIM15);
+  init_musical_timer(TIM16);
 
   // timer 2 - channel 1 - PA15 AF1
 
@@ -75,13 +77,18 @@ int main(void) {
 
     // assume 800hz sample rate, 64-point fft
     // freq = i * 400 / 32
-    // ms = 1 / freq
-    // ms = 32 / i * 400
-    int32_t max_frequency = (int) 32 / (max_index * 400);
+    // sec = 1 / freq
+    // sec = 32 / i * 400
+    // 10 microsec = 100,000 * (32 / i * 400)
+    int32_t max_period = (int) 1000000 * (32 / ((double) (max_index * 400));
 
-    set_volume(volume);
+    // set_volume(volume); how??
 
-    play_note(max_frequency);
+    play_note(TIM2, max_period);
+
+    play_note(TIM15, (int) max_period * 3 / 2);
+
+    play_note(TIM16, max_period * 2);
 
   }
 

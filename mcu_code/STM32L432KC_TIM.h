@@ -17,4 +17,7 @@ void enable_timers();
 void initTIM(TIM_TypeDef * TIMx);
 void delay_millis(TIM_TypeDef * TIMx, uint32_t ms);
 
+void init_musical_timer(TIM_TypeDef * TIMx);
+void play_note(TIM_TypeDef * TIMx, uint32_t freq);
+
 #endif
