@@ -85,6 +85,34 @@ int main(void) {
 
   }
 
+
+  // Enable interrupts globally
+    __enable_irq();
+
+    // 1. Configure mask bit
+    EXTI->IMR1 |= EXTI_IMR1_IM2;
+    // 2. Disable rising edge trigger
+    EXTI->RTSR1 &= ~(EXTI_RTSR1_RT2);
+    // 3. Enable falling edge trigger
+    EXTI->FTSR1 |= EXTI_FTSR1_FT2;
+    // 4. Turn on EXTI interrupt in NVIC_ISER
+    NVIC->ISER[0] |= (1 << EXTI2_IRQn);
+
+}
+
+
+void TIM6_IRQHandler(void){
+    // Check that the timer is what triggered our interrupt
+    if (TIM6->SR & (TIM_SR_CC1IF_Msk)) {
+
+        TIM6->SR &= ~(0x1); // Clear UIF
+        TIM6->SR &= ~(TIM_SR_CC1IF); // clear interrupt flag?
+
+        // Then toggle the LED
+        togglePin(LED_PIN);
+
+        TIM6->CNT = 0;      // Reset count
+    }
 }
 
 /*************************** End of file ****************************/
