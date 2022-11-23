@@ -85,18 +85,34 @@ int main(void) {
 
   }
 
-
+  
   // Enable interrupts globally
     __enable_irq();
-
+    
+   
     // 1. Configure mask bit
     EXTI->IMR1 |= EXTI_IMR1_IM2;
     // 2. Disable rising edge trigger
     EXTI->RTSR1 &= ~(EXTI_RTSR1_RT2);
     // 3. Enable falling edge trigger
-    EXTI->FTSR1 |= EXTI_FTSR1_FT2;
+    EXTI->FTSR1 |= EXTI_FTSR1_FT2
     // 4. Turn on EXTI interrupt in NVIC_ISER
     NVIC->ISER[0] |= (1 << EXTI2_IRQn);
+
+   
+
+
+     
+    //initialize TIM6
+    initTIM(TIM6);
+
+    // Turn on TIM6 interrupt in NVIC_ISER
+    NVIC->ISER[0] |= (1 << TIM6_IRQn);
+    
+    //run at 800Hz
+    delay_millis(TIM6, 1/800)
+
+
 
 }
 
