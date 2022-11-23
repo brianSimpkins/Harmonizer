@@ -2,7 +2,7 @@
 <session>
  <Bookmarks/>
  <Breakpoints groups="Breakpoints" active_group="Breakpoints">
-  <BreakpointListItem trigger="" line="48" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="main.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="61" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="main.c" useHWbreakpoint="false"/>
   <Exceptions set="MemManage;UsageFault_Coprocessor;UsageFault_CheckingError;UsageFault_StateError;BusFault;ExceptionEntryReturnFault;HardFault"/>
  </Breakpoints>
  <ExecutionProfileWindow/>
@@ -67,7 +67,11 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
+<<<<<<< HEAD
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="47" useTextEdit="1" path="main.c" left="0" selected="1" top="60" codecName="Default"/>
+=======
+  <SessionOpenFile windowGroup="DockEditLeft" x="26" y="22" useTextEdit="1" path="main.c" left="0" selected="1" top="0" codecName="Default"/>
+>>>>>>> 94d19aabbdc466f48d7d98bec03ab6481887d3ba
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="STM32L432KC_SPI.c" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="18" y="8" useTextEdit="1" path="STM32L432KC_RCC.c" left="0" top="1" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="1" y="22" useTextEdit="1" path="STM32L432KC_GPIO.c" left="0" top="0" codecName="Default"/>
@@ -75,7 +79,7 @@
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="STM32L432KC_GPIO.h" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="92" y="9076" useTextEdit="1" openedFrom="C:/Users/brian/OneDrive/Documents/2022Fall/E155/Harmonizer/mcu_code/main.c" path="STM32L4xx/Device/Include/stm32l432xx.h" left="0" top="9057" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="13" y="1528" useTextEdit="1" openedFrom="C:/Users/brian/OneDrive/Documents/2022Fall/E155/Harmonizer/mcu_code/STM32L432KC_RCC.c" path="CMSIS_5/CMSIS/Core/Include/core_cm4.h" left="0" top="1517" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="5" y="41" useTextEdit="1" path="STM32L432KC_ADC.c" left="0" top="7" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="41" y="21" useTextEdit="1" path="STM32L432KC_ADC.c" left="0" top="40" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="19" y="13" useTextEdit="1" path="STM32L432KC_ADC.h" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="STM32L432KC_FLASH.h" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="9" y="193" useTextEdit="1" path="SEGGER_THUMB_Startup.s" left="0" top="185" codecName="Default"/>

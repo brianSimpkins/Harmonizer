@@ -33,6 +33,17 @@ void delay_millis(TIM_TypeDef * TIMx, uint32_t ms){
   while(!(TIMx->SR & 1)); // Wait for UIF to go high
 }
 
-void init_music(TIM_TypeDef * TIMx) {
-  
+void init_musical_timer(TIM_TypeDef * TIMx) {
+  TIMx->CCMR1 |= (0b0110 << TIM_CCMR1_OC1M_Pos); // Enable PWM mode 1
+
+  TIMx->CCMR1 |= TIM_CCMR1_OC1PE; // Enable CCR preload 
+  TIMx->CR1 |= TIM_CR1_ARPE; // Enable ARR preload
+  TIMx->CCER |= TIM_CCER_CC1E; // Enable CCR 1 output
+}
+
+void play_note(TIM_TypeDef * TIMx, uint32_t freq) {
+  TIMx->ARR = freq; // preload arr
+  TIMx->CCR1 = freq / 2; // preload ccr
+
+  TIMx->EGR |= 1; // force shadow buffer load
 }
