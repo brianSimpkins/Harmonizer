@@ -77,18 +77,15 @@ int main(void) {
 
     // assume 800hz sample rate, 64-point fft
     // freq = i * 400 / 32
-    // sec = 1 / freq
-    // sec = 32 / i * 400
-    // 10 microsec = 100,000 * (32 / i * 400)
-    int32_t max_period = (int) 1000000 * (32 / ((double) (max_index * 400));
+    int32_t fundamental_frequency = (int) (max_index * 400 / 32);
 
     // set_volume(volume); how??
 
-    play_note(TIM2, max_period);
+    play_note(TIM2, fundamental_frequency);
 
-    play_note(TIM15, (int) max_period * 3 / 2);
+    play_note(TIM15, (int) fundamental_frequency * 3 / 2);
 
-    play_note(TIM16, max_period * 2);
+    play_note(TIM16, fundamental_frequency * 2);
 
   }
 

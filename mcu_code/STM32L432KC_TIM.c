@@ -42,8 +42,14 @@ void init_musical_timer(TIM_TypeDef * TIMx) {
 }
 
 void play_note(TIM_TypeDef * TIMx, uint32_t freq) {
-  TIMx->ARR = freq; // preload arr
-  TIMx->CCR1 = freq / 2; // preload ccr
+
+  // sec = 1 / freq
+  // 10 microsec = 100,000 * (1 / freq)
+  uint32_t period = (int) 100000 * (1 / freq)
+
+
+  TIMx->ARR = period; // preload arr
+  TIMx->CCR1 = (int) period / 2; // preload ccr
 
   TIMx->EGR |= 1; // force shadow buffer load
 }
