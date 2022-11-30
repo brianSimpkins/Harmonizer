@@ -14,14 +14,11 @@ Purpose : Interface with FPGA and Microphone, control the speakers
 #include "STM32L432KC.h"
 
 
-uint16_t samples[64];
-uint16_t output_real[32];
-uint16_t output_imag[32];
-
-uint16_t volume;
+int16_t samples[64];
+int16_t output_real[32];
+int16_t output_imag[32];
 
 bool output_ready = false;
-
 
 int main(void) {
   configureFlash();
@@ -49,43 +46,58 @@ int main(void) {
   // turn on the peripheral
   adc_start();
 
+
+  initTIM(TIM6);
+  // 800 hz with 10 microsecond time base
+  // equals 1/800 * 100,000 cycles
+  TIM6->ARR = (uint16_t) 100000 / 800;
+
   // loop: should be replaced with TIM6 interrupt
-  for(int i = 0; i < 64; ++i) {
+  for(uint16_t i = 0; i < 64; ++i) {
+    TIM6->SR &= ~(0x1); // Clear UIF
+    TIM6->CNT = 0;      // Reset count
+
+    // get a sample from the adc
     samples[i] = adc_read();
+
+    uint16_t output_index = i >> 1;
+
+    if(i % 2 == 1) {
+      output_real[output_index] = spiSendReceive(samples[i]);
+    } else {
+      output_imag[output_index] = spiSendReceive(samples[i]);
+    }
+    
+    // wait until the timer is done before sampling again
+    if(i < 63) while(!(TIM6->SR & 1)); // Wait for UIF to go high
   }
 
+  int32_t max_magnitude = 0;
+  int32_t max_index = 0;
 
+  // loop through output
+  // 0th index is meaningless for us
+  for(uint16_t i = 1; i < 32; ++i) {
+    int32_t magnitude = (output_real[i] * output_real[i]) + 
+                        (output_imag[i] * output_imag[i]);
 
-
-  // determine fundamental frequency
-  if(output_ready) {
-
-    int32_t max_magnitude = 0;
-    int32_t max_index = 0;
-
-    // loop through output
-    // 0th index is meaningless for us
-    for(int i = 1; i < 32; ++i) {
-      int32_t magnitude = (output_real[i] * output_real[i]) + 
-                          (output_imag[i] * output_imag[i]);
-
-      if(magnitude > max_magnitude) {
-        max_magnitude = magnitude;
-        max_index = i;
-      }
+    if(magnitude > max_magnitude) {
+      max_magnitude = magnitude;
+      max_index = i;
     }
+  }
 
-    // assume 800hz sample rate, 64-point fft
-    // freq = i * 400 / 32
-    int32_t fundamental_frequency = (int) (max_index * 400 / 32);
+  // assume 800hz sample rate, 64-point fft
+  // freq = i * 400 / 32
+  int32_t fundamental_frequency = (int32_t) (max_index * 400 / 32);
 
-    // set_volume(volume); how??
+  // set_volume(volume); how??
 
-    play_note(TIM2, fundamental_frequency);
+  play_note(TIM2, fundamental_frequency);
 
-    play_note(TIM15, (int) fundamental_frequency * 3 / 2);
+  play_note(TIM15, (int) fundamental_frequency * 3 / 2);
 
-    play_note(TIM16, fundamental_frequency * 2);
+  play_note(TIM16, fundamental_frequency * 2);
 
   }
 

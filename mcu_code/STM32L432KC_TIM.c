@@ -39,17 +39,19 @@ void init_musical_timer(TIM_TypeDef * TIMx) {
   TIMx->CCMR1 |= TIM_CCMR1_OC1PE; // Enable CCR preload 
   TIMx->CR1 |= TIM_CR1_ARPE; // Enable ARR preload
   TIMx->CCER |= TIM_CCER_CC1E; // Enable CCR 1 output
+
+  initTIM(TIMx);
 }
 
 void play_note(TIM_TypeDef * TIMx, uint32_t freq) {
 
   // sec = 1 / freq
   // 10 microsec = 100,000 * (1 / freq)
-  uint32_t period = (int) 100000 * (1 / freq)
+  uint32_t period = (uint32_t) 100000 * (1 / freq);
 
 
   TIMx->ARR = period; // preload arr
-  TIMx->CCR1 = (int) period / 2; // preload ccr
+  TIMx->CCR1 = (uint32_t) period / 2; // preload ccr
 
   TIMx->EGR |= 1; // force shadow buffer load
 }
