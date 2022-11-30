@@ -1,14 +1,17 @@
-// STM32L432KC_SPI.h
-// Brian Simpkins
-// bsimpkins@hmc.edu
-// 10/8/2022
-// Declares the functions to initialize and operate the SPI peripheral on the MCU
+// STM32F401RE_SPI.h
+// Header for SPI functions
 
 #ifndef STM32L4_SPI_H
 #define STM32L4_SPI_H
 
 #include <stdint.h>
 #include <stm32l432xx.h>
+
+
+#define SPI_CE PA11
+#define SPI_SCK PB3
+#define SPI_MOSI PB5
+#define SPI_MISO PB4
 
 ///////////////////////////////////////////////////////////////////////////////
 // Function prototypes
@@ -22,9 +25,7 @@
  * Refer to the datasheet for more low-level details. */ 
 void initSPI(int br, int cpol, int cpha);
 
-/* Transmits a character (1 byte) over SPI and returns the received character.
- *    -- send: the character to send over SPI
- *    -- return: the character received over SPI */
-char spiSendReceive(char send);
+
+int16_t spiSendReceive(int16_t send);
 
 #endif

@@ -37,7 +37,8 @@ int main(void) {
 
   // timer 16 - channel 1 - PA6 AF14
 
-  
+
+  /* set up ADC */
   // configure PA5 to Analog
   gpioEnable(GPIO_PORT_A);
   pinMode(PA5, GPIO_ANALOG);
@@ -47,6 +48,11 @@ int main(void) {
   adc_start();
 
 
+  /* set up spi with port B */
+  initSPI(1, 0, 0);
+
+
+  /* set up sampling timer */
   initTIM(TIM6);
   // 800 hz with 10 microsecond time base
   // equals 1/800 * 100,000 cycles
@@ -60,6 +66,7 @@ int main(void) {
     // get a sample from the adc
     samples[i] = adc_read();
 
+    // insert output into one of the arrays
     uint16_t output_index = i >> 1;
 
     if(i % 2 == 1) {
@@ -73,11 +80,11 @@ int main(void) {
   }
 
   int32_t max_magnitude = 0;
-  int32_t max_index = 0;
+  uint8_t max_index = 0;
 
   // loop through output
   // 0th index is meaningless for us
-  for(uint16_t i = 1; i < 32; ++i) {
+  for(uint8_t i = 1; i < 32; ++i) {
     int32_t magnitude = (output_real[i] * output_real[i]) + 
                         (output_imag[i] * output_imag[i]);
 
@@ -88,8 +95,8 @@ int main(void) {
   }
 
   // assume 800hz sample rate, 64-point fft
-  // freq = i * 400 / 32
-  int32_t fundamental_frequency = (int32_t) (max_index * 400 / 32);
+  // freq = i * 400 / 32 + 1/2(400/32)
+  int32_t fundamental_frequency = (int32_t) ((max_index * 400 / 32) + 200/32);
 
   // set_volume(volume); how??
 
@@ -102,35 +109,31 @@ int main(void) {
   }
 
   
-  // Enable interrupts globally
-    __enable_irq();
+  // // Enable interrupts globally
+  //   __enable_irq();
     
    
-    // 1. Configure mask bit
-    EXTI->IMR1 |= EXTI_IMR1_IM2;
-    // 2. Disable rising edge trigger
-    EXTI->RTSR1 &= ~(EXTI_RTSR1_RT2);
-    // 3. Enable falling edge trigger
-    EXTI->FTSR1 |= EXTI_FTSR1_FT2
-    // 4. Turn on EXTI interrupt in NVIC_ISER
-    NVIC->ISER[0] |= (1 << EXTI2_IRQn);
+  //   // 1. Configure mask bit
+  //   EXTI->IMR1 |= EXTI_IMR1_IM2;
+  //   // 2. Disable rising edge trigger
+  //   EXTI->RTSR1 &= ~(EXTI_RTSR1_RT2);
+  //   // 3. Enable falling edge trigger
+  //   EXTI->FTSR1 |= EXTI_FTSR1_FT2
+  //   // 4. Turn on EXTI interrupt in NVIC_ISER
+  //   NVIC->ISER[0] |= (1 << EXTI2_IRQn);
 
    
 
 
      
-    //initialize TIM6
-    initTIM(TIM6);
+  //   //initialize TIM6
+  //   initTIM(TIM6);
 
-    // Turn on TIM6 interrupt in NVIC_ISER
-    NVIC->ISER[0] |= (1 << TIM6_IRQn);
+  //   // Turn on TIM6 interrupt in NVIC_ISER
+  //   NVIC->ISER[0] |= (1 << TIM6_IRQn);
     
-    //run at 800Hz
-    delay_millis(TIM6, 1/800)
-
-
-
-}
+  //   //run at 800Hz
+  //   delay_millis(TIM6, 1/800);
 
 
 void TIM6_IRQHandler(void){
@@ -140,8 +143,6 @@ void TIM6_IRQHandler(void){
         TIM6->SR &= ~(0x1); // Clear UIF
         TIM6->SR &= ~(TIM_SR_CC1IF); // clear interrupt flag?
 
-        // Then toggle the LED
-        togglePin(LED_PIN);
 
         TIM6->CNT = 0;      // Reset count
     }
