@@ -59,15 +59,15 @@ int main(void) {
   TIM6->ARR = (uint16_t) 100000 / 800;
 
   // loop: should be replaced with TIM6 interrupt
-  for(uint16_t i = 0; i < 64; ++i) {
+  for(uint8_t i = 0; i < 64; ++i) {
     TIM6->SR &= ~(0x1); // Clear UIF
     TIM6->CNT = 0;      // Reset count
 
     // get a sample from the adc
-    samples[i] = adc_read();
+    samples[i] = (adc_read() - 0x100);
 
     // insert output into one of the arrays
-    uint16_t output_index = i >> 1;
+    uint8_t output_index = i >> 1;
 
     if(i % 2 == 1) {
       output_real[output_index] = spiSendReceive(samples[i]);
@@ -95,11 +95,10 @@ int main(void) {
   }
 
   // assume 800hz sample rate, 64-point fft
-  // freq = i * 400 / 32 + 1/2(400/32)
-  int32_t fundamental_frequency = (int32_t) ((max_index * 400 / 32) + 200/32);
+  // freq = i * 400 / 32
+  int32_t fundamental_frequency = (int32_t) (max_index * 400 / 32);
 
-  // set_volume(volume); how??
-
+  // if average amplitude is high enough, play note
   play_note(TIM2, fundamental_frequency);
 
   play_note(TIM15, (int) fundamental_frequency * 3 / 2);
