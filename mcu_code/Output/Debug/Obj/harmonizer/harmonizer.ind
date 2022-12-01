@@ -5,7 +5,6 @@
 "Output/Debug/Obj/harmonizer/STM32L432KC_RCC.o"
 "Output/Debug/Obj/harmonizer/STM32L432KC_SPI.o"
 "Output/Debug/Obj/harmonizer/STM32L432KC_TIM.o"
-"Output/Debug/Obj/harmonizer/STM32L432KC_USART.o"
 "Output/Debug/Obj/harmonizer/STM32L432KC_ADC.o"
 "Output/Debug/Obj/harmonizer/SEGGER_THUMB_Startup.o"
 "Output/Debug/Obj/harmonizer/STM32L4xx_Startup.o"

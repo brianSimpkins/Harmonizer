@@ -56,13 +56,13 @@ void adc_start() {
   ADC1->CR |= ADC_CR_ADSTART;
 }
 
-uint16_t adc_read() {
+int16_t adc_read() {
   // Acknowledge overrun
   ADC1->ISR |= ADC_ISR_OVR;
   // Wait for EOC == 1
   while (!(ADC1->ISR & ADC_ISR_EOC));
   // Read from ADC_DR
-  uint16_t curr_data = (uint16_t) ADC1->DR;
+  int16_t curr_data = (int16_t) ADC1->DR;
 
   return(curr_data);
 }

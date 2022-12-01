@@ -23,6 +23,5 @@ Output/Debug/Obj/harmonizer/main.o: \
   C:\Users\brian\OneDrive\Documents\2022Fall\E155\Harmonizer\mcu_code\STM32L432KC_RCC.h \
   C:\Users\brian\OneDrive\Documents\2022Fall\E155\Harmonizer\mcu_code\STM32L432KC_TIM.h \
   C:\Users\brian\OneDrive\Documents\2022Fall\E155\Harmonizer\mcu_code\STM32L432KC_FLASH.h \
-  C:\Users\brian\OneDrive\Documents\2022Fall\E155\Harmonizer\mcu_code\STM32L432KC_USART.h \
   C:\Users\brian\OneDrive\Documents\2022Fall\E155\Harmonizer\mcu_code\STM32L432KC_SPI.h \
   C:\Users\brian\OneDrive\Documents\2022Fall\E155\Harmonizer\mcu_code\STM32L432KC_ADC.h
