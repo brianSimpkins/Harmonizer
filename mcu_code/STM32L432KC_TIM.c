@@ -5,6 +5,7 @@
 #include "STM32L432KC_RCC.h"
 
 void enable_timers() {
+  RCC->AHB2ENR  |= RCC_AHB2ENR_GPIOAEN;
   RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
   RCC->APB1ENR1 |= RCC_APB1ENR1_TIM6EN;
   RCC->APB2ENR  |= RCC_APB2ENR_TIM15EN;
@@ -34,24 +35,42 @@ void delay_millis(TIM_TypeDef * TIMx, uint32_t ms){
 }
 
 void init_musical_timer(TIM_TypeDef * TIMx) {
-  TIMx->CCMR1 |= (0b0110 << TIM_CCMR1_OC1M_Pos); // Enable PWM mode 1
+
+  // Set prescaler to give 10 miscrosecond time base
+  uint32_t psc_div = (uint32_t) ((SystemCoreClock/1e5));
+
+  // Set prescaler division factor
+  TIMx->PSC = (psc_div - 1);
+  // Generate an update event to update prescaler value
+  TIMx->EGR |= 1;
+
+  TIMx->CCMR1 |= (0b0111 << TIM_CCMR1_OC1M_Pos); // Enable PWM mode 1
 
   TIMx->CCMR1 |= TIM_CCMR1_OC1PE; // Enable CCR preload 
   TIMx->CR1 |= TIM_CR1_ARPE; // Enable ARR preload
   TIMx->CCER |= TIM_CCER_CC1E; // Enable CCR 1 output
 
-  initTIM(TIMx);
 }
 
 void play_note(TIM_TypeDef * TIMx, uint32_t freq) {
 
+  int period;
+
   // sec = 1 / freq
   // 10 microsec = 100,000 * (1 / freq)
-  uint32_t period = (uint32_t) 100000 * (1 / freq);
-
+  if(freq == 0) {
+    period = 0;
+  } else {
+    period = (int) (100000 / freq);
+  }
+  
 
   TIMx->ARR = period; // preload arr
-  TIMx->CCR1 = (uint32_t) period / 2; // preload ccr
+  TIMx->CCR1 = (int) period / 2; // preload ccr
+
+  TIMx->EGR |= 1; // force shadow buffer load
+
+  TIMx->CR1 |= 1; // turn on timer
 
   TIMx->EGR |= 1; // force shadow buffer load
 }

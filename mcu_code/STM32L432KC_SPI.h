@@ -7,6 +7,7 @@
 #include <stdint.h>
 #include <stm32l432xx.h>
 
+#include "STM32L432KC_GPIO.h"
 
 #define SPI_CE PA11
 #define SPI_SCK PB3

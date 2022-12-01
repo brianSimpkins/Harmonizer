@@ -63,8 +63,6 @@
         <file file_name="STM32L432KC_SPI.h" />
         <file file_name="STM32L432KC_TIM.c" />
         <file file_name="STM32L432KC_TIM.h" />
-        <file file_name="STM32L432KC_USART.c" />
-        <file file_name="STM32L432KC_USART.h" />
         <file file_name="STM32L432KC_ADC.c" />
         <file file_name="STM32L432KC_ADC.h" />
       </folder>
