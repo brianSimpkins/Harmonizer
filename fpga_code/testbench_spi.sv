@@ -16,12 +16,16 @@ module fft_testbench_spi();
 
    logic fft_out_flop_done;
    logic [1023:0] fftout1024;
+   logic [1023:0] fftin1024;
+   logic bufempty;
+   logic cs; 
+   logic processing;
 
    integer             f; // file pointer
 
-   fft_controller dut(clk, reset, start, load, rd_adr, rd, done, wd);
-   fft_out_flop fftout(.clk(slow_clk), .reset(reset), .fft_done(done), .buf_ready(fft_out_flop_done), .fft_out1024(fftout1024), .fft_load(load), .fft_out32(wd));
-   
+   fft_controller dut(clk, reset, start, load, rd_adr, rd, done,processing, wd);
+   fft_out_flop fftout(.clk(slow_clk), .reset(reset), .fft_done(done), .buf_ready(fft_out_flop_done), .fft_out1024(fftout1024), .fft_load(load), .fft_out32(wd), .buf_empty(bufempty));
+   fft_in_flop fftin(.clk(slow_clk), .reset(reset), .fft_in1024(fftin1024), .fft_processing(processing), .cs(cs), .out_buf_ready(fft_out_flop_done), .fft_in32(rd), .fft_load(load), .fft_start(start), .out_buf_empty(bufempty) );
    // clk
    always
      begin
@@ -42,11 +46,20 @@ module fft_testbench_spi();
    initial
      begin
 	$readmemh("simulation/test_in_square.memh", input_data);
+
 	$readmemh("simulation/gt_test_out_square.memh", expected_out);
         f = $fopen("simulation/test_out_square.memh", "w"); // write computed values.
-	idx=0; reset=1; #40; reset=0;
+	idx=0; reset=1; #40; reset=0; cs = 0;
      end	
 
+genvar i;
+//generate hell
+generate
+	for (i=0; i<64; i = i +1) begin
+      		assign fftin1024[((i+1)*16-1):(i*16)] = input_data[63-i][31:16];
+   	end
+endgenerate
+/*
    // increment testbench counter and derive load/start signals
    always @(posedge slow_clk)
      if (~reset) idx <= idx + 1;
@@ -58,7 +71,8 @@ module fft_testbench_spi();
    always @(posedge slow_clk)
      if (load) out_idx <= 0;
      else if (done) out_idx <= out_idx + 1;
-   
+*/
+  /* 
    // load/start logic
    assign rd = load ? input_data[idx[5:0]] : 0;  // read in test data by addressing `input_data` with `idx`.
    assign expected = expected_out[out_idx[5:0]]; // get test output by addressing `expected_out` with `idx`.
@@ -66,6 +80,8 @@ module fft_testbench_spi();
    assign expected_im = expected[15:0];         // get imaginary part of `expected` (gt output)
    assign wd_re = wd[31:16];               // get real      part of `wd` (computed output)
    assign wd_im = wd[15:0];                     // get imaginary part of `wd` (computed output)
+
+*/
 
    // if FFT is done, compare gt to computed output, and write computed output to file.
    always @(posedge slow_clk)
@@ -82,4 +98,5 @@ module fft_testbench_spi();
            $stop;
 	end
      end
+
 endmodule // fft_testbench
