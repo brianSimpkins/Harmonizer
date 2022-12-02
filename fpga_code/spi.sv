@@ -31,7 +31,8 @@ module fft_out_flop(
     input logic reset,
     output logic [1023:0] fft_out1024, //to SPI
     output logic buf_ready,
-    output logic buf_empty
+    output logic buf_empty,
+    output logic [31:0] idx
 );
 
 logic [6:0] cnt;
@@ -39,23 +40,24 @@ logic [1023:0] q;
 logic [1023:0] d;
 logic [1023:0] d_shift;
 
-assign d_shift = (cnt == 63) ? q : q << 32;
+assign d_shift = (cnt == 31) ? q : q << 32;
 assign d = (cnt==0) ? 0 : {d_shift[1023:32], fft_out32}; //NOTE: we don't need the (cnt == 0) here if we pulse reset before doing everything
 
 always_ff @(negedge clk) begin
-    if (reset || fft_load || !fft_done || cnt == 64) cnt <= 0; //NOTE: done signal sketch here
+    if (reset || fft_load || !fft_done || cnt == 32) cnt <= 0; //NOTE: done signal sketch here
     else cnt <= cnt + 1;
 end
 
 always_ff @(negedge clk) begin
-    if (reset) q <= 0;
+    if (reset || !fft_done) q <= 0;
     else q <= d;
 end
 
 
 assign fft_out1024 = (cnt == 0) ? 0 : q;
-assign buf_ready = (cnt == 64);
+assign buf_ready = (cnt == 32);
 assign buf_empty = (cnt == 0);
+assign idx = cnt;
 
 endmodule
 
@@ -71,7 +73,8 @@ module fft_in_flop(
     input logic out_buf_ready, //from fft_out_flop
     output logic [31:0] fft_in32, //to FFT
     output logic fft_load, //to FFT
-    output logic fft_start //to FFT
+    output logic fft_start, //to FFT
+    output logic [31:0] idx //to FFT
 );
 
 typedef enum logic [2:0] {WAIT,SEND} state;
@@ -121,7 +124,7 @@ end
 
 assign fft_start = (cnt == 64);
 assign fft_load = (currState == SEND && !fft_processing);
-
+assign idx = cnt;
 Extend32 extend(.a(re16), .b(fft_in32)); //extend 16 bit real into 32 bit complex
 
 

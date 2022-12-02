@@ -8,8 +8,8 @@ module fft_testbench_spi();
    logic [31:0]        rd, wd;
    logic [31:0]        idx, out_idx, expected;
 
-   logic [5:0]            rd_adr;
-   assign rd_adr = idx[5:0];
+   logic [5:0]            rd_adr, idxIN, idxOUT;
+   //assign rd_adr = idx[5:0];
    
    logic [31:0]          input_data [0:63];
    logic [31:0]        expected_out [0:63];
@@ -24,9 +24,10 @@ module fft_testbench_spi();
    integer             f; // file pointer
 
    fft_controller dut(clk, reset, start, load, rd_adr, rd, done,processing, wd);
-   fft_out_flop fftout(.clk(slow_clk), .reset(reset), .fft_done(done), .buf_ready(fft_out_flop_done), .fft_out1024(fftout1024), .fft_load(load), .fft_out32(wd), .buf_empty(bufempty));
-   fft_in_flop fftin(.clk(slow_clk), .reset(reset), .fft_in1024(fftin1024), .fft_processing(processing), .cs(cs), .out_buf_ready(fft_out_flop_done), .fft_in32(rd), .fft_load(load), .fft_start(start), .out_buf_empty(bufempty) );
+   fft_out_flop fftout(.idx(idxOUT),.clk(slow_clk), .reset(reset), .fft_done(done), .buf_ready(fft_out_flop_done), .fft_out1024(fftout1024), .fft_load(load), .fft_out32(wd), .buf_empty(bufempty));
+   fft_in_flop fftin(.idx(idxIN),.clk(slow_clk), .reset(reset), .fft_in1024(fftin1024), .fft_processing(processing), .cs(cs), .out_buf_ready(fft_out_flop_done), .fft_in32(rd), .fft_load(load), .fft_start(start), .out_buf_empty(bufempty) );
    // clk
+   assign rd_adr = (load) ? idxIN : idxOUT;
    always
      begin
 	    clk = 1; #5; clk=0; #5;
@@ -82,7 +83,7 @@ endgenerate
    assign wd_im = wd[15:0];                     // get imaginary part of `wd` (computed output)
 
 */
-
+/*
    // if FFT is done, compare gt to computed output, and write computed output to file.
    always @(posedge slow_clk)
      if (done) begin
@@ -95,8 +96,8 @@ endgenerate
 	end else begin
 	   $display("FFT test complete.");
            $fclose(f);
-           $stop;
+           //$stop;
 	end
      end
-
+*/
 endmodule // fft_testbench
