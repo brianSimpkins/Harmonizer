@@ -3,23 +3,34 @@ module fft_spi(input  logic sck,//from mcu
                input logic reset,
                input logic cs,
                output logic sdo,//to mcu
-               output logic [1023:0] q, //fft input
+               output logic [1023:0] fft_in, //fft input
                output logic dataReady, //to fft input flop
-               input  logic [1023:0] d); //fft output
+               input  logic [1023:0] fft_out); //fft output
 
-    logic         qdelayed, wasdone;
-    always_ff @(posedge sck)
-        if (cs) q <= {q[1022:0], sdi};
-        else    q <= {d[1022:0],sdi};
+	 logic [9:0]   cnt;
+	 logic [1023:0] q;
+	 
+    always_ff @(posedge sck) begin
+		  if (reset) begin
+			  fft_in <= 0;
+			  cnt <= 0;
+		  end else begin 
+			  fft_in <= {fft_in[1022:0], sdi};
+			  cnt <= cnt + 1;
+		  end
+	 end
+	 
+
 
     // sdo should change on the negative edge of sck
+	 
     always_ff @(negedge sck) begin
-        qdelayed = q[1023];
-    end
-
+		  if (cnt == 0) q <= fft_out;
+		  else q <= (q << 1);
+	 end
     
     // when cs is first asserted, shift out msb before clock edge
-    assign sdo = (cs) ? qdelayed : d[1023];
+    assign sdo = q[1023];
 endmodule
 
 //every pulse of slow_clk, we will have a new 32 bit output from FFT
@@ -35,16 +46,16 @@ module fft_out_flop(
     output logic [31:0] idx
 );
 
-logic [6:0] cnt;
+logic [6:0] cnt = 0;
 logic [1023:0] q;
 logic [1023:0] d;
 logic [1023:0] d_shift;
 
-assign d_shift = (cnt == 31) ? q : q << 32;
-assign d = (cnt==0) ? 0 : {d_shift[1023:32], fft_out32}; //NOTE: we don't need the (cnt == 0) here if we pulse reset before doing everything
+assign d_shift = (cnt == 33) ? q : q << 32;
+assign d = {d_shift[1023:32], fft_out32}; //NOTE: we don't need the (cnt == 0) here if we pulse reset before doing everything
 
 always_ff @(negedge clk) begin
-    if (reset || fft_load || !fft_done || cnt == 32) cnt <= 0; //NOTE: done signal sketch here
+    if (reset || fft_load || !fft_done || cnt == 33) cnt <= 0; //NOTE: done signal sketch here
     else cnt <= cnt + 1;
 end
 
@@ -55,7 +66,7 @@ end
 
 
 assign fft_out1024 = (cnt == 0) ? 0 : q;
-assign buf_ready = (cnt == 32);
+assign buf_ready = (cnt == 33);
 assign buf_empty = (cnt == 0);
 assign idx = cnt;
 
@@ -91,7 +102,7 @@ logic [15:0] re16; //16 bit real component we are grabbing from q
 assign re16 = q[1023:1008]; //16 bit real is 16 most significant bits of data stored in flop.
 
 assign d_shift = (cnt == 63) ? q : q << 16;
-assign d = (cnt==0) ? fft_in1024 : d_shift;
+assign d = d_shift;
 assign sendReady = (out_buf_ready || out_buf_empty) && !fft_processing && !cs; //we are ready to SEND data to FFT unit when the FFT is not in processing AND not sending to output buffer
 
 // counter flip flop
@@ -116,7 +127,7 @@ end
 always_comb begin
     case (currState)
         WAIT: nextState = (sendReady) ? SEND : WAIT;
-        SEND: nextState = (cnt === 64) ? WAIT : SEND;
+        SEND: nextState = (cnt === 63) ? WAIT : SEND;
         default: nextState = WAIT;
     endcase
 end

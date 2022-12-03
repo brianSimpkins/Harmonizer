@@ -15,13 +15,19 @@
             <Task name="PARTrace" build_result="0" update_result="2" update_time="1668820444"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="0" build_time="1668820444">
-            <Task name="Lattice_Synthesis" build_result="0" update_result="2" update_time="1668820444"/>
-            <Task name="LSE_Compile" build_result="0" update_result="2" update_time="1668820444"/>
-            <Task name="SynTrace" build_result="0" update_result="2" update_time="1668552614"/>
-            <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1668552614"/>
+        <Milestone name="Synthesis" build_result="0" build_time="1670029219">
+            <Task name="Lattice_Synthesis" build_result="0" update_result="2" update_time="1670029219"/>
+            <Task name="LSE_Compile" build_result="0" update_result="2" update_time="1670029219"/>
+            <Task name="SynTrace" build_result="0" update_result="2" update_time="1670029219"/>
+            <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1670029219"/>
         </Milestone>
-        <Milestone name="TOOL_Report" build_result="0" build_time="0"/>
+        <Milestone name="TOOL_Report" build_result="0" build_time="0">
+            <Task name="HDLE" build_result="0" update_result="2" update_time="1670029219"/>
+            <Task name="BKM" build_result="0" update_result="2" update_time="1670029219"/>
+            <Task name="SSO" build_result="0" update_result="2" update_time="1670029219"/>
+            <Task name="PIODRC" build_result="0" update_result="2" update_time="1670029219"/>
+            <Task name="DEC" build_result="0" update_result="2" update_time="1670029219"/>
+        </Milestone>
         <Report name="FFT_fft.bgn" last_build_time="1668820283" last_build_size="1017"/>
         <Report name="FFT_fft.bin" last_build_time="1668820283" last_build_size="104156"/>
         <Report name="FFT_fft.lsedata" last_build_time="0" last_build_size="0"/>

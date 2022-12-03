@@ -11,23 +11,23 @@ cModel Technology
 dC:/Users/bsimpkins/Documents/Harmonizer-adc_brian/fpga_code
 vagu
 Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z1 !s110 1668819271
+Z1 !s110 1670027585
 !i10b 1
 !s100 o2>G7hja0`M]EDn[oJJ3E3
 IB`b>5B1Q<:P;MAGAaRQVV3
 S1
 Z2 dC:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code
-Z3 w1668724752
+Z3 w1670023446
 Z4 8C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv
 Z5 FC:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv
-!i122 66
+!i122 121
 L0 3 37
 Z6 VDg1SIo80bB@j0V0VzS_@n1
 Z7 OT;L;2021.4;73
 r1
 !s85 0
 31
-Z8 !s108 1668819271.000000
+Z8 !s108 1670027585.000000
 Z9 !s107 C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv|
 Z10 !s90 -reportprogress|300|-work|work|C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv|
 !s101 -O0
@@ -45,7 +45,7 @@ R2
 R3
 Z13 8C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv
 Z14 FC:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv
-!i122 69
+!i122 124
 L0 2 31
 R6
 R7
@@ -70,7 +70,7 @@ R2
 R3
 R13
 R14
-!i122 69
+!i122 124
 L0 36 31
 R6
 R7
@@ -84,27 +84,53 @@ R16
 !i113 1
 R11
 R12
-vfft_controller
+vExtend32
 R0
 R1
 !i10b 1
-!s100 AI_]PG^N33^fcPn2MCkNe2
-IoEVQmJH1^:hDzEgjdDha91
+!s100 6:=McT;Q5ni[6BIi@m>P<2
+IE?mU?TnizW?9[Z53<_1:T0
 S1
 R2
-Z17 w1668819131
-Z18 8C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv
-Z19 FC:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv
-!i122 67
-L0 2 83
+Z17 w1670027269
+Z18 8C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv
+Z19 FC:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv
+!i122 125
+L0 134 8
 R6
 R7
 r1
 !s85 0
 31
 R8
-Z20 !s107 C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv|
-Z21 !s90 -reportprogress|300|-work|work|C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv|
+Z20 !s107 C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv|
+Z21 !s90 -reportprogress|300|-work|work|C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+n@extend32
+vfft_controller
+R0
+R1
+!i10b 1
+!s100 ZAacohC>ggTDaUgn;OLkI2
+ICA?fWA1Q=V<EeGUn`Le1>0
+S1
+R2
+R3
+Z22 8C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv
+Z23 FC:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv
+!i122 122
+L0 2 84
+R6
+R7
+r1
+!s85 0
+31
+R8
+Z24 !s107 C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv|
+Z25 !s90 -reportprogress|300|-work|work|C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv|
 !s101 -O0
 !i113 1
 R11
@@ -113,15 +139,90 @@ vfft_counter
 R0
 R1
 !i10b 1
-!s100 VdQ7QD:bkNCf``b7?n0V43
-IJ]EjLH2:c]iQQCB>m9kDZ1
+!s100 _kLCRMGk:a><ICW[^kVTn0
+IX2Q?Ggh6<6<d7h^D2iL>e2
+S1
+R2
+R3
+R22
+R23
+!i122 122
+L0 88 21
+R6
+R7
+r1
+!s85 0
+31
+R8
+R24
+R25
+!s101 -O0
+!i113 1
+R11
+R12
+vfft_in_flop
+R0
+R1
+!i10b 1
+!s100 0kZkBCkF_7247oZd<S>e82
+I6?oojcOZ]1PWLPXXL8>:T1
 S1
 R2
 R17
 R18
 R19
-!i122 67
-L0 87 21
+!i122 125
+L0 66 66
+R6
+R7
+r1
+!s85 0
+31
+R8
+R20
+R21
+!s101 -O0
+!i113 1
+R11
+R12
+vfft_out_flop
+R0
+R1
+!i10b 1
+!s100 l?MS?UiB:SKUIJ=RWe?BT3
+If=9ijoLGQEZ9RioFko>4;3
+S1
+R2
+R17
+R18
+R19
+!i122 125
+L0 26 37
+R6
+R7
+r1
+!s85 0
+31
+R8
+R20
+R21
+!s101 -O0
+!i113 1
+R11
+R12
+vfft_spi
+R0
+R1
+!i10b 1
+!s100 YZ8_]nfXT_3_BHF9MU=L=0
+I<ERcz[1GFR;ddd_k[m9Ti3
+S1
+R2
+R17
+R18
+R19
+!i122 125
+L0 1 23
 R6
 R7
 r1
@@ -142,10 +243,10 @@ R1
 IK1=15MkbPJZRQmEkbm[GU3
 S1
 R2
-w1668819265
+R3
 8C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv
 FC:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv
-!i122 71
+!i122 126
 L0 3 79
 R6
 R7
@@ -155,6 +256,31 @@ r1
 R8
 !s107 C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+vfft_testbench_spi
+R0
+R1
+!i10b 1
+!s100 @S6:LeI<S>Ndhd[PnAGLj2
+IMH[lF_fA1IUIkUk9Rgl>k1
+S1
+R2
+w1670027418
+8C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv
+FC:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv
+!i122 127
+L0 3 62
+R6
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv|
 !s101 -O0
 !i113 1
 R11
@@ -170,7 +296,7 @@ R2
 R3
 R13
 R14
-!i122 69
+!i122 124
 L0 70 13
 R6
 R7
@@ -195,7 +321,7 @@ R2
 R3
 R4
 R5
-!i122 66
+!i122 121
 L0 42 32
 R6
 R7
@@ -217,10 +343,10 @@ R1
 I><HUm6:^PgKalBdabOf0d2
 S1
 R2
-Z22 w1668818845
-Z23 8C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv
-Z24 FC:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv
-!i122 68
+R3
+Z26 8C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv
+Z27 FC:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv
+!i122 123
 L0 4 16
 R6
 R7
@@ -228,8 +354,8 @@ r1
 !s85 0
 31
 R8
-Z25 !s107 C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv|
-Z26 !s90 -reportprogress|300|-work|work|C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv|
+Z28 !s107 C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv|
+Z29 !s90 -reportprogress|300|-work|work|C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv|
 !s101 -O0
 !i113 1
 R11
@@ -245,7 +371,7 @@ R2
 R3
 R4
 R5
-!i122 66
+!i122 121
 L0 76 9
 R6
 R7
@@ -262,15 +388,15 @@ R12
 vspi
 R0
 !s125 LATTICE_CONN
-R1
+!s110 1668819271
 !i10b 1
 !s100 0K?l^5;UIaBo@A=laAOfg2
 I5YT^hb^6EWVd]^cOgifO;1
 S1
 R2
-R3
-8C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv
-FC:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv
+w1668724752
+R18
+R19
 !i122 70
 L0 1 2
 R6
@@ -278,9 +404,9 @@ R7
 r1
 !s85 0
 31
-R8
-!s107 C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv|
-!s90 -reportprogress|300|-work|work|C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv|
+!s108 1668819271.000000
+R20
+R21
 !s101 -O0
 !i113 1
 R11
@@ -293,10 +419,10 @@ R1
 IQh=L4?c02lF0KBK0Y]kUa3
 S1
 R2
-R22
-R23
-R24
-!i122 68
+R3
+R26
+R27
+!i122 123
 L0 22 15
 R6
 R7
@@ -304,8 +430,8 @@ r1
 !s85 0
 31
 R8
-R25
-R26
+R28
+R29
 !s101 -O0
 !i113 1
 R11
