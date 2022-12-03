@@ -8,7 +8,7 @@
 // ADC Helper Functions
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void adc_init(int channel_num) {
+void adc_init(char channel_num) {
   // Enable RCC to ADC
   RCC->AHB2ENR |= RCC_AHB2ENR_ADCEN;
 
@@ -16,10 +16,15 @@ void adc_init(int channel_num) {
   ADC1_COMMON->CCR |= ADC_CCR_CKMODE_0;
 
   // Set ADC_SQR1_SQ1 to channel 10
-  ADC1->SQR1 |= (10 << ADC_SQR1_SQ1_Pos);
+  ADC1->SQR1 |= (channel_num << ADC_SQR1_SQ1_Pos);
 
   // Set resolution to 10-bit
   ADC1->CFGR |= (01 << ADC_CFGR_RES_Pos);
+
+  // Set 512 offset
+  ADC1->OFR1 |= ADC_OFR1_OFFSET1_EN;
+  ADC1->OFR1 |= _VAL2FLD(ADC_OFR1_OFFSET1_CH, channel_num);
+  ADC1->OFR1 |= _VAL2FLD(ADC_OFR1_OFFSET1, (420 << 2));
 
   // Ensure DEEPPWD = 0 and ADVREGEN = 1
   ADC1->CR &= ~(ADC_CR_DEEPPWD);

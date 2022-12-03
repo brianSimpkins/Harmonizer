@@ -11,7 +11,7 @@
 // Functions //
 ///////////////
 
-void adc_init(int channel_num);
+void adc_init(char channel_num);
 
 void adc_start();
 

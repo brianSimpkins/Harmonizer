@@ -26,7 +26,7 @@ void initTIM(TIM_TypeDef * TIMx){
 }
 
 void delay_millis(TIM_TypeDef * TIMx, uint32_t ms){
-  TIMx->ARR = (ms * 100);// Set timer max count
+  TIMx->ARR = (ms * 100); // Set timer max count
   TIMx->EGR |= 1;     // Force update
   TIMx->SR &= ~(0x1); // Clear UIF
   TIMx->CNT = 0;      // Reset count
