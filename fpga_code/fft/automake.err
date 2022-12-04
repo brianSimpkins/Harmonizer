@@ -3,3 +3,7 @@ ERROR - Design doesn't fit into device specified, refer to the Map report for mo
 ERROR - Design doesn't fit into device specified, refer to the Map report for more details.
 ERROR - Design doesn't fit into device specified, refer to the Map report for more details.
 ERROR - Design doesn't fit into device specified, refer to the Map report for more details.
+ERROR - Design doesn't fit into device specified, refer to the Map report for more details.
+ERROR - Design doesn't fit into device specified, refer to the Map report for more details.
+ERROR - Design doesn't fit into device specified, refer to the Map report for more details.
+ERROR - c:/users/bsimpkins/documents/harmonizer-main/fpga_code/spi.sv(26): qdelayed is not declared. VERI-1128

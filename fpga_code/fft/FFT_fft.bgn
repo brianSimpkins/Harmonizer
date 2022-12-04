@@ -4,10 +4,10 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Nov 18 17:11:19 2022
+Sat Dec  3 22:01:28 2022
 
 
-Command: bitgen -w -freq 0 -gui FFT_fft.udb 
+Command: bitgen -w -freq 0 -gui -msgset C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/promote.xml FFT_fft.udb 
 
 Running DRC.
 DRC detected 0 errors and 0 warnings.

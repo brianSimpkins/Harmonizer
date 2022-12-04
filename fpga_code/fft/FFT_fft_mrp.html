@@ -47,30 +47,32 @@ Target Device:        iCE40UP5KSG48
 Target Performance:   High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 3.2.0.18.0
-Mapped on: Fri Nov 18 17:11:05 2022
+Mapped on: Sat Dec  3 22:01:07 2022
 
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
 
 Command line:   map -i FFT_fft_syn.udb -o FFT_fft_map.udb -mp FFT_fft.mrp
-     -hierrpt -gui
+     -hierrpt -gui -msgset
+     C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/promote.xml
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of slice registers:  21 out of  5280 (<1%)
-   Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:           513 out of  5280 (10%)
-      Number of logic LUT4s:             322
-      Number of inserted feedthru LUT4s:   1
-      Number of ripple logic:             95 (190 LUT4s)
-   Number of IO sites used:   27 out of 39 (69%)
-      Number of IO sites used for general PIO: 27
+   Number of slice registers: 3122 out of  5280 (59%)
+   Number of I/O registers:      1 out of   117 (1%)
+   Number of LUT4s:           3636 out of  5280 (69%)
+      Number of logic LUT4s:             2405
+      Number of inserted feedthru LUT4s: 1011
+      Number of replicated LUT4s:          2
+      Number of ripple logic:            109 (218 LUT4s)
+   Number of IO sites used:   7 out of 39 (18%)
+      Number of IO sites used for general PIO: 7
       Number of IO sites used for I3C: 0 out of 2 (0%)
       (note: If I3C is not used, its site can be used as general PIO)
-      Number of IO sites used for PIO+I3C: 27 out of 36 (75%)
+      Number of IO sites used for PIO+I3C: 7 out of 36 (19%)
       Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
       (note: If RGB LED drivers are not used, sites can be used as OD outputs,
        see TN1288 iCE40 LED Driver Usage Guide)
-      Number of IO sites used for PIO+I3C+OD+RGB: 27 out of 39 (69%)
+      Number of IO sites used for PIO+I3C+OD+RGB: 7 out of 39 (18%)
    Number of DSPs:             4 out of 8 (50%)
    Number of I2Cs:             0 out of 2 (0%)
    Number of High Speed OSCs:  0 out of 1 (0%)
@@ -83,34 +85,41 @@ Command line:   map -i FFT_fft_syn.udb -o FFT_fft_map.udb -mp FFT_fft.mrp
    Number of SPIs:             0 out of 2 (0%)
    Number of EBRs:             10 out of 30 (33%)
    Number of PLLs:             0 out of 1 (0%)
-   Number of Clocks:  3
-      Net slow_clk: 15 loads, 15 rising, 0 falling (Driver: Pin
-     clk_counter_78__i2/Q)
+   Number of Clocks:  4
       Net clk_c: 18 loads, 18 rising, 0 falling (Driver: Port clk)
-      Net ram_clk: 2 loads, 2 rising, 0 falling (Driver: Pin
-     clk_counter_78__i1/Q)
-   Number of Clock Enables:  7
+      Net slow_clk: 2074 loads, 1046 rising, 1028 falling (Driver: Pin
+     clk_counter_68__i1/Q)
+      Net clk_counter[0]: 2 loads, 2 rising, 0 falling (Driver: Pin
+     clk_counter_68__i0/Q)
+      Net sck_c: 1033 loads, 1024 rising, 9 falling (Driver: Port sck)
+   Number of Clock Enables:  10
       Net VCC_net: 30 loads, 0 SLICEs
-      Net processing_N_15: 4 loads, 4 SLICEs
+      Net processing_N_3141: 4 loads, 4 SLICEs
+      Net n2320: 4 loads, 4 SLICEs
+      Net n12627: 992 loads, 992 SLICEs
+      Net fftinReg.n11547: 1000 loads, 1000 SLICEs
+      Net fftinReg.maxfan_replicated_net_23: 24 loads, 24 SLICEs
       Net write_0: 4 loads, 0 SLICEs
-      Net write_1: 4 loads, 0 SLICEs
-      Net n1843: 4 loads, 4 SLICEs
-      Net n1856: 6 loads, 6 SLICEs
-      Net n1788: 1 loads, 1 SLICEs
-   Number of LSRs:  1
-      Pin reset: 14 loads, 14 SLICEs (Net: reset_c)
-   Top 10 highest fanout non-clock nets:
 
-      Net load_c: 109 loads
+      Net fftUnit.n12755: 6 loads, 6 SLICEs
+      Net fftUnit.n12742: 4 loads, 4 SLICEs
+      Net fftUnit.write_1: 4 loads, 0 SLICEs
+   Number of LSRs:  4
+      Pin reset: 25 loads, 25 SLICEs (Net: reset_c)
+      Net fftinReg.n9497: 4 loads, 4 SLICEs
+      Net fftinReg.n11550: 16 loads, 16 SLICEs
+      Pin full_reset: 996 loads, 996 SLICEs (Net: fftoutReg.full_reset_c)
+   Top 10 highest fanout non-clock nets:
+      Net currState: 1034 loads
+      Net fftoutReg.full_reset_c: 1030 loads
+      Net cnt[10]: 1000 loads
+      Net fftinReg.n11547: 1000 loads
+      Net n17: 1000 loads
+      Net n12627: 992 loads
+      Net fft_processing: 83 loads
       Net fft_level[0]: 82 loads
-      Net VCC_net: 39 loads
-      Net reset_c: 18 loads
-      Net done_c: 17 loads
-      Net fft_level[1]: 16 loads
-      Net butterfly_iter[0]: 14 loads
-      Net fft_level[2]: 14 loads
-      Net n23_2: 11 loads
-      Net address_a_5__N_73[0]: 9 loads
+      Net fftinReg.maxfan_replicated_net_57: 58 loads
+      Net VCC_net: 42 loads
 
 
 
@@ -135,64 +144,28 @@ Command line:   map -i FFT_fft_syn.udb -o FFT_fft_map.udb -mp FFT_fft.mrp
 +---------------------+-----------+-----------+-------+-------+-----------+
 | reset               | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| data_out[1]         | OUTPUT    |           |       |       |           |
+| full_reset          | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| load_address[0]     | INPUT     |           |       |       |           |
+| sck                 | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| load_address[1]     | INPUT     |           |       |       |           |
+| clk                 | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| load_address[2]     | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| data_in[7]          | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| data_in[5]          | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| data_in[4]          | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| data_in[3]          | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| data_in[2]          | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| data_in[0]          | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| data_in[1]          | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| data_out[2]         | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| data_out[5]         | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-
-| data_in[6]          | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| data_out[0]         | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| start               | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| load                | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| data_out[6]         | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| load_address[3]     | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| data_out[3]         | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| load_address[4]     | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| load_address[5]     | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| data_out[4]         | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| data_out[7]         | OUTPUT    |           |       |       |           |
+| sdi                 | INPUT     |           | I     |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | done                | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| clk                 | INPUT     |           |       |       |           |
+| sdo                 | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 
 
 
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
+Block fftoutReg/full_reset_pad_lut_buf_1 was optimized away.
+
+Block fftoutReg/full_reset_pad_lut_buf_2 was optimized away.
+Block i4_1_lut_adj_57 was optimized away.
+Block i4_1_lut was optimized away.
 Block i1 was optimized away.
 
 
@@ -200,35 +173,36 @@ Block i1 was optimized away.
 <A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
 ---------------
 
-Instance Name: ram0_b/mem0
+Instance Name: spi/fft_in_i0
+         Type: IOLOGIC
+Instance Name: fftUnit/twiddle_gen/mux_10
          Type: EBR
-Instance Name: ram0_b/mem1
+Instance Name: fftUnit/twiddle_gen/mux_9
          Type: EBR
-Instance Name: ram1_a/mem1
+Instance Name: fftUnit/ram1_b/mem1
          Type: EBR
-Instance Name: ram1_a/mem0
+Instance Name: fftUnit/ram1_b/mem0
          Type: EBR
-Instance Name: ram0_a/mem1
+Instance Name: fftUnit/ram1_a/mem1
          Type: EBR
-Instance Name: ram0_a/mem0
+Instance Name: fftUnit/ram1_a/mem0
          Type: EBR
-Instance Name: ram1_b/mem1
+Instance Name: fftUnit/ram0_b/mem0
          Type: EBR
-Instance Name: ram1_b/mem0
+Instance Name: fftUnit/ram0_b/mem1
          Type: EBR
-Instance Name: butt/mult/m_real_twiddle/in1_15__I_0
+Instance Name: fftUnit/ram0_a/mem1
+         Type: EBR
+Instance Name: fftUnit/ram0_a/mem0
+         Type: EBR
+Instance Name: fftUnit/butt/mult/m_real_twiddle/in1_15__I_0
          Type: DSP
-Instance Name: butt/mult/m_real_b/in1_15__I_0
+Instance Name: fftUnit/butt/mult/m_real_b/in1_15__I_0
          Type: DSP
-Instance Name: butt/mult/m_real/in1_15__I_0
+Instance Name: fftUnit/butt/mult/m_real/in1_15__I_0
          Type: DSP
-
-Instance Name: butt/mult/m_imag/in1_15__I_0
+Instance Name: fftUnit/butt/mult/m_imag/in1_15__I_0
          Type: DSP
-Instance Name: twiddle_gen/mux_38
-         Type: EBR
-Instance Name: twiddle_gen/mux_39
-         Type: EBR
 
 
 
@@ -237,39 +211,7 @@ Instance Name: twiddle_gen/mux_39
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 59 MB
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   Peak Memory Usage: 119 MB
 
 
 

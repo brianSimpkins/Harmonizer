@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Nov 18 17:10:59 2022
+Sat Dec  3 22:00:56 2022
 
 
 Command Line:  C:\lscc\radiant\3.2\ispfpga\bin\nt64\synthesis.exe -f FFT_fft_lattice.synproj -gui -msgset C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/promote.xml 
@@ -81,7 +81,7 @@ The -p option is iCE40UP5K.
 
 INFO - synthesis: User-Selected Strategy Settings
 Optimization goal = Area
-Top-level module name = fft_controller.
+Top-level module name = fft.
 Target frequency = 200.000000 MHz.
 Maximum fanout = 1000.
 Timing path count = 3
@@ -120,6 +120,7 @@ Verilog design file = C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft
 Verilog design file = C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv
 Verilog design file = C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv
 Verilog design file = C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv
+Verilog design file = C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft.sv
 VHDL library = pmi
 VHDL design file = C:/lscc/radiant/3.2/ip/pmi/pmi_iCE40UP.vhd
 WARNING - synthesis: Unexpected file name extension for Verilog file c:/users/bsimpkins/documents/harmonizer-main/fpga_code/address_gen.sv.
@@ -127,6 +128,7 @@ WARNING - synthesis: Unexpected file name extension for Verilog file c:/users/bs
 WARNING - synthesis: Unexpected file name extension for Verilog file c:/users/bsimpkins/documents/harmonizer-main/fpga_code/memory_units.sv.
 WARNING - synthesis: Unexpected file name extension for Verilog file c:/users/bsimpkins/documents/harmonizer-main/fpga_code/multiplication.sv.
 WARNING - synthesis: Unexpected file name extension for Verilog file c:/users/bsimpkins/documents/harmonizer-main/fpga_code/spi.sv.
+WARNING - synthesis: Unexpected file name extension for Verilog file c:/users/bsimpkins/documents/harmonizer-main/fpga_code/fft.sv.
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
 Compile design.
 Compile Design Begin
@@ -169,22 +171,24 @@ Analyzing Verilog file c:/users/bsimpkins/documents/harmonizer-main/fpga_code/ff
 Analyzing Verilog file c:/users/bsimpkins/documents/harmonizer-main/fpga_code/memory_units.sv. VERI-1482
 Analyzing Verilog file c:/users/bsimpkins/documents/harmonizer-main/fpga_code/multiplication.sv. VERI-1482
 Analyzing Verilog file c:/users/bsimpkins/documents/harmonizer-main/fpga_code/spi.sv. VERI-1482
+Analyzing Verilog file c:/users/bsimpkins/documents/harmonizer-main/fpga_code/fft.sv. VERI-1482
 Analyzing VHDL file c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd. VHDL-1481
 Analyzing VHDL file c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd
 
 INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd(4): analyzing package components. VHDL-1014
 INFO - synthesis: The default VHDL library search path is now "C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft". VHDL-1504
 Top module language type = Verilog.
-Top module name (Verilog, mixed language): fft_controller
+Top module name (Verilog, mixed language): fft
+INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/fft.sv(54): compiling module fft. VERI-1018
+INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/spi.sv(1): compiling module fft_spi. VERI-1018
+INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/spi.sv(78): compiling module fft_in_flop. VERI-1018
+INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/spi.sv(147): compiling module Extend32. VERI-1018
+INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/spi.sv(34): compiling module fft_out_flop. VERI-1018
 INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/fft_controller.sv(2): compiling module fft_controller. VERI-1018
-WARNING - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/fft_controller.sv(17): expression size 32 truncated to fit in target size 2. VERI-1209
-INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/fft_controller.sv(87): compiling module fft_counter. VERI-1018
-WARNING - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/fft_controller.sv(36): expression size 32 truncated to fit in target size 8. VERI-1209
+INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/fft_controller.sv(76): compiling module fft_counter. VERI-1018
 INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/address_gen.sv(3): compiling module agu. VERI-1018
 INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/address_gen.sv(76): compiling module reverse_bits. VERI-1018
 INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/address_gen.sv(42): compiling module processing_agu. VERI-1018
-WARNING - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/address_gen.sv(60): expression size 32 truncated to fit in target size 6. VERI-1209
-WARNING - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/address_gen.sv(70): expression size 6 truncated to fit in target size 5. VERI-1209
 INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/memory_units.sv(4): compiling module ram. VERI-1018
 INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/memory_units.sv(22): compiling module twiddle_rom. VERI-1018
 WARNING - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/memory_units.sv(27): net mem does not have a driver. VDB-1002
@@ -220,32 +224,37 @@ WARNING - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/memo
 
 
 ######## Found 4 RTL RAMs in the design.
-######## Mapping RTL RAM \ram0_a/mem to 2 EBR blocks in PSEUDO_DUAL_PORT Mode
+######## Mapping RTL RAM \fftUnit/ram0_a/mem to 2 EBR blocks in PSEUDO_DUAL_PORT Mode
 
-######## Mapping RTL RAM \ram0_b/mem to 2 EBR blocks in PSEUDO_DUAL_PORT Mode
+######## Mapping RTL RAM \fftUnit/ram0_b/mem to 2 EBR blocks in PSEUDO_DUAL_PORT Mode
 
-######## Mapping RTL RAM \ram1_a/mem to 2 EBR blocks in PSEUDO_DUAL_PORT Mode
+######## Mapping RTL RAM \fftUnit/ram1_a/mem to 2 EBR blocks in PSEUDO_DUAL_PORT Mode
 
-######## Mapping RTL RAM \ram1_b/mem to 2 EBR blocks in PSEUDO_DUAL_PORT Mode
+######## Mapping RTL RAM \fftUnit/ram1_b/mem to 2 EBR blocks in PSEUDO_DUAL_PORT Mode
 
 Mapped 4 multiplier(s)
 
 
+INFO - synthesis: Net full_reset_c with fanout 1033 was buffered for fixing max_fanout violation.
+INFO - synthesis: Net full_reset_c with fanout 1033 was buffered for fixing max_fanout violation.
+INFO - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
 
 
 <A name="lse_area"></A><B><U><big>Area Report</big></U></B>
 
-################### Begin Area Report (fft_controller)######################
-Number of register bits => 21 of 5280 (0 % )
+################### Begin Area Report (fft)######################
+Number of register bits => 3122 of 5280 (59 % )
 EBR_B => 10
-CCU2 => 95
-FD1P3XZ => 21
-IB => 18
-LUT4 => 321
+CCU2 => 109
+FD1P3XZ => 3122
+IB => 5
+INV => 2
+IOL_B => 1
+LUT4 => 2406
 MAC16 => 4
-OB => 9
+OB => 2
 ################### End Area Report ##################
-Number of odd-length carry chains : 1
+Number of odd-length carry chains : 4
 Number of even-length carry chains : 12
 
 
@@ -253,31 +262,32 @@ Number of even-length carry chains : 12
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 3
-  Net : ram_clk, loads : 78
+Number of Clocks: 4
+  Net : clk_counter[0], loads : 15
   Net : slow_clk, loads : 1
   Net : clk_c, loads : 0
+  Net : sck_c, loads : 0
 Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : load_c, loads : 109
-  Net : counter/fft_level[0], loads : 80
-  Net : counter/reset_c, loads : 21
-  Net : done_c, loads : 17
-  Net : counter/fft_level[1], loads : 14
-  Net : counter/butterfly_iter[0], loads : 13
-  Net : counter/fft_level[2], loads : 10
-  Net : n23_2, loads : 9
-  Net : counter/butterfly_iter[1], loads : 8
-  Net : address_generator/standard_logic/mask_shift[1], loads : 8
+  Net : cnt_6__N_2095, loads : 1031
+  Net : fftinReg/n11547, loads : 1000
+  Net : spi/cnt[10], loads : 999
+  Net : fftinReg/currState, loads : 999
+  Net : fftoutReg/n17883, loads : 999
+  Net : spi/n17, loads : 999
+  Net : n12627, loads : 992
+  Net : fftUnit/counter/fft_level[0], loads : 79
+  Net : fftinReg/n2195, loads : 63
+  Net : fftinReg/maxfan_replicated_net_57, loads : 58
 ################### End Clock Report ##################
 
-Peak Memory Usage: 89 MB
+Peak Memory Usage: 125 MB
 
 --------------------------------------------------------------
-Total CPU Time: 1 secs 
-Total REAL Time: 5 secs 
+Total CPU Time: 6 secs 
+Total REAL Time: 10 secs 
 --------------------------------------------------------------
 
 

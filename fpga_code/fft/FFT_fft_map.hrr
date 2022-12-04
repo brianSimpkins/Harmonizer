@@ -1,123 +1,165 @@
 ---------------------------------------------------
-Report for cell fft_controller
-   Instance path: fft_controller
+Report for cell fft
+   Instance path: fft
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        513        100.0
-                                 IOBUF	         27        100.0
-                                PFUREG	         21        100.0
+                                 IOLGC	       1.00        100.0
+                                  LUT4	       3636        100.0
+                                 IOREG	          1        100.0
+                                 IOBUF	          7        100.0
+                                PFUREG	       3122        100.0
                                    EBR	         10        100.0
                                    DSP	          4        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                                   agu	          1        13.8
-                        butterfly_unit	          1        40.7
-                           fft_counter	          1         3.1
+                        fft_controller	          1        12.2
+                           fft_in_flop	          1        28.9
+                          fft_out_flop	          1         0.3
+                               fft_spi	          1        28.6
+---------------------------------------------------
+Report for cell fft_spi
+   Instance path: fft/spi
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOLGC	       1.00        100.0
+                                  LUT4	       1040        28.6
+                                 IOREG	          1        100.0
+                                PFUREG	       1036        33.2
+---------------------------------------------------
+Report for cell fft_in_flop
+   Instance path: fft/fftinReg
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	       1052        28.9
+                                PFUREG	       1034        33.1
+---------------------------------------------------
+Report for cell fft_controller
+   Instance path: fft/fftUnit
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        443        12.2
+                                 IOBUF	          1        14.3
+                                PFUREG	         19         0.6
+                                   EBR	         10        100.0
+                                   DSP	          4        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                                   agu	          1         1.7
+                        butterfly_unit	          1         6.6
+                           fft_counter	          1         0.5
                                    ram	          1         0.0
                                 ram_U3	          1         0.0
                                 ram_U4	          1         0.0
                                 ram_U5	          1         0.0
                            twiddle_rom	          1         0.0
 ---------------------------------------------------
-Report for cell ram_U4
-   Instance path: fft_controller/ram0_b
+Report for cell twiddle_rom
+   Instance path: fft/fftUnit/twiddle_gen
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          2        20.0
+---------------------------------------------------
+Report for cell ram
+   Instance path: fft/fftUnit/ram1_b
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                    EBR	          2        20.0
 ---------------------------------------------------
 Report for cell ram_U3
-   Instance path: fft_controller/ram1_a
+   Instance path: fft/fftUnit/ram1_a
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          2        20.0
+---------------------------------------------------
+Report for cell ram_U4
+   Instance path: fft/fftUnit/ram0_b
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                    EBR	          2        20.0
 ---------------------------------------------------
 Report for cell ram_U5
-   Instance path: fft_controller/ram0_a
+   Instance path: fft/fftUnit/ram0_a
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                    EBR	          2        20.0
 ---------------------------------------------------
 Report for cell fft_counter
-   Instance path: fft_controller/counter
+   Instance path: fft/fftUnit/counter
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         16         3.1
-                                 IOBUF	          1         3.7
-                                PFUREG	         12        57.1
----------------------------------------------------
-Report for cell ram
-   Instance path: fft_controller/ram1_b
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                   EBR	          2        20.0
----------------------------------------------------
-Report for cell agu
-   Instance path: fft_controller/address_generator
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	         71        13.8
-SUB MODULES
-                                  cell	      count    LUT4 Usage(%)
-                        processing_agu	          1         9.2
----------------------------------------------------
-Report for cell processing_agu
-   Instance path: fft_controller/address_generator/standard_logic
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	         47         9.2
+                                  LUT4	         18         0.5
+                                 IOBUF	          1        14.3
+                                PFUREG	         12         0.4
 ---------------------------------------------------
 Report for cell butterfly_unit
-   Instance path: fft_controller/butt
+   Instance path: fft/fftUnit/butt
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        209        40.7
+                                  LUT4	        241         6.6
                                    DSP	          4        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                    complex_multiplier	          1        21.2
+                    complex_multiplier	          1         3.0
 ---------------------------------------------------
 Report for cell complex_multiplier
-   Instance path: fft_controller/butt/mult
+   Instance path: fft/fftUnit/butt/mult
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        109        21.2
+                                  LUT4	        109         3.0
                                    DSP	          4        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                            multiplier	          1         7.4
+                            multiplier	          1         1.0
                          multiplier_U0	          1         0.0
-                         multiplier_U1	          1         7.2
-                         multiplier_U2	          1         3.5
+                         multiplier_U1	          1         1.0
+                         multiplier_U2	          1         0.5
 ---------------------------------------------------
 Report for cell multiplier
-   Instance path: fft_controller/butt/mult/m_real_twiddle
+   Instance path: fft/fftUnit/butt/mult/m_real_twiddle
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         38         7.4
+                                  LUT4	         38         1.0
                                    DSP	          1        25.0
 ---------------------------------------------------
 Report for cell multiplier_U0
-   Instance path: fft_controller/butt/mult/m_real_b
+   Instance path: fft/fftUnit/butt/mult/m_real_b
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                    DSP	          1        25.0
 ---------------------------------------------------
 Report for cell multiplier_U1
-   Instance path: fft_controller/butt/mult/m_real
+   Instance path: fft/fftUnit/butt/mult/m_real
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         37         7.2
+                                  LUT4	         37         1.0
                                    DSP	          1        25.0
 ---------------------------------------------------
 Report for cell multiplier_U2
-   Instance path: fft_controller/butt/mult/m_imag
+   Instance path: fft/fftUnit/butt/mult/m_imag
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         18         3.5
+                                  LUT4	         18         0.5
                                    DSP	          1        25.0
 ---------------------------------------------------
-Report for cell twiddle_rom
-   Instance path: fft_controller/twiddle_gen
+Report for cell agu
+   Instance path: fft/fftUnit/address_generator
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                   EBR	          2        20.0
+                                  LUT4	         62         1.7
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                        processing_agu	          1         1.4
+---------------------------------------------------
+Report for cell processing_agu
+   Instance path: fft/fftUnit/address_generator/standard_logic
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         50         1.4
+---------------------------------------------------
+Report for cell fft_out_flop
+   Instance path: fft/fftoutReg
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10         0.3
+                                 IOBUF	          1        14.3
+                                PFUREG	       1031        33.0

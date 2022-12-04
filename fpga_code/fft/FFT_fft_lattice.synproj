@@ -44,10 +44,11 @@
 "C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv"
 "C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv"
 "C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv"
+"C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft.sv"
 
 
 -path "C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code"
--top fft_controller
+-top fft
 -udb "FFT_fft_rtl.udb"
 -output_hdl "FFT_fft.vm"
 

@@ -9,7 +9,7 @@ Performance Hardware Data Status:   Advanced       Version 1.0.
 
 
 
-Design:  fft_controller
+Design:  fft
 Family:  iCE40UP
 Device:  iCE40UP5K
 Package: SG48
@@ -42,15 +42,15 @@ Saving bit stream in "C:\Users\bsimpkins\Documents\Harmonizer-main\fpga_code\fft
     <postMsg mid="1009992" type="Info" dynamic="1" navigation="0" arg0="Bitstream authenticated."  />
 Bitstream generation complete!
 
-Total CPU Time: 0 secs 
+Total CPU Time: 1 secs 
 Total REAL Time: 7 secs 
-Peak Memory Usage: 113 MB
+Peak Memory Usage: 156 MB
 
 
 ibisgen "FFT_fft.udb" "C:/lscc/radiant/3.2/cae_library/ibis/iCE40UP.ibs"
 IBIS Models Generator: Lattice Radiant Software (64-bit) 3.2.0.18.0
 
-Fri Nov 18 17:11:23 2022
+Sat Dec  3 22:01:32 2022
 
 Loading FFT_fft.udb ...
 Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.
@@ -59,7 +59,7 @@ Performance Hardware Data Status:   Advanced       Version 1.0.
 
 
 
-Design:  fft_controller
+Design:  fft
 Family:  iCE40UP
 Device:  iCE40UP5K
 Package: SG48
@@ -85,7 +85,7 @@ Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
 Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.
 Package Status:                     Preliminary    Version 1.5.
 Loading udb::Database ...
-Design:  fft_controller
+Design:  fft
 Family:  iCE40UP
 Device:  iCE40UP5K
 Package: SG48
@@ -99,6 +99,6 @@ Writing a verilog netlist based on the FFT_fft design file.
 Writing Verilog netlist to file FFT_fft_vo.vo
 Writing SDF timing to file FFT_fft_vo.sdf
 Backanno finished with 0 posted error messages.
-Total CPU Time: 1 secs 
-Total REAL Time: 0 secs 
-Peak Memory Usage: 96 MB
+Total CPU Time: 4 secs 
+Total REAL Time: 4 secs 
+Peak Memory Usage: 232 MB

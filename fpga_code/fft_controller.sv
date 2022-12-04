@@ -1,28 +1,16 @@
 // Top level module
-module fft_controller (input logic 				clk, reset, start, load,
+module fft_controller (input logic 				clk, ram_clk, slow_clk, reset, start, load,
                        input logic [5:0] 		load_address,
                        input logic [31:0] 	data_in,
                        output logic 			done,
 			output logic processing,
                        output logic [31:0] 	data_out);
 
-   logic [1:0]    clk_counter = 0;
-   logic				slow_clk, ram_clk;
    logic			    write_0, write_1;
    logic [5:0]		fft_level, butterfly_iter, address_0_a, address_0_b, write_address_0, address_1_a, address_1_b, write_address_1, out_address;
    logic [4:0]		twiddle_address;
    logic [31:0]	twiddle, a, b, a_out, b_out, write_data_a, write_data_b, write_data;
    logic [31:0]	read_data_0_a, read_data_0_b, read_data_1_a, read_data_1_b;
-
-	always_ff @(posedge clk) begin
-		clk_counter = clk_counter + 1;
-	end
-	
-	// clock to multiplex RAM input
-	assign ram_clk = clk_counter[0];
-	
-	// clock to fix latency in ERAM
-	assign slow_clk = clk_counter[1];
 
 	// start 'processing' with a pulse from 'start'
 	always_ff @(posedge slow_clk) begin
@@ -100,7 +88,7 @@ module fft_counter (	input logic clk, processing, reset, done,
             butterfly_iter <= butterfly_iter + 1'd1;
          end else begin
             butterfly_iter <= 0;
-            fft_level <= fft_level + 1'd1;
+            fft_level <= (fft_level == 6) ? fft_level : fft_level + 1'd1;
          end
       end
    end

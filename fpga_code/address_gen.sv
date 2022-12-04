@@ -57,7 +57,7 @@ module processing_agu (input logic [5:0] 	fft_level, butterfly_iter,
       address_a  = ((temp_a << fft_level) | (temp_a >> (6 - fft_level)));
 
 		// j * 2 + 1
-		temp_b = temp_a + 1;
+		temp_b = temp_a + 6'b1;
 
       address_b  = ((temp_b << fft_level) | (temp_b >> (6 - fft_level)));
 
@@ -67,7 +67,7 @@ module processing_agu (input logic [5:0] 	fft_level, butterfly_iter,
 	  mask_shift = mask >>> fft_level;
 
 		// mask j
-      twiddle_address = mask_shift & butterfly_iter;
+      twiddle_address = mask_shift[4:0] & butterfly_iter[4:0];
 		
    end
 endmodule
