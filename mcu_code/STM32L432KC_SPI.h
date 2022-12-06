@@ -9,8 +9,10 @@
 
 #include "STM32L432KC_GPIO.h"
 
-#define SPI_CE PA11
-#define SPI_SCK PB3
+#define FULL_RST PA10
+#define RST      PA9
+#define DONE     PA11
+#define SPI_SCK  PB3
 #define SPI_MOSI PB5
 #define SPI_MISO PB4
 

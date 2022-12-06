@@ -24,7 +24,7 @@ void adc_init(char channel_num) {
   // Set 512 offset
   ADC1->OFR1 |= ADC_OFR1_OFFSET1_EN;
   ADC1->OFR1 |= _VAL2FLD(ADC_OFR1_OFFSET1_CH, channel_num);
-  ADC1->OFR1 |= _VAL2FLD(ADC_OFR1_OFFSET1, (420 << 2));
+  ADC1->OFR1 |= _VAL2FLD(ADC_OFR1_OFFSET1, (502 << 2));
 
   // Ensure DEEPPWD = 0 and ADVREGEN = 1
   ADC1->CR &= ~(ADC_CR_DEEPPWD);

@@ -43,14 +43,14 @@ Saving bit stream in "C:\Users\bsimpkins\Documents\Harmonizer-main\fpga_code\fft
 Bitstream generation complete!
 
 Total CPU Time: 1 secs 
-Total REAL Time: 7 secs 
-Peak Memory Usage: 156 MB
+Total REAL Time: 8 secs 
+Peak Memory Usage: 158 MB
 
 
 ibisgen "FFT_fft.udb" "C:/lscc/radiant/3.2/cae_library/ibis/iCE40UP.ibs"
 IBIS Models Generator: Lattice Radiant Software (64-bit) 3.2.0.18.0
 
-Sat Dec  3 22:01:32 2022
+Sun Dec  4 20:53:58 2022
 
 Loading FFT_fft.udb ...
 Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.
@@ -100,5 +100,5 @@ Writing Verilog netlist to file FFT_fft_vo.vo
 Writing SDF timing to file FFT_fft_vo.sdf
 Backanno finished with 0 posted error messages.
 Total CPU Time: 4 secs 
-Total REAL Time: 4 secs 
-Peak Memory Usage: 232 MB
+Total REAL Time: 5 secs 
+Peak Memory Usage: 235 MB

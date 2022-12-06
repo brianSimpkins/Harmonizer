@@ -1,6 +1,6 @@
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
 
-Sat Dec  3 22:01:08 2022
+Sun Dec  4 20:53:15 2022
 
 Command Line: par -w -n 1 -t 1 -s 1 -cores 1 -exp parPathBased=ON \
 	FFT_fft_map.udb FFT_fft.udb 
@@ -9,16 +9,16 @@ Command Line: par -w -n 1 -t 1 -s 1 -cores 1 -exp parPathBased=ON \
 Level/       Number       Worst        Timing       Worst        Timing       Run          Run
 Cost [udb]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            -            -            -            -            13           Completed
+5_1   *      0            23.456       0            1.715        0            31           Completed
 
 * : Design saved.
 
-Total (real) run time for 1-seed: 13 secs 
+Total (real) run time for 1-seed: 32 secs 
 
 par done!
 
 Lattice Place and Route Report for Design "FFT_fft_map.udb"
-Sat Dec  3 22:01:08 2022
+Sun Dec  4 20:53:15 2022
 
 PAR: Place And Route Radiant Software (64-bit) 3.2.0.18.0.
 Command Line: par -w -t 1 -cores 1 -exp parPathBased=ON FFT_fft_map.udb \
@@ -36,19 +36,19 @@ Family:  iCE40UP
 Device:  iCE40UP5K
 Package: SG48
 Performance Grade:   High-Performance_1.2V
-Number of Signals: 7170
-Number of Connections: 19697
+Number of Signals: 7175
+Number of Connections: 19710
 Device utilization summary:
 
    SLICE (est.)    1852/2640         70% used
-     LUT           3636/5280         68% used
-     REG           3122/5280         59% used
-   PIO                7/56           12% used
-                      7/36           19% bonded
+     LUT           3640/5280         68% used
+     REG           3123/5280         59% used
+   PIO                6/56           10% used
+                      6/36           16% bonded
    IOLOGIC            1/56            1% used
    DSP                4/8            50% used
    I2C                0/2             0% used
-   HFOSC              0/1             0% used
+   HFOSC              1/1           100% used
    LFOSC              0/1             0% used
    LEDDA_IP           0/1             0% used
    RGBA_DRV           0/1             0% used
@@ -63,42 +63,41 @@ Device utilization summary:
    OPENDRAIN          0/3             0% used
 
 Pin Constraint Summary:
-   0 out of 7 pins locked (0% locked).
-.
-...........
+   6 out of 6 pins locked (100% locked).
+
 Finished Placer Phase 0 (HIER). CPU time: 1 secs , REAL time: 4 secs 
 
 
-................
-Finished Placer Phase 0 (AP).  CPU time: 1 secs , REAL time: 5 secs 
+.......................................
+Finished Placer Phase 0 (AP).  CPU time: 10 secs , REAL time: 13 secs 
 
-Starting Placer Phase 1. CPU time: 1 secs , REAL time: 5 secs 
+Starting Placer Phase 1. CPU time: 10 secs , REAL time: 13 secs 
 ..  ..
 ....................
 
-Placer score = 702624.
+Placer score = 714989.
 
 Device SLICE utilization summary after final SLICE packing:
-   SLICE           1838/2640         69% used
+   SLICE           1848/2640         70% used
 
-Finished Placer Phase 1. CPU time: 6 secs , REAL time: 9 secs 
+Finished Placer Phase 1. CPU time: 16 secs , REAL time: 20 secs 
 
 Starting Placer Phase 2.
 .
 
-Placer score =  1730390
-Finished Placer Phase 2.  CPU time: 6 secs , REAL time: 9 secs 
+Placer score =  791719
+Finished Placer Phase 2.  CPU time: 17 secs , REAL time: 20 secs 
 
 
 ------------------ Clock Report ------------------
 
 Global Clocks :
-  PRIMARY "slow_clk" from Q0 on comp "SLICE_109" on site "R13C31C", clk load = 1048, ce load = 0, sr load = 0
-  PRIMARY "sck_c" from comp "sck" on CLK_PIN site "35 (PR13B)", clk load = 521, ce load = 0, sr load = 0
-  PRIMARY "fftinReg.n11547" from F1 on comp "fftinReg.SLICE_3211" on site "R13C3B", clk load = 0, ce load = 501, sr load = 0
-  PRIMARY "fftoutReg.full_reset_c" from comp "full_reset" on CLK_PIN site "37 (PR14A)", clk load = 0, ce load = 0, sr load = 500
-  PRIMARY "n12627" from F1 on comp "SLICE_3205" on site "R13C31B", clk load = 0, ce load = 496, sr load = 0
-  PRIMARY "clk_c" from comp "clk" on CLK_PIN site "20 (PL20B)", clk load = 17, ce load = 0, sr load = 0
+  PRIMARY "clk" from comp "hf_osc" on site "HFOSC_R1C32", clk load = 17, ce load = 0, sr load = 0
+  PRIMARY "slow_clk" from Q1 on comp "SLICE_110" on site "R18C2A", clk load = 1048, ce load = 0, sr load = 0
+  PRIMARY "sck_c" from comp "sck" on PIO site "21 (PL19B)", clk load = 521, ce load = 0, sr load = 0
+  PRIMARY "fftinReg.n11580" from F0 on comp "fftinReg.SLICE_3431" on site "R13C2A", clk load = 0, ce load = 501, sr load = 0
+  PRIMARY "n2329" from F0 on comp "SLICE_3206" on site "R14C31B", clk load = 0, ce load = 496, sr load = 0
+  PRIMARY "fftoutReg.full_reset_c" from comp "full_reset" on PIO site "23 (PR20A)", clk load = 0, ce load = 0, sr load = 496
 
   PRIMARY  : 6 out of 8 (75%)
 
@@ -106,31 +105,26 @@ Global Clocks :
 
 
 I/O Usage Summary (final):
-   7 out of 56 (12.5%) I/O sites used.
-   7 out of 36 (19.4%) bonded I/O sites used.
-   Number of I/O comps: 7; differential: 0
+   6 out of 56 (10.7%) I/O sites used.
+   6 out of 36 (16.7%) bonded I/O sites used.
+   Number of I/O comps: 6; differential: 0
    Number of Vref pins used: 0
 
 I/O Bank Usage Summary:
 +----------+---------------+------------+------------+------------+
 | I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
 +----------+---------------+------------+------------+------------+
-| 0        | 3 / 14 ( 21%) | 3.3V       |            |            |
-| 1        | 1 / 14 (  7%) | 3.3V       |            |            |
-| 2        | 3 / 8 ( 37%)  | 3.3V       |            |            |
+| 0        | 2 / 14 ( 14%) | 3.3V       |            |            |
+| 1        | 4 / 14 ( 28%) | 3.3V       |            |            |
+| 2        | 0 / 8 (  0%)  | OFF        |            |            |
 +----------+---------------+------------+------------+------------+
 
-Total Placer CPU time: 6 secs , REAL time: 10 secs 
+Total Placer CPU time: 17 secs , REAL time: 20 secs 
 
 Writing design to file FFT_fft_par.dir/5_1.udb ...
 
 
------------------------------------------------------------------
-INFO - par: ASE feature is off due to non timing-driven settings.  
------------------------------------------------------------------
-
-
-Start NBR router at 22:01:18 12/03/22
+Start NBR router at 20:53:36 12/04/22
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -148,27 +142,29 @@ Note: NBR uses a different method to calculate timing slacks. The
 Starting routing resource preassignment
 Preassignment Summary:
 --------------------------------------------------------------------------------
-3308 connections routed with dedicated routing resources
+3309 connections routed with dedicated routing resources
 6 global clock signals routed
-6391 connections routed (of 16641 total) (38.41%)
+6388 connections routed (of 16654 total) (38.36%)
 ---------------------------------------------------------
 Clock routing summary:
 Primary clocks (6 used out of 8 available):
-#0  Signal "clk_c"
-       Clock   loads: 17    out of    17 routed (100.00%)
-#1  Signal "n12627"
-       Control loads: 496   out of   496 routed (100.00%)
-#2  Signal "fftoutReg.full_reset_c"
-       Control loads: 500   out of   500 routed (100.00%)
-       Data    loads: 0     out of    34 routed (  0.00%)
-#4  Signal "slow_clk"
+#0  Signal "slow_clk"
        Clock   loads: 1048  out of  1048 routed (100.00%)
        Data    loads: 0     out of     1 routed (  0.00%)
-#5  Signal "fftinReg.n11547"
+#1  Signal "n2329"
+       Control loads: 496   out of   496 routed (100.00%)
+#2  Signal "fftoutReg.full_reset_c"
+       Control loads: 496   out of   496 routed (100.00%)
+       Data    loads: 0     out of    35 routed (  0.00%)
+#4  Signal "clk"
+       Clock   loads: 17    out of    17 routed (100.00%)
+#5  Signal "fftinReg.n11580"
        Control loads: 501   out of   501 routed (100.00%)
 #7  Signal "sck_c"
        Clock   loads: 521   out of   521 routed (100.00%)
 Other clocks:
+    Signal "done_all"
+       Clock   loads: 0     out of     1 routed (  0.00%)
     Signal "clk_counter[0]"
        Clock   loads: 0     out of     2 routed (  0.00%)
        Data    loads: 0     out of    47 routed (  0.00%)
@@ -176,75 +172,69 @@ Other clocks:
 --------------------------------------------------------------------------------
 Completed routing resource preassignment
 
-Start NBR section for initial routing at 22:01:18 12/03/22
+Start NBR section for initial routing at 20:53:37 12/04/22
 Level 4, iteration 1
-821(0.31%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
+294(0.11%) conflicts; 10266(61.64%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 26.909ns/0.000ns; real time: 4 secs 
+Level 4, iteration 2
+62(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 24.766ns/0.000ns; real time: 5 secs 
 
 Info: Initial congestion level at 75.00% usage is 0
 Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 22:01:19 12/03/22
+Start NBR section for normal routing at 20:53:41 12/04/22
 Level 4, iteration 1
-380(0.14%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
+40(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 23.942ns/0.000ns; real time: 5 secs 
 Level 4, iteration 2
-258(0.10%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
+31(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 23.942ns/0.000ns; real time: 5 secs 
 Level 4, iteration 3
-136(0.05%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
+18(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 23.942ns/0.000ns; real time: 5 secs 
 Level 4, iteration 4
-94(0.04%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
+10(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 23.942ns/0.000ns; real time: 6 secs 
 Level 4, iteration 5
-69(0.03%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 23.942ns/0.000ns; real time: 6 secs 
 Level 4, iteration 6
-51(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 23.942ns/0.000ns; real time: 6 secs 
 Level 4, iteration 7
-39(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 23.942ns/0.000ns; real time: 6 secs 
 Level 4, iteration 8
-25(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
-Level 4, iteration 9
-15(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
-Level 4, iteration 10
-14(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
-Level 4, iteration 11
-9(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
-Level 4, iteration 12
-6(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
-Level 4, iteration 13
-5(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
-Level 4, iteration 14
-2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
-Level 4, iteration 15
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
-Level 4, iteration 16
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
-Level 4, iteration 17
-2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
-Level 4, iteration 18
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
-Level 4, iteration 19
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
-Level 4, iteration 20
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
-Level 4, iteration 21
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
-Level 4, iteration 22
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
-Level 4, iteration 23
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 23.942ns/0.000ns; real time: 6 secs 
 
-Start NBR section for post-routing at 22:01:20 12/03/22
+Start NBR section for setup/hold timing optimization with effort level 3 at 20:53:42 12/04/22
+
+Starting full timing analysis...
+
+Start NBR section for post-routing at 20:53:44 12/04/22
 
 End NBR router with 0 unrouted connection
+
+Starting full timing analysis...
 
 NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
+  Estimated worst slack<setup> : 23.456ns
+  Estimated worst slack<hold > : 1.715ns
+  Timing score<setup> : 0
+  Timing score<hold > : 0
+  Number of connections with timing violations<setup> : 0 (0.00%)
+  Number of connections with timing violations<hold > : 0 (0.00%)
 -----------
 
 
-Total CPU time 2 secs 
-Total REAL time: 3 secs 
+Total CPU time 10 secs 
+Total REAL time: 10 secs 
 Completely routed.
-End of route.  16641 routed (100.00%); 0 unrouted.
+End of route.  16654 routed (100.00%); 0 unrouted.
 
 Writing design to file FFT_fft_par.dir/5_1.udb ...
 
@@ -254,15 +244,15 @@ All signals are completely routed.
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = <n/a>
-PAR_SUMMARY::Timing score<setup/<ns>> = <n/a>
-PAR_SUMMARY::Worst  slack<hold /<ns>> = <n/a>
-PAR_SUMMARY::Timing score<hold /<ns>> = <n/a>
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 23.456
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 1.715
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  Time: 9 secs 
-Total REAL Time: 13 secs 
-Peak Memory Usage: 128.77 MB
+Total CPU  Time: 28 secs 
+Total REAL Time: 32 secs 
+Peak Memory Usage: 232.57 MB
 
 
 par done!

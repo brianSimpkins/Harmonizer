@@ -1,0 +1,24 @@
+#Start recording tcl command: 12/4/2022 14:14:28
+#Project Location: C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code; Project name: FFT
+prj_open "C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/FFT.rdf"
+prj_run PAR -impl fft
+prj_run Export -impl fft
+prj_run PAR -impl fft
+prj_run Export -impl fft
+prj_run PAR -impl fft
+prj_run Export -impl fft
+prj_add_source "C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/pins.pdc"
+prj_enable_source "C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/pins.pdc"
+prj_run PAR -impl fft
+prj_run Export -impl fft
+launch_programmer_prj "C:/lscc/radiant/3.2"
+prj_run PAR -impl fft
+prj_run Export -impl fft
+prj_run PAR -impl fft
+prj_run Export -impl fft
+prj_run PAR -impl fft
+prj_run Export -impl fft
+launch_programmer_prj "C:/lscc/radiant/3.2"
+prj_run PAR -impl fft
+prj_run Export -impl fft
+#Stop recording: 12/4/2022 22:54:48

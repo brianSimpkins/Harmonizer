@@ -1,16 +1,17 @@
 ----------------------------------------------------------------------
 Report for cell fft.TECH
-Register bits:  3122 of 5280 (59.129%)
-I/O cells:      5
+Register bits:  3123 of 5280 (59.148%)
+I/O cells:      4
                                   Cell usage:
                                cell     count   Res Usage(%)
                               EBR_B        10          100.0
                                CCU2       109          100.0
-                            FD1P3XZ      3122          100.0
-                                 IB         5          100.0
+                            FD1P3XZ      3123          100.0
+                         HSOSC_CORE         1          100.0
+                                 IB         4          100.0
                                 INV         2          100.0
                               IOL_B         1          100.0
-                               LUT4      2406          100.0
+                               LUT4      2409          100.0
                               MAC16         4          100.0
                                  OB         2          100.0
 SUB MODULES
@@ -32,7 +33,7 @@ SUB MODULES
                              ram_U4         1
                              ram_U5         1
                         twiddle_rom         1
-                              TOTAL      5679
+                              TOTAL      5683
 ----------------------------------------------------------------------
 Report for cell fft_spi.v1
 Instance Path : spi
@@ -50,8 +51,8 @@ Instance Path : fftinReg
                                cell     count   Res Usage(%)
                                 FA2         4            3.7
                             FD1P3XZ      1034           33.1
-                               LUT4      1044           43.4
-                              TOTAL      2082
+                               LUT4      1047           43.5
+                              TOTAL      2085
 ----------------------------------------------------------------------
 Report for cell fft_controller.v1
 Instance Path : fftUnit
@@ -60,8 +61,8 @@ Instance Path : fftUnit
                               EBR_B        10          100.0
                                 FA2        95           87.2
                             FD1P3XZ        19            0.6
-                                 IB         1           20.0
-                               LUT4       290           12.1
+                                 IB         1           25.0
+                               LUT4       285           11.8
                               MAC16         4          100.0
 SUB MODULES
                                 agu         1
@@ -78,7 +79,7 @@ SUB MODULES
                              ram_U4         1
                              ram_U5         1
                         twiddle_rom         1
-                              TOTAL       433
+                              TOTAL       428
 ----------------------------------------------------------------------
 Report for cell twiddle_rom.v1
 Instance Path : fftUnit.twiddle_gen
@@ -121,9 +122,8 @@ Instance Path : fftUnit.counter
                                cell     count   Res Usage(%)
                                 FA2         8            7.3
                             FD1P3XZ        12            0.4
-                                 IB         1           20.0
-                               LUT4         2            0.1
-                              TOTAL        23
+                                 IB         1           25.0
+                              TOTAL        21
 ----------------------------------------------------------------------
 Report for cell butterfly_unit.v1
 Instance Path : fftUnit.butt
@@ -192,18 +192,18 @@ Instance Path : fftUnit.address_generator
                                   Cell usage:
                                cell     count   Res Usage(%)
                                 FA2         4            3.7
-                               LUT4        59            2.5
+                               LUT4        60            2.5
 SUB MODULES
                      processing_agu         1
-                              TOTAL        64
+                              TOTAL        65
 ----------------------------------------------------------------------
 Report for cell processing_agu.v1
 Instance Path : fftUnit.address_generator.standard_logic
                                   Cell usage:
                                cell     count   Res Usage(%)
                                 FA2         4            3.7
-                               LUT4        47            2.0
-                              TOTAL        51
+                               LUT4        48            2.0
+                              TOTAL        52
 ----------------------------------------------------------------------
 Report for cell fft_out_flop.v1
 Instance Path : fftoutReg
@@ -211,6 +211,6 @@ Instance Path : fftoutReg
                                cell     count   Res Usage(%)
                                 FA2         4            3.7
                             FD1P3XZ      1031           33.0
-                                 IB         1           20.0
-                               LUT4         4            0.2
-                              TOTAL      1040
+                                 IB         1           25.0
+                               LUT4        11            0.5
+                              TOTAL      1047

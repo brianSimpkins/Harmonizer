@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BuildStatus>
     <Strategy name="Strategy1">
-        <Milestone name="Export" build_result="2" build_time="1670133692">
-            <Task name="Bitgen" build_result="2" update_result="0" update_time="1670133692"/>
-            <Task name="IBIS" build_result="2" update_result="0" update_time="1670133693"/>
-            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1670133697"/>
+        <Milestone name="Export" build_result="0" build_time="1670223181">
+            <Task name="Bitgen" build_result="0" update_result="2" update_time="1670223181"/>
+            <Task name="IBIS" build_result="0" update_result="2" update_time="1670223181"/>
+            <Task name="TimingSimFileVlg" build_result="0" update_result="2" update_time="1670223181"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1670133668">
-            <Task name="Map" build_result="2" update_result="0" update_time="1670133668"/>
-            <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
+        <Milestone name="Map" build_result="0" build_time="1670223181">
+            <Task name="Map" build_result="0" update_result="2" update_time="1670223181"/>
+            <Task name="MapTrace" build_result="0" update_result="2" update_time="1670198291"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1670133681">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1670133681"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1670133685"/>
+        <Milestone name="PAR" build_result="0" build_time="1670223181">
+            <Task name="PAR" build_result="0" update_result="2" update_time="1670223181"/>
+            <Task name="PARTrace" build_result="0" update_result="2" update_time="1670223181"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1670133667">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1670133667"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1670133685"/>
+        <Milestone name="Synthesis" build_result="0" build_time="1670223181">
+            <Task name="Lattice_Synthesis" build_result="0" update_result="2" update_time="1670223181"/>
+            <Task name="LSE_Compile" build_result="0" update_result="2" update_time="1670223181"/>
             <Task name="SynTrace" build_result="0" update_result="2" update_time="1670109628"/>
             <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1670109628"/>
         </Milestone>
@@ -28,16 +28,16 @@
             <Task name="PIODRC" build_result="0" update_result="2" update_time="1670029219"/>
             <Task name="DEC" build_result="0" update_result="2" update_time="1670029219"/>
         </Milestone>
-        <Report name="FFT_fft.bgn" last_build_time="1670133692" last_build_size="1092"/>
-        <Report name="FFT_fft.bin" last_build_time="1670133692" last_build_size="104156"/>
+        <Report name="FFT_fft.bgn" last_build_time="1670216038" last_build_size="1092"/>
+        <Report name="FFT_fft.bin" last_build_time="1670216038" last_build_size="104156"/>
         <Report name="FFT_fft.lsedata" last_build_time="0" last_build_size="0"/>
-        <Report name="FFT_fft.twr.html" last_build_time="1670133685" last_build_size="12813"/>
-        <Report name="FFT_fft.udb" last_build_time="1670133681" last_build_size="475299"/>
-        <Report name="FFT_fft_map.udb" last_build_time="1670133668" last_build_size="258341"/>
-        <Report name="FFT_fft_rtl.udb" last_build_time="1670133663" last_build_size="244565"/>
-        <Report name="FFT_fft_syn.udb" last_build_time="1670133667" last_build_size="189082"/>
-        <Report name="FFT_fft_vo.sdf" last_build_time="1670133697" last_build_size="3079795"/>
-        <Report name="FFT_fft_vo.vo" last_build_time="1670133697" last_build_size="3132011"/>
-        <Report name="IBIS/FFT_fft.ibs" last_build_time="1670133693" last_build_size="54124"/>
+        <Report name="FFT_fft.twr.html" last_build_time="1670216030" last_build_size="360743"/>
+        <Report name="FFT_fft.udb" last_build_time="1670216027" last_build_size="450511"/>
+        <Report name="FFT_fft_map.udb" last_build_time="1670215995" last_build_size="260353"/>
+        <Report name="FFT_fft_rtl.udb" last_build_time="1670215990" last_build_size="245330"/>
+        <Report name="FFT_fft_syn.udb" last_build_time="1670215994" last_build_size="188682"/>
+        <Report name="FFT_fft_vo.sdf" last_build_time="1670216043" last_build_size="3088551"/>
+        <Report name="FFT_fft_vo.vo" last_build_time="1670216043" last_build_size="3127891"/>
+        <Report name="IBIS/FFT_fft.ibs" last_build_time="1670216038" last_build_size="54067"/>
     </Strategy>
 </BuildStatus>

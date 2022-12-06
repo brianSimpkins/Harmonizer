@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Dec  3 22:00:56 2022
+Sun Dec  4 20:53:03 2022
 
 
 Command Line:  C:\lscc\radiant\3.2\ispfpga\bin\nt64\synthesis.exe -f FFT_fft_lattice.synproj -gui -msgset C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/promote.xml 
@@ -179,10 +179,11 @@ INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd(4): analyzing packa
 INFO - synthesis: The default VHDL library search path is now "C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft". VHDL-1504
 Top module language type = Verilog.
 Top module name (Verilog, mixed language): fft
-INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/fft.sv(54): compiling module fft. VERI-1018
+INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/fft.sv(2): compiling module fft. VERI-1018
+INFO - synthesis: C:/lscc/radiant/3.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV="0b10"). VERI-1018
 INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/spi.sv(1): compiling module fft_spi. VERI-1018
-INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/spi.sv(78): compiling module fft_in_flop. VERI-1018
-INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/spi.sv(147): compiling module Extend32. VERI-1018
+INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/spi.sv(81): compiling module fft_in_flop. VERI-1018
+INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/spi.sv(150): compiling module Extend32. VERI-1018
 INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/spi.sv(34): compiling module fft_out_flop. VERI-1018
 INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/fft_controller.sv(2): compiling module fft_controller. VERI-1018
 INFO - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/fft_controller.sv(76): compiling module fft_counter. VERI-1018
@@ -235,22 +236,23 @@ WARNING - synthesis: c:/users/bsimpkins/documents/harmonizer-main/fpga_code/memo
 Mapped 4 multiplier(s)
 
 
-INFO - synthesis: Net full_reset_c with fanout 1033 was buffered for fixing max_fanout violation.
-INFO - synthesis: Net full_reset_c with fanout 1033 was buffered for fixing max_fanout violation.
+INFO - synthesis: Net full_reset_c with fanout 1027 was buffered for fixing max_fanout violation.
+INFO - synthesis: Net full_reset_c with fanout 1027 was buffered for fixing max_fanout violation.
 INFO - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
 
 
 <A name="lse_area"></A><B><U><big>Area Report</big></U></B>
 
 ################### Begin Area Report (fft)######################
-Number of register bits => 3122 of 5280 (59 % )
+Number of register bits => 3123 of 5280 (59 % )
 EBR_B => 10
 CCU2 => 109
-FD1P3XZ => 3122
-IB => 5
+FD1P3XZ => 3123
+HSOSC_CORE => 1
+IB => 4
 INV => 2
 IOL_B => 1
-LUT4 => 2406
+LUT4 => 2409
 MAC16 => 4
 OB => 2
 ################### End Area Report ##################
@@ -262,24 +264,25 @@ Number of even-length carry chains : 12
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 4
+Number of Clocks: 5
   Net : clk_counter[0], loads : 15
   Net : slow_clk, loads : 1
-  Net : clk_c, loads : 0
+  Net : clk, loads : 0
   Net : sck_c, loads : 0
+  Net : fftoutReg/done_all, loads : 0
 Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : cnt_6__N_2095, loads : 1031
-  Net : fftinReg/n11547, loads : 1000
+  Net : cnt_6__N_2097, loads : 1031
+  Net : fftinReg/n11580, loads : 1000
   Net : spi/cnt[10], loads : 999
   Net : fftinReg/currState, loads : 999
-  Net : fftoutReg/n17883, loads : 999
-  Net : spi/n17, loads : 999
-  Net : n12627, loads : 992
-  Net : fftUnit/counter/fft_level[0], loads : 79
-  Net : fftinReg/n2195, loads : 63
+  Net : spi/n29, loads : 999
+  Net : fftoutReg/n18008, loads : 999
+  Net : n2329, loads : 992
+  Net : fftUnit/counter/fft_level[0], loads : 80
+  Net : fftinReg/n2202, loads : 63
   Net : fftinReg/maxfan_replicated_net_57, loads : 58
 ################### End Clock Report ##################
 

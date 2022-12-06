@@ -1,7 +1,109 @@
 # Reading pref.tcl
-vsim work.fft_testbench_spi
-# vsim work.fft_testbench_spi 
-# Start time: 21:26:24 on Dec 03,2022
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:01:19 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv 
+# -- Compiling module agu
+# -- Compiling module processing_agu
+# -- Compiling module reverse_bits
+# 
+# Top level modules:
+# 	agu
+# End time: 20:01:19 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:01:19 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft.sv 
+# -- Compiling module fft
+# 
+# Top level modules:
+# 	fft
+# End time: 20:01:19 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:01:19 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv 
+# -- Compiling module fft_controller
+# -- Compiling module fft_counter
+# 
+# Top level modules:
+# 	fft_controller
+# End time: 20:01:19 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:01:20 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv 
+# -- Compiling module ram
+# -- Compiling module twiddle_rom
+# 
+# Top level modules:
+# 	ram
+# 	twiddle_rom
+# End time: 20:01:20 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:01:20 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv 
+# -- Compiling module butterfly_unit
+# -- Compiling module complex_multiplier
+# -- Compiling module multiplier
+# 
+# Top level modules:
+# 	butterfly_unit
+# End time: 20:01:20 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:01:20 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv 
+# -- Compiling module fft_spi
+# -- Compiling module fft_out_flop
+# -- Compiling module fft_in_flop
+# -- Compiling module Extend32
+# 
+# Top level modules:
+# 	fft_spi
+# 	fft_out_flop
+# 	fft_in_flop
+# End time: 20:01:20 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:01:20 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv 
+# -- Compiling module fft_testbench
+# 
+# Top level modules:
+# 	fft_testbench
+# End time: 20:01:20 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_main.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:01:20 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_main.sv 
+# -- Compiling module testbench_main
+# 
+# Top level modules:
+# 	testbench_main
+# End time: 20:01:20 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:01:20 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv 
+# -- Compiling module fft_testbench_spi
+# 
+# Top level modules:
+# 	fft_testbench_spi
+# End time: 20:01:20 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui work.testbench_main
+# vsim -gui work.testbench_main 
+# Start time: 20:01:31 on Dec 04,2022
 # //  ModelSim - Lattice FPGA Edition 2021.4 Oct 14 2021
 # //
 # //  Copyright 1991-2021 Mentor Graphics Corporation
@@ -16,7 +118,16 @@ vsim work.fft_testbench_spi
 # //  18 U.S.C. Section 1905.
 # //
 # Loading sv_std.std
-# Loading work.fft_testbench_spi
+# Loading work.testbench_main
+# Loading work.fft
+# ** Error: (vsim-3033) Instantiation of 'HSOSC' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_main/fft File: C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft.sv Line: 15
+#         Searched libraries:
+#             C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/work
+# Loading work.fft_spi
+# Loading work.fft_in_flop
+# Loading work.Extend32
+# Loading work.fft_out_flop
 # Loading work.fft_controller
 # Loading work.fft_counter
 # Loading work.agu
@@ -27,41 +138,114 @@ vsim work.fft_testbench_spi
 # Loading work.butterfly_unit
 # Loading work.complex_multiplier
 # Loading work.multiplier
-# Loading work.fft_out_flop
-# Loading work.fft_in_flop
-# Loading work.Extend32
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 11, found 9.
-#    Time: 0 ps  Iteration: 0  Instance: /fft_testbench_spi/dut File: C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (6) for port 'start'. The port definition is at: C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv(2).
-#    Time: 0 ps  Iteration: 0  Instance: /fft_testbench_spi/dut File: C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'load'. The port definition is at: C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv(2).
-#    Time: 0 ps  Iteration: 0  Instance: /fft_testbench_spi/dut File: C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (1) for port 'load_address'. The port definition is at: C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /fft_testbench_spi/dut File: C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_in'. The port definition is at: C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /fft_testbench_spi/dut File: C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'done'. The port definition is at: C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /fft_testbench_spi/dut File: C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv Line: 26
-# ** Warning: (vsim-3722) C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv(26): [TFMPC] - Missing connection for port 'processing'.
-# ** Warning: (vsim-3722) C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv(26): [TFMPC] - Missing connection for port 'data_out'.
-# ** Error (suppressible): (vsim-3389) Port 'idx' not found in the connected module (1st connection).
-#    Time: 0 ps  Iteration: 0  Instance: /fft_testbench_spi/fftout File: C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv Line: 27
-# ** Error (suppressible): (vsim-3389) Port 'reset' not found in the connected module (3rd connection).
-#    Time: 0 ps  Iteration: 0  Instance: /fft_testbench_spi/fftout File: C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv Line: 27
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'fftin'.  Expected 12, found 11.
-#    Time: 0 ps  Iteration: 0  Instance: /fft_testbench_spi/fftin File: C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv Line: 28
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (6) for port 'idx'. The port definition is at: C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv(94).
-#    Time: 0 ps  Iteration: 0  Instance: /fft_testbench_spi/fftin File: C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv Line: 28
-# ** Error: (vsim-3063) Port 'cs' not found in the connected module (6th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /fft_testbench_spi/fftin File: C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv Line: 28
-# ** Warning: (vsim-3722) C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv(28): [TFMPC] - Missing connection for port 'dataReady'.
-# ** Warning: (vsim-3722) C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv(28): [TFMPC] - Missing connection for port 'fft_done'.
 # Error loading design
-# End time: 21:26:37 on Dec 03,2022, Elapsed time: 0:00:13
-# Errors: 3, Warnings: 12
+# End time: 20:01:45 on Dec 04,2022, Elapsed time: 0:00:14
+# Errors: 1, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:03:14 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv 
+# -- Compiling module agu
+# -- Compiling module processing_agu
+# -- Compiling module reverse_bits
+# 
+# Top level modules:
+# 	agu
+# End time: 20:03:14 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:03:14 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft.sv 
+# -- Compiling module fft
+# 
+# Top level modules:
+# 	fft
+# End time: 20:03:14 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:03:14 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv 
+# -- Compiling module fft_controller
+# -- Compiling module fft_counter
+# 
+# Top level modules:
+# 	fft_controller
+# End time: 20:03:14 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:03:14 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv 
+# -- Compiling module ram
+# -- Compiling module twiddle_rom
+# 
+# Top level modules:
+# 	ram
+# 	twiddle_rom
+# End time: 20:03:14 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:03:14 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv 
+# -- Compiling module butterfly_unit
+# -- Compiling module complex_multiplier
+# -- Compiling module multiplier
+# 
+# Top level modules:
+# 	butterfly_unit
+# End time: 20:03:14 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:03:14 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv 
+# -- Compiling module fft_spi
+# -- Compiling module fft_out_flop
+# -- Compiling module fft_in_flop
+# -- Compiling module Extend32
+# 
+# Top level modules:
+# 	fft_spi
+# 	fft_out_flop
+# 	fft_in_flop
+# End time: 20:03:14 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:03:14 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv 
+# -- Compiling module fft_testbench
+# 
+# Top level modules:
+# 	fft_testbench
+# End time: 20:03:14 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_main.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:03:14 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_main.sv 
+# -- Compiling module testbench_main
+# 
+# Top level modules:
+# 	testbench_main
+# End time: 20:03:14 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:03:14 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv 
+# -- Compiling module fft_testbench_spi
+# 
+# Top level modules:
+# 	fft_testbench_spi
+# End time: 20:03:14 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 vsim work.testbench_main
 # vsim work.testbench_main 
-# Start time: 21:27:00 on Dec 03,2022
+# Start time: 20:03:18 on Dec 04,2022
 # Loading sv_std.std
 # Loading work.testbench_main
 # Loading work.fft
@@ -79,158 +263,16 @@ vsim work.testbench_main
 # Loading work.butterfly_unit
 # Loading work.complex_multiplier
 # Loading work.multiplier
-vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 21:29:02 on Dec 03,2022
-# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv 
-# -- Compiling module agu
-# -- Compiling module processing_agu
-# -- Compiling module reverse_bits
-# 
-# Top level modules:
-# 	agu
-# End time: 21:29:03 on Dec 03,2022, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft.sv
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 21:29:03 on Dec 03,2022
-# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft.sv 
-# -- Compiling module fft
-# 
-# Top level modules:
-# 	fft
-# End time: 21:29:03 on Dec 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 21:29:03 on Dec 03,2022
-# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv 
-# -- Compiling module fft_controller
-# -- Compiling module fft_counter
-# 
-# Top level modules:
-# 	fft_controller
-# End time: 21:29:03 on Dec 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 21:29:03 on Dec 03,2022
-# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv 
-# -- Compiling module ram
-# -- Compiling module twiddle_rom
-# 
-# Top level modules:
-# 	ram
-# 	twiddle_rom
-# End time: 21:29:03 on Dec 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 21:29:03 on Dec 03,2022
-# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv 
-# -- Compiling module butterfly_unit
-# -- Compiling module complex_multiplier
-# -- Compiling module multiplier
-# 
-# Top level modules:
-# 	butterfly_unit
-# End time: 21:29:03 on Dec 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 21:29:03 on Dec 03,2022
-# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv 
-# -- Compiling module fft_spi
-# -- Compiling module fft_out_flop
-# -- Compiling module fft_in_flop
-# -- Compiling module Extend32
-# 
-# Top level modules:
-# 	fft_spi
-# 	fft_out_flop
-# 	fft_in_flop
-# End time: 21:29:03 on Dec 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 21:29:03 on Dec 03,2022
-# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv 
-# -- Compiling module fft_testbench
-# 
-# Top level modules:
-# 	fft_testbench
-# End time: 21:29:03 on Dec 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_main.sv
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 21:29:03 on Dec 03,2022
-# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_main.sv 
-# -- Compiling module testbench_main
-# 
-# Top level modules:
-# 	testbench_main
-# End time: 21:29:03 on Dec 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 21:29:03 on Dec 03,2022
-# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv 
-# -- Compiling module fft_testbench_spi
-# 
-# Top level modules:
-# 	fft_testbench_spi
-# End time: 21:29:03 on Dec 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
 add wave -position end sim:/testbench_main/*
-add wave -position end sim:/testbench_main/fft/fftinReg/*
+run 6000000
 add wave -position end sim:/testbench_main/fft/fftoutReg/*
-add wave -position end sim:/testbench_main/fft/*
 restart -f; run 400000
-# Loading work.testbench_main
-# Loading work.fft
-# Loading work.fft_spi
-# Loading work.fft_in_flop
-# Loading work.Extend32
-# Loading work.fft_out_flop
-# Loading work.fft_controller
-# Loading work.fft_counter
-# Loading work.agu
-# Loading work.reverse_bits
-# Loading work.processing_agu
-# Loading work.ram
-# Loading work.twiddle_rom
-# Loading work.butterfly_unit
-# Loading work.complex_multiplier
-# Loading work.multiplier
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench_main/fft/idxOut'. 
-add wave -position 15 sim:/testbench_main/fft/spi/*
+add wave -position 32 sim:/testbench_main/fft/fftinReg/*
+add wave -position end sim:/testbench_main/fft/fftUnit/*
 restart -f; run 400000
-vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 21:35:37 on Dec 03,2022
-# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv 
-# -- Compiling module fft_spi
-# -- Compiling module fft_out_flop
-# -- Compiling module fft_in_flop
-# -- Compiling module Extend32
-# 
-# Top level modules:
-# 	fft_spi
-# 	fft_out_flop
-# 	fft_in_flop
-# End time: 21:35:37 on Dec 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart -f; run 400000
-# Loading work.fft_spi
-# Loading work.fft_in_flop
-# Loading work.Extend32
-# Loading work.fft_out_flop
-run 200000
-restart -f; run 390000
-run 200000
 vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 21:54:11 on Dec 03,2022
+# Start time: 20:17:57 on Dec 04,2022
 # vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv 
 # -- Compiling module agu
 # -- Compiling module processing_agu
@@ -238,32 +280,32 @@ vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main
 # 
 # Top level modules:
 # 	agu
-# End time: 21:54:11 on Dec 03,2022, Elapsed time: 0:00:00
+# End time: 20:17:57 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft.sv
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 21:54:11 on Dec 03,2022
+# Start time: 20:17:57 on Dec 04,2022
 # vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft.sv 
 # -- Compiling module fft
 # 
 # Top level modules:
 # 	fft
-# End time: 21:54:11 on Dec 03,2022, Elapsed time: 0:00:00
+# End time: 20:17:57 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 21:54:11 on Dec 03,2022
+# Start time: 20:17:57 on Dec 04,2022
 # vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv 
 # -- Compiling module fft_controller
 # -- Compiling module fft_counter
 # 
 # Top level modules:
 # 	fft_controller
-# End time: 21:54:11 on Dec 03,2022, Elapsed time: 0:00:00
+# End time: 20:17:57 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 21:54:11 on Dec 03,2022
+# Start time: 20:17:57 on Dec 04,2022
 # vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv 
 # -- Compiling module ram
 # -- Compiling module twiddle_rom
@@ -271,11 +313,11 @@ vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main
 # Top level modules:
 # 	ram
 # 	twiddle_rom
-# End time: 21:54:11 on Dec 03,2022, Elapsed time: 0:00:00
+# End time: 20:17:57 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 21:54:11 on Dec 03,2022
+# Start time: 20:17:57 on Dec 04,2022
 # vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv 
 # -- Compiling module butterfly_unit
 # -- Compiling module complex_multiplier
@@ -283,11 +325,11 @@ vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main
 # 
 # Top level modules:
 # 	butterfly_unit
-# End time: 21:54:11 on Dec 03,2022, Elapsed time: 0:00:00
+# End time: 20:17:57 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 21:54:11 on Dec 03,2022
+# Start time: 20:17:57 on Dec 04,2022
 # vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv 
 # -- Compiling module fft_spi
 # -- Compiling module fft_out_flop
@@ -298,59 +340,41 @@ vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main
 # 	fft_spi
 # 	fft_out_flop
 # 	fft_in_flop
-# End time: 21:54:11 on Dec 03,2022, Elapsed time: 0:00:00
+# End time: 20:17:57 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 21:54:11 on Dec 03,2022
+# Start time: 20:17:57 on Dec 04,2022
 # vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv 
 # -- Compiling module fft_testbench
 # 
 # Top level modules:
 # 	fft_testbench
-# End time: 21:54:11 on Dec 03,2022, Elapsed time: 0:00:00
+# End time: 20:17:57 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_main.sv
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 21:54:11 on Dec 03,2022
+# Start time: 20:17:57 on Dec 04,2022
 # vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_main.sv 
 # -- Compiling module testbench_main
 # 
 # Top level modules:
 # 	testbench_main
-# End time: 21:54:11 on Dec 03,2022, Elapsed time: 0:00:00
+# End time: 20:17:57 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 21:54:11 on Dec 03,2022
+# Start time: 20:17:57 on Dec 04,2022
 # vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv 
 # -- Compiling module fft_testbench_spi
 # 
 # Top level modules:
 # 	fft_testbench_spi
-# End time: 21:54:11 on Dec 03,2022, Elapsed time: 0:00:00
+# End time: 20:17:57 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-restart -f; run 390000
-# Loading work.testbench_main
-# Loading work.fft
-# Loading work.fft_spi
-# Loading work.fft_in_flop
-# Loading work.Extend32
-# Loading work.fft_out_flop
-# Loading work.fft_controller
-# Loading work.fft_counter
-# Loading work.agu
-# Loading work.reverse_bits
-# Loading work.processing_agu
-# Loading work.ram
-# Loading work.twiddle_rom
-# Loading work.butterfly_unit
-# Loading work.complex_multiplier
-# Loading work.multiplier
-run 200000
 vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 22:01:54 on Dec 03,2022
+# Start time: 20:18:08 on Dec 04,2022
 # vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv 
 # -- Compiling module agu
 # -- Compiling module processing_agu
@@ -358,32 +382,32 @@ vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main
 # 
 # Top level modules:
 # 	agu
-# End time: 22:01:54 on Dec 03,2022, Elapsed time: 0:00:00
+# End time: 20:18:08 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft.sv
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 22:01:54 on Dec 03,2022
+# Start time: 20:18:08 on Dec 04,2022
 # vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft.sv 
 # -- Compiling module fft
 # 
 # Top level modules:
 # 	fft
-# End time: 22:01:54 on Dec 03,2022, Elapsed time: 0:00:00
+# End time: 20:18:08 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 22:01:54 on Dec 03,2022
+# Start time: 20:18:08 on Dec 04,2022
 # vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv 
 # -- Compiling module fft_controller
 # -- Compiling module fft_counter
 # 
 # Top level modules:
 # 	fft_controller
-# End time: 22:01:54 on Dec 03,2022, Elapsed time: 0:00:00
+# End time: 20:18:08 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 22:01:54 on Dec 03,2022
+# Start time: 20:18:08 on Dec 04,2022
 # vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv 
 # -- Compiling module ram
 # -- Compiling module twiddle_rom
@@ -391,11 +415,11 @@ vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main
 # Top level modules:
 # 	ram
 # 	twiddle_rom
-# End time: 22:01:54 on Dec 03,2022, Elapsed time: 0:00:00
+# End time: 20:18:08 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 22:01:54 on Dec 03,2022
+# Start time: 20:18:08 on Dec 04,2022
 # vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv 
 # -- Compiling module butterfly_unit
 # -- Compiling module complex_multiplier
@@ -403,11 +427,11 @@ vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main
 # 
 # Top level modules:
 # 	butterfly_unit
-# End time: 22:01:54 on Dec 03,2022, Elapsed time: 0:00:00
+# End time: 20:18:08 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 22:01:54 on Dec 03,2022
+# Start time: 20:18:08 on Dec 04,2022
 # vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv 
 # -- Compiling module fft_spi
 # -- Compiling module fft_out_flop
@@ -418,39 +442,39 @@ vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main
 # 	fft_spi
 # 	fft_out_flop
 # 	fft_in_flop
-# End time: 22:01:54 on Dec 03,2022, Elapsed time: 0:00:00
+# End time: 20:18:08 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 22:01:55 on Dec 03,2022
+# Start time: 20:18:08 on Dec 04,2022
 # vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv 
 # -- Compiling module fft_testbench
 # 
 # Top level modules:
 # 	fft_testbench
-# End time: 22:01:55 on Dec 03,2022, Elapsed time: 0:00:00
+# End time: 20:18:08 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_main.sv
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 22:01:55 on Dec 03,2022
+# Start time: 20:18:08 on Dec 04,2022
 # vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_main.sv 
 # -- Compiling module testbench_main
 # 
 # Top level modules:
 # 	testbench_main
-# End time: 22:01:55 on Dec 03,2022, Elapsed time: 0:00:00
+# End time: 20:18:08 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-# Start time: 22:01:55 on Dec 03,2022
+# Start time: 20:18:08 on Dec 04,2022
 # vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv 
 # -- Compiling module fft_testbench_spi
 # 
 # Top level modules:
 # 	fft_testbench_spi
-# End time: 22:01:55 on Dec 03,2022, Elapsed time: 0:00:00
+# End time: 20:18:08 on Dec 04,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-restart -f; run 600000
+restart -f; run 400000
 # Loading work.testbench_main
 # Loading work.fft
 # Loading work.fft_spi
@@ -467,6 +491,508 @@ restart -f; run 600000
 # Loading work.butterfly_unit
 # Loading work.complex_multiplier
 # Loading work.multiplier
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench_main/fft/fftoutReg/idx'. 
-# End time: 22:03:52 on Dec 03,2022, Elapsed time: 0:36:52
+run 400000
+add wave -position end  sim:/testbench_main/fft/fftUnit/ram0_a/mem
+restart -f; run 800000
+add wave -position end  sim:/testbench_main/fft/fftUnit/address_generator/out_address
+add wave -position end  sim:/testbench_main/fft/fftUnit/address_generator/out_address
+restart -f; run 800000
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:28:26 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv 
+# -- Compiling module agu
+# -- Compiling module processing_agu
+# -- Compiling module reverse_bits
+# 
+# Top level modules:
+# 	agu
+# End time: 20:28:26 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:28:26 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft.sv 
+# -- Compiling module fft
+# 
+# Top level modules:
+# 	fft
+# End time: 20:28:26 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:28:26 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv 
+# -- Compiling module fft_controller
+# -- Compiling module fft_counter
+# 
+# Top level modules:
+# 	fft_controller
+# End time: 20:28:26 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:28:26 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv 
+# -- Compiling module ram
+# -- Compiling module twiddle_rom
+# 
+# Top level modules:
+# 	ram
+# 	twiddle_rom
+# End time: 20:28:26 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:28:26 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv 
+# -- Compiling module butterfly_unit
+# -- Compiling module complex_multiplier
+# -- Compiling module multiplier
+# 
+# Top level modules:
+# 	butterfly_unit
+# End time: 20:28:26 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:28:26 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv 
+# -- Compiling module fft_spi
+# -- Compiling module fft_out_flop
+# -- Compiling module fft_in_flop
+# -- Compiling module Extend32
+# 
+# Top level modules:
+# 	fft_spi
+# 	fft_out_flop
+# 	fft_in_flop
+# End time: 20:28:26 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:28:26 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv 
+# -- Compiling module fft_testbench
+# 
+# Top level modules:
+# 	fft_testbench
+# End time: 20:28:26 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_main.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:28:26 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_main.sv 
+# -- Compiling module testbench_main
+# 
+# Top level modules:
+# 	testbench_main
+# End time: 20:28:26 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:28:26 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv 
+# -- Compiling module fft_testbench_spi
+# 
+# Top level modules:
+# 	fft_testbench_spi
+# End time: 20:28:26 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f; run 800000
+# Loading work.testbench_main
+# Loading work.fft
+# Loading work.fft_spi
+# Loading work.fft_in_flop
+# Loading work.Extend32
+# Loading work.fft_out_flop
+# Loading work.fft_controller
+# Loading work.fft_counter
+# Loading work.agu
+# Loading work.reverse_bits
+# Loading work.processing_agu
+# Loading work.ram
+# Loading work.twiddle_rom
+# Loading work.butterfly_unit
+# Loading work.complex_multiplier
+# Loading work.multiplier
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:29:50 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv 
+# -- Compiling module fft_spi
+# -- Compiling module fft_out_flop
+# -- Compiling module fft_in_flop
+# -- Compiling module Extend32
+# 
+# Top level modules:
+# 	fft_spi
+# 	fft_out_flop
+# 	fft_in_flop
+# End time: 20:29:50 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f; run 800000
+# Loading work.fft_spi
+# Loading work.fft_in_flop
+# Loading work.Extend32
+# Loading work.fft_out_flop
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:32:46 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv 
+# -- Compiling module agu
+# -- Compiling module processing_agu
+# -- Compiling module reverse_bits
+# 
+# Top level modules:
+# 	agu
+# End time: 20:32:46 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:32:46 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft.sv 
+# -- Compiling module fft
+# 
+# Top level modules:
+# 	fft
+# End time: 20:32:46 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:32:46 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv 
+# -- Compiling module fft_controller
+# -- Compiling module fft_counter
+# 
+# Top level modules:
+# 	fft_controller
+# End time: 20:32:46 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:32:46 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv 
+# -- Compiling module ram
+# -- Compiling module twiddle_rom
+# 
+# Top level modules:
+# 	ram
+# 	twiddle_rom
+# End time: 20:32:46 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:32:46 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv 
+# -- Compiling module butterfly_unit
+# -- Compiling module complex_multiplier
+# -- Compiling module multiplier
+# 
+# Top level modules:
+# 	butterfly_unit
+# End time: 20:32:46 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:32:46 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv 
+# -- Compiling module fft_spi
+# -- Compiling module fft_out_flop
+# -- Compiling module fft_in_flop
+# -- Compiling module Extend32
+# 
+# Top level modules:
+# 	fft_spi
+# 	fft_out_flop
+# 	fft_in_flop
+# End time: 20:32:46 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:32:46 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv 
+# -- Compiling module fft_testbench
+# 
+# Top level modules:
+# 	fft_testbench
+# End time: 20:32:46 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_main.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:32:46 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_main.sv 
+# -- Compiling module testbench_main
+# 
+# Top level modules:
+# 	testbench_main
+# End time: 20:32:46 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:32:46 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv 
+# -- Compiling module fft_testbench_spi
+# 
+# Top level modules:
+# 	fft_testbench_spi
+# End time: 20:32:46 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f; run 800000
+# Loading work.testbench_main
+# Loading work.fft
+# Loading work.fft_spi
+# Loading work.fft_in_flop
+# Loading work.Extend32
+# Loading work.fft_out_flop
+# Loading work.fft_controller
+# Loading work.fft_counter
+# Loading work.agu
+# Loading work.reverse_bits
+# Loading work.processing_agu
+# Loading work.ram
+# Loading work.twiddle_rom
+# Loading work.butterfly_unit
+# Loading work.complex_multiplier
+# Loading work.multiplier
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:41:46 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv 
+# -- Compiling module agu
+# -- Compiling module processing_agu
+# -- Compiling module reverse_bits
+# 
+# Top level modules:
+# 	agu
+# End time: 20:41:46 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:41:46 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft.sv 
+# -- Compiling module fft
+# 
+# Top level modules:
+# 	fft
+# End time: 20:41:46 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:41:46 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv 
+# -- Compiling module fft_controller
+# -- Compiling module fft_counter
+# 
+# Top level modules:
+# 	fft_controller
+# End time: 20:41:46 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:41:46 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv 
+# -- Compiling module ram
+# -- Compiling module twiddle_rom
+# 
+# Top level modules:
+# 	ram
+# 	twiddle_rom
+# End time: 20:41:46 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:41:46 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv 
+# -- Compiling module butterfly_unit
+# -- Compiling module complex_multiplier
+# -- Compiling module multiplier
+# 
+# Top level modules:
+# 	butterfly_unit
+# End time: 20:41:46 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:41:46 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv 
+# -- Compiling module fft_spi
+# -- Compiling module fft_out_flop
+# -- Compiling module fft_in_flop
+# -- Compiling module Extend32
+# 
+# Top level modules:
+# 	fft_spi
+# 	fft_out_flop
+# 	fft_in_flop
+# End time: 20:41:46 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:41:46 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv 
+# -- Compiling module fft_testbench
+# 
+# Top level modules:
+# 	fft_testbench
+# End time: 20:41:46 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_main.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:41:46 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_main.sv 
+# -- Compiling module testbench_main
+# 
+# Top level modules:
+# 	testbench_main
+# End time: 20:41:46 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:41:46 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv 
+# -- Compiling module fft_testbench_spi
+# 
+# Top level modules:
+# 	fft_testbench_spi
+# End time: 20:41:46 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Load canceled
+restart -f; run 800000
+# Loading work.testbench_main
+# Loading work.fft
+# Loading work.fft_spi
+# Loading work.fft_in_flop
+# Loading work.Extend32
+# Loading work.fft_out_flop
+# Loading work.fft_controller
+# Loading work.fft_counter
+# Loading work.agu
+# Loading work.reverse_bits
+# Loading work.processing_agu
+# Loading work.ram
+# Loading work.twiddle_rom
+# Loading work.butterfly_unit
+# Loading work.complex_multiplier
+# Loading work.multiplier
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:44:57 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/address_gen.sv 
+# -- Compiling module agu
+# -- Compiling module processing_agu
+# -- Compiling module reverse_bits
+# 
+# Top level modules:
+# 	agu
+# End time: 20:44:57 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:44:57 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft.sv 
+# -- Compiling module fft
+# 
+# Top level modules:
+# 	fft
+# End time: 20:44:57 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:44:57 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/fft_controller.sv 
+# -- Compiling module fft_controller
+# -- Compiling module fft_counter
+# 
+# Top level modules:
+# 	fft_controller
+# End time: 20:44:57 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:44:57 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/memory_units.sv 
+# -- Compiling module ram
+# -- Compiling module twiddle_rom
+# 
+# Top level modules:
+# 	ram
+# 	twiddle_rom
+# End time: 20:44:57 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:44:57 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/multiplication.sv 
+# -- Compiling module butterfly_unit
+# -- Compiling module complex_multiplier
+# -- Compiling module multiplier
+# 
+# Top level modules:
+# 	butterfly_unit
+# End time: 20:44:57 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:44:57 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/spi.sv 
+# -- Compiling module fft_spi
+# -- Compiling module fft_out_flop
+# -- Compiling module fft_in_flop
+# -- Compiling module Extend32
+# 
+# Top level modules:
+# 	fft_spi
+# 	fft_out_flop
+# 	fft_in_flop
+# End time: 20:44:57 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:44:58 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench.sv 
+# -- Compiling module fft_testbench
+# 
+# Top level modules:
+# 	fft_testbench
+# End time: 20:44:58 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_main.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:44:58 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_main.sv 
+# -- Compiling module testbench_main
+# 
+# Top level modules:
+# 	testbench_main
+# End time: 20:44:58 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 20:44:58 on Dec 04,2022
+# vlog -reportprogress 300 -work work C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/testbench_spi.sv 
+# -- Compiling module fft_testbench_spi
+# 
+# Top level modules:
+# 	fft_testbench_spi
+# End time: 20:44:58 on Dec 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f; run 800000
+# Loading work.testbench_main
+# Loading work.fft
+# Loading work.fft_spi
+# Loading work.fft_in_flop
+# Loading work.Extend32
+# Loading work.fft_out_flop
+# Loading work.fft_controller
+# Loading work.fft_counter
+# Loading work.agu
+# Loading work.reverse_bits
+# Loading work.processing_agu
+# Loading work.ram
+# Loading work.twiddle_rom
+# Loading work.butterfly_unit
+# Loading work.complex_multiplier
+# Loading work.multiplier
+# End time: 22:55:04 on Dec 04,2022, Elapsed time: 2:51:46
 # Errors: 0, Warnings: 0

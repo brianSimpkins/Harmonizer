@@ -21,6 +21,12 @@
         <Source name="fft.sv" type="Verilog" type_short="Verilog">
             <Options VerilogStandard="System Verilog" top_module="fft"/>
         </Source>
+        <Source name="pins.pdc" type="Physical Constraints File" type_short="PDC">
+            <Options/>
+        </Source>
+        <Source name="source/fft.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
     </Implementation>
     <Strategy name="Strategy1" file="FFT1.sty"/>
 </RadiantProject>

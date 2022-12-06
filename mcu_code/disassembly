@@ -1,0 +1,273 @@
+    0124        lsls r4, r4, #4
+    F2C40100    movt r1, #0x4000
+--- main.c -- 81 -------------------------------------------
+for(uint8_t i = 0; i < 64; ++i) {
+TIM6->SR &= ~(0x1); // Clear UIF
+TIM6->CNT = 0; // Reset count
+    2000        movs r0, #0
+    6008        str r0, [r1]
+--- main.c -- 87 -------------------------------------------
+// get a sample from the adc
+// samples[i] = adc_read();
+// insert output into one of the arrays
+uint8_t output_index = i >> 1;
+    F89D0033    ldrb.w r0, [sp, #0x33]
+    0840        lsrs r0, r0, #1
+    F88D0032    strb.w r0, [sp, #0x32]
+--- main.c -- 92 -------------------------------------------
+if(samples[i] < 0) {
+    F89D1033    ldrb.w r1, [sp, #0x33]
+    A82E        add r0, sp, #0xB8
+    F9300011    ldrsh.w r0, [r0, r1, lsl #1]
+    F1B03FFF    cmp.w r0, #0xFFFFFFFF
+    DC08        bgt 0x08000AC4
+--- main.c -- 94 -------------------------------------------
+curr_ave_mag -= samples[i];
+    F89D1033    ldrb.w r1, [sp, #0x33]
+    A82E        add r0, sp, #0xB8
+    F9301011    ldrsh.w r1, [r0, r1, lsl #1]
+    980D        ldr r0, [sp, #0x34]
+    1A40        subs r0, r0, r1
+    900D        str r0, [sp, #0x34]
+--- main.c -- 95 -------------------------------------------
+} else {
+    E007        b 0x08000AD4
+--- main.c -- 96 -------------------------------------------
+curr_ave_mag += samples[i];
+    F89D1033    ldrb.w r1, [sp, #0x33]
+    A82E        add r0, sp, #0xB8
+    F9301011    ldrsh.w r1, [r0, r1, lsl #1]
+    980D        ldr r0, [sp, #0x34]
+    4408        add r0, r1
+    900D        str r0, [sp, #0x34]
+--- main.c -- 97 -------------------------------------------
+}
+if(i % 2 == 1) {
+    F89D0033    ldrb.w r0, [sp, #0x33]
+    07C0        lsls r0, r0, #31
+    B160        cbz r0, 0x08000AF6
+--- main.c -- 100 ------------------------------------------
+output_imag[output_index] = spiSendReceive(samples[i]);
+    F89D1033    ldrb.w r1, [sp, #0x33]
+    A82E        add r0, sp, #0xB8
+    F9300011    ldrsh.w r0, [r0, r1, lsl #1]
+    F000F9C0    bl 0x08000E6A <spiSendReceive>
+    F89D2032    ldrb.w r2, [sp, #0x32]
+    A90E        add r1, sp, #0x38
+    F8210012    strh.w r0, [r1, r2, lsl #1]
+--- main.c -- 101 ------------------------------------------
+} else {
+    E00B        b 0x08000B0E
+--- main.c -- 102 ------------------------------------------
+output_real[output_index] = spiSendReceive(samples[i]);
+    F89D1033    ldrb.w r1, [sp, #0x33]
+    A82E        add r0, sp, #0xB8
+    F9300011    ldrsh.w r0, [r0, r1, lsl #1]
+    F000F9B3    bl 0x08000E6A <spiSendReceive>
+    F89D2032    ldrb.w r2, [sp, #0x32]
+    A91E        add r1, sp, #0x78
+    F8210012    strh.w r0, [r1, r2, lsl #1]
+--- main.c -- 103 ------------------------------------------
+}
+// wait until the timer is done before sampling again
+if(i < 63) while(!(TIM6->SR & 1)); // Wait for UIF to go high
+    F89D0033    ldrb.w r0, [sp, #0x33]
+    283E        cmp r0, #0x3E
+    DC07        bgt 0x08000B26
+    F2410010    movw r0, #0x1010
+    F2C40000    movt r0, #0x4000
+    6800        ldr r0, [r0]
+    07C0        lsls r0, r0, #31
+    B900        cbnz r0, 0x08000B26
+    E7F7        b 0x08000B16
+--- main.c -- 82 -------------------------------------------
+for(uint8_t i = 0; i < 64; ++i) {
+    F89D0033    ldrb.w r0, [sp, #0x33]
+    3001        adds r0, #1
+    F88D0033    strb.w r0, [sp, #0x33]
+    E7A0        b 0x08000A74
+--- main.c -- 106 ------------------------------------------
+if(i < 63) while(!(TIM6->SR & 1)); // Wait for UIF to go high
+}
+curr_ave_mag = curr_ave_mag / 64;
+    980D        ldr r0, [sp, #0x34]
+    0980        lsrs r0, r0, #6
+    900D        str r0, [sp, #0x34]
+--- main.c -- 111 ------------------------------------------
+if(prev_ave_mag > 35) {
+    984E        ldr r0, [sp, #0x0138]
+    2824        cmp r0, #0x24
+    D348        bcc 0x08000BD0
+--- main.c -- 113 ------------------------------------------
+int32_t max_magnitude = 0;
+    2000        movs r0, #0
+    900B        str r0, [sp, #0x2C]
+--- main.c -- 115 ------------------------------------------
+uint8_t max_index = 0;
+    F88D002B    strb.w r0, [sp, #0x2B]
+--- main.c -- 116 ------------------------------------------
+// loop through output
+// 0th index is meaningless for us
+for(uint8_t i = 1; i < 32; ++i) {
+    2001        movs r0, #1
+    F88D002A    strb.w r0, [sp, #0x2A]
+    F89D002A    ldrb.w r0, [sp, #0x2A]
+    281F        cmp r0, #31
+    DC1C        bgt 0x08000B8E
+--- main.c -- 120 ------------------------------------------
+int32_t magnitude = (output_real[i] * output_real[i]) +
+    F89D202A    ldrb.w r2, [sp, #0x2A]
+    A81E        add r0, sp, #0x78
+    F9300012    ldrsh.w r0, [r0, r2, lsl #1]
+    FB00F100    mul r1, r0, r0
+    A80E        add r0, sp, #0x38
+--- main.c -- 121 ------------------------------------------
+(output_imag[i] * output_imag[i]);
+    F9300012    ldrsh.w r0, [r0, r2, lsl #1]
+--- main.c -- 120 ------------------------------------------
+int32_t magnitude = (output_real[i] * output_real[i]) +
+    FB101000    smlabb r0, r0, r0, r1
+    9009        str r0, [sp, #0x24]
+--- main.c -- 121 ------------------------------------------
+(output_imag[i] * output_imag[i]);
+if(magnitude > max_magnitude) {
+    9809        ldr r0, [sp, #0x24]
+    990B        ldr r1, [sp, #0x2C]
+    4288        cmp r0, r1
+    DD05        ble 0x08000B82
+--- main.c -- 124 ------------------------------------------
+max_magnitude = magnitude;
+    9809        ldr r0, [sp, #0x24]
+    900B        str r0, [sp, #0x2C]
+--- main.c -- 125 ------------------------------------------
+max_index = i;
+    F89D002A    ldrb.w r0, [sp, #0x2A]
+    F88D002B    strb.w r0, [sp, #0x2B]
+--- main.c -- 119 ------------------------------------------
+for(uint8_t i = 1; i < 32; ++i) {
+    F89D002A    ldrb.w r0, [sp, #0x2A]
+    3001        adds r0, #1
+    F88D002A    strb.w r0, [sp, #0x2A]
+    E7DE        b 0x08000B4C
+--- main.c -- 127 ------------------------------------------
+}
+// assume 800hz sample rate, 64-point fft
+// freq = i * 400 / 32
+int32_t fundamental_frequency = (int32_t) (max_index * 400 / 32);
+    F89D002B    ldrb.w r0, [sp, #0x2B]
+    F44F71C8    mov.w r1, #0x0190
+    4348        muls r0, r1
+    0940        lsrs r0, r0, #5
+    9008        str r0, [sp, #32]
+    F04F4080    mov.w r0, #0x40000000
+    21DC        movs r1, #0xDC
+--- main.c -- 132 ------------------------------------------
+// if average amplitude is high enough, play note
+play_note(TIM2, 220);
+    F000F988    bl 0x08000EB6 <play_note>
+--- main.c -- 135 ------------------------------------------
+play_note(TIM15, (int) fundamental_frequency * 3 / 2);
+    9808        ldr r0, [sp, #32]
+    EB000040    add.w r0, r0, r0, lsl #1
+    EB0070D0    add.w r0, r0, r0, lsr #31
+    1041        asrs r1, r0, #1
+    F2440000    movw r0, #0x4000
+    F2C40001    movt r0, #0x4001
+    F000F97C    bl 0x08000EB6 <play_note>
+--- main.c -- 137 ------------------------------------------
+play_note(TIM16, fundamental_frequency * 2);
+    9808        ldr r0, [sp, #32]
+    0041        lsls r1, r0, #1
+    F2444000    movw r0, #0x4400
+    F2C40001    movt r0, #0x4001
+    F000F974    bl 0x08000EB6 <play_note>
+--- main.c -- 139 ------------------------------------------
+} else {
+    E013        b 0x08000BF8
+    F04F4080    mov.w r0, #0x40000000
+    2100        movs r1, #0
+--- main.c -- 141 ------------------------------------------
+play_note(TIM2, 0);
+    9101        str r1, [sp, #4]
+    F000F96D    bl 0x08000EB6 <play_note>
+    9901        ldr r1, [sp, #4]
+--- main.c -- 143 ------------------------------------------
+play_note(TIM15, 0);
+    F2440000    movw r0, #0x4000
+    F2C40001    movt r0, #0x4001
+    F000F966    bl 0x08000EB6 <play_note>
+    9901        ldr r1, [sp, #4]
+--- main.c -- 145 ------------------------------------------
+play_note(TIM16, 0);
+    F2444000    movw r0, #0x4400
+    F2C40001    movt r0, #0x4001
+    F000F95F    bl 0x08000EB6 <play_note>
+--- main.c -- 147 ------------------------------------------
+}
+prev_ave_mag = curr_ave_mag;
+    980D        ldr r0, [sp, #0x34]
+    904E        str r0, [sp, #0x0138]
+--- main.c -- 151 ------------------------------------------
+while( !digitalRead(DONE) );
+    200B        movs r0, #11
+    F7FFFDBE    bl 0x0800077E <digitalRead>
+    B900        cbnz r0, 0x08000C06
+    E7FA        b 0x08000BFC
+--- main.c -- 154 ------------------------------------------
+togglePin(RST);
+    2009        movs r0, #9
+    9000        str r0, [sp]
+    F7FFFDCB    bl 0x080007A4 <togglePin>
+    9800        ldr r0, [sp]
+--- main.c -- 156 ------------------------------------------
+togglePin(RST);
+    F7FFFDC8    bl 0x080007A4 <togglePin>
+--- main.c -- 78 -------------------------------------------
+while (1) {
+    E72A        b 0x08000A6C
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    FE00FE00    cdp2 p14, 0, c15, c0, c0, 0
+    FE00FE00    cdp2 p14, 0, c15, c0, c0, 0
+    FE00FE00    cdp2 p14, 0, c15, c0, c0, 0
+    FE00FE00    cdp2 p14, 0, c15, c0, c0, 0
+    FE00FE00    cdp2 p14, 0, c15, c0, c0, 0
+    FE00FE00    cdp2 p14, 0, c15, c0, c0, 0
+    FE00FE00    cdp2 p14, 0, c15, c0, c0, 0
+    FE00FE00    cdp2 p14, 0, c15, c0, c0, 0
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    01FF        lsls r7, r7, #7
+    FE00FE00    cdp2 p14, 0, c15, c0, c0, 0
+    FE00FE00    cdp2 p14, 0, c15, c0, c0, 0
+    FE00FE00    cdp2 p14, 0, c15, c0, c0, 0
+    FE00FE00    cdp2 p14, 0, c15, c0, c0, 0
+    FE00FE00    cdp2 p14, 0, c15, c0, c0, 0
+    FE00FE00    cdp2 p14, 0, c15, c0, c0, 0

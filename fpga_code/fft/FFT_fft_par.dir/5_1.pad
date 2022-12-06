@@ -6,19 +6,18 @@ Performance Grade:      High-Performance_1.2V
 PACKAGE:          SG48
 Package Status:                     Preliminary    Version 1.5
 
-Sat Dec  3 22:01:18 2022
+Sun Dec  4 20:53:36 2022
 
 Pinout by Port Name:
 +------------+----------+--------------+-------+--------------------+
 | Port Name  | Pin/Bank | Buffer Type  | Site  | Properties         |
 +------------+----------+--------------+-------+--------------------+
-| clk        | 20/1     | LVCMOS33_IN  | PL20B | PULL:100K          |
-| done       | 43/0     | LVCMOS33_OUT | PR10A | DRIVE:8mA PULL:NA  |
-| full_reset | 37/0     | LVCMOS33_IN  | PR14A | PULL:100K          |
-| reset      | 45/2     | LVCMOS33_IN  | PL8B  | PULL:100K          |
-| sck        | 35/0     | LVCMOS33_IN  | PR13B | PULL:100K          |
-| sdi        | 2/2      | LVCMOS33_IN  | PL9A  | PULL:100K          |
-| sdo        | 46/2     | LVCMOS33_OUT | PL6A  | DRIVE:8mA PULL:NA  |
+| done       | 20/1     | LVCMOS33_OUT | PL20B | DRIVE:8mA PULL:NA  |
+| full_reset | 23/0     | LVCMOS33_IN  | PR20A | PULL:100K          |
+| reset      | 25/0     | LVCMOS33_IN  | PR20B | PULL:100K          |
+| sck        | 21/1     | LVCMOS33_IN  | PL19B | PULL:100K          |
+| sdi        | 10/1     | LVCMOS33_IN  | PL17A | PULL:100K          |
+| sdo        | 12/1     | LVCMOS33_OUT | PL19A | DRIVE:8mA PULL:NA  |
 +------------+----------+--------------+-------+--------------------+
 
 Vccio by Bank:
@@ -27,21 +26,20 @@ Vccio by Bank:
 +------+-------+
 | 0    | 3.3V  |
 | 1    | 3.3V  |
-| 2    | 3.3V  |
 +------+-------+
 
 Pinout by Pin Number:
 +----------+---------------------+------------+--------------+-------+------------------+
 | Pin/Bank | Pin Info            | Constraint | Buffer Type  | Site  | Dual Function    |
 +----------+---------------------+------------+--------------+-------+------------------+
-| 2/2      | sdi                 |            | LVCMOS33_IN  | PL9A  |                  |
+| 2/2      |     unused, PULL:UP |            |              | PL9A  |                  |
 | 3/2      |     unused, PULL:UP |            |              | PL10B |                  |
 | 4/2      |     unused, PULL:UP |            |              | PL10A |                  |
 | 6/1      |     unused, PULL:UP |            |              | PL14B |                  |
 | 9/1      |     unused, PULL:UP |            |              | PL16A |                  |
-| 10/1     |     unused, PULL:UP |            |              | PL17A |                  |
+| 10/1     | sdi                 | LOCATED    | LVCMOS33_IN  | PL17A |                  |
 | 11/1     |     unused, PULL:UP |            |              | PL18A |                  |
-| 12/1     |     unused, PULL:UP |            |              | PL19A |                  |
+| 12/1     | sdo                 | LOCATED    | LVCMOS33_OUT | PL19A |                  |
 | 13/1     |     unused, PULL:UP |            |              | PL20A |                  |
 | 14/1     |     unused, PULL:UP |            |              | PL24A | SPI_SO           |
 | 15/1     |     unused, PULL:UP |            |              | PL25A | SPISCK           |
@@ -49,28 +47,28 @@ Pinout by Pin Number:
 | 17/1     |     unused, PULL:UP |            |              | PL24B | SPI_SI           |
 | 18/1     |     unused, PULL:UP |            |              | PL23B |                  |
 | 19/1     |     unused, PULL:UP |            |              | PL22B |                  |
-| 20/1     | clk                 |            | LVCMOS33_IN  | PL20B | PCLKT1_0         |
-| 21/1     |     unused, PULL:UP |            |              | PL19B |                  |
-| 23/0     |     unused, PULL:UP |            |              | PR20A |                  |
-| 25/0     |     unused, PULL:UP |            |              | PR20B |                  |
+| 20/1     | done                | LOCATED    | LVCMOS33_OUT | PL20B | PCLKT1_0         |
+| 21/1     | sck                 | LOCATED    | LVCMOS33_IN  | PL19B |                  |
+| 23/0     | full_reset          | LOCATED    | LVCMOS33_IN  | PR20A |                  |
+| 25/0     | reset               | LOCATED    | LVCMOS33_IN  | PR20B |                  |
 | 26/0     |     unused, PULL:UP |            |              | PR19A |                  |
 | 27/0     |     unused, PULL:UP |            |              | PR19B |                  |
 | 28/0     |     unused, PULL:UP |            |              | PR18A |                  |
 | 31/0     |     unused, PULL:UP |            |              | PR17B |                  |
 | 32/0     |     unused, PULL:UP |            |              | PR17A |                  |
 | 34/0     |     unused, PULL:UP |            |              | PR14B |                  |
-| 35/0     | sck                 |            | LVCMOS33_IN  | PR13B | GPLL_IN/PCLKT0_1 |
+| 35/0     |     unused, PULL:UP |            |              | PR13B | GPLL_IN/PCLKT0_1 |
 | 36/0     |     unused, PULL:UP |            |              | PR10B |                  |
-| 37/0     | full_reset          |            | LVCMOS33_IN  | PR14A | PCLKT0_0         |
+| 37/0     |     unused, PULL:UP |            |              | PR14A | PCLKT0_0         |
 | 38/0     |     unused, PULL:UP |            |              | PR9B  |                  |
 | 39/0     |                     |            |              | PR5A  | RGB0             |
 | 40/0     |                     |            |              | PR6A  | RGB1             |
 | 41/0     |                     |            |              | PR7A  | RGB2             |
 | 42/0     |     unused, PULL:UP |            |              | PR9A  |                  |
-| 43/0     | done                |            | LVCMOS33_OUT | PR10A |                  |
+| 43/0     |     unused, PULL:UP |            |              | PR10A |                  |
 | 44/2     |     unused, PULL:UP |            |              | PL7B  | PCLKT2_0         |
-| 45/2     | reset               |            | LVCMOS33_IN  | PL8B  |                  |
-| 46/2     | sdo                 |            | LVCMOS33_OUT | PL6A  |                  |
+| 45/2     |     unused, PULL:UP |            |              | PL8B  |                  |
+| 46/2     |     unused, PULL:UP |            |              | PL6A  |                  |
 | 47/2     |     unused, PULL:UP |            |              | PL7A  |                  |
 | 48/2     |     unused, PULL:UP |            |              | PL8A  |                  |
 | PL6B/2   |     unused, PULL:UP |            |              | PL6B  |                  |
@@ -95,13 +93,12 @@ Pinout by Pin Number:
 
 Locate Constraints for each Pin: 
 
-ldc_set_location -site {20} [ get_ports {clk} ]
-ldc_set_location -site {43} [ get_ports {done} ]
-ldc_set_location -site {37} [ get_ports {full_reset} ]
-ldc_set_location -site {45} [ get_ports {reset} ]
-ldc_set_location -site {35} [ get_ports {sck} ]
-ldc_set_location -site {2} [ get_ports {sdi} ]
-ldc_set_location -site {46} [ get_ports {sdo} ]
+ldc_set_location -site {20} [ get_ports {done} ]
+ldc_set_location -site {23} [ get_ports {full_reset} ]
+ldc_set_location -site {25} [ get_ports {reset} ]
+ldc_set_location -site {21} [ get_ports {sck} ]
+ldc_set_location -site {10} [ get_ports {sdi} ]
+ldc_set_location -site {12} [ get_ports {sdo} ]
 
 
 
@@ -109,5 +106,5 @@ ldc_set_location -site {46} [ get_ports {sdo} ]
 
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
 
-Sat Dec  3 22:01:18 2022
+Sun Dec  4 20:53:36 2022
 

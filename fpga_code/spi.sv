@@ -34,6 +34,7 @@ endmodule
 module fft_out_flop(
     input logic clk, //from FPGA
     input logic [31:0] fft_out32, //from FFT
+	 input logic fft_start, // to reset cnt
     input logic fft_done, //from FFT
     input logic fft_load, //from FFT
     input logic full_reset,
@@ -47,11 +48,13 @@ logic [1023:0] q;
 logic [1023:0] d;
 logic [1023:0] d_shift;
 
+
+
 always_ff @(negedge clk) begin
     /*if (full_reset || fft_load || !fft_done) cnt <= 0; //NOTE: done signal sketch here
     else if (cnt == 32) cnt <= cnt;
 	 else cnt <= cnt + 1;*/
-	 if (full_reset) cnt <= 0;
+	 if (full_reset || fft_start) cnt <= 0;
 	 else if (fft_done) cnt <= ((cnt == 32) ? cnt : cnt + 7'b1);
 	 else cnt <= cnt;
 end
@@ -98,7 +101,6 @@ logic [1023:0] d;
 logic [1023:0] d_shift;
 state currState;
 state nextState;
-logic loadReady;
 logic [15:0] re16; //16 bit real component we are grabbing from q
 
 assign re16 = q[1023:1008]; //16 bit real is 16 most significant bits of data stored in flop.
@@ -128,7 +130,7 @@ end
 //next state logic
 always_comb begin
     case (currState)
-        WAIT: nextState = (sendReady) ? SEND : WAIT;
+        WAIT: nextState = (sendReady && cnt != 64) ? SEND : WAIT;
         SEND: nextState = (cnt === 63) ? WAIT : SEND;
         default: nextState = WAIT;
     endcase

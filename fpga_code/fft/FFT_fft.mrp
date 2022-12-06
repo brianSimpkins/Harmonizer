@@ -5,37 +5,38 @@ Target Device:        iCE40UP5KSG48
 Target Performance:   High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 3.2.0.18.0
-Mapped on: Sat Dec  3 22:01:07 2022
+Mapped on: Sun Dec  4 20:53:14 2022
 
 Design Information
 ------------------
 
-Command line:   map -i FFT_fft_syn.udb -o FFT_fft_map.udb -mp FFT_fft.mrp
-     -hierrpt -gui -msgset
+Command line:   map -i FFT_fft_syn.udb -pdc
+     C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/pins.pdc -o
+     FFT_fft_map.udb -mp FFT_fft.mrp -hierrpt -gui -msgset
      C:/Users/bsimpkins/Documents/Harmonizer-main/fpga_code/promote.xml
 
 Design Summary
 --------------
 
-   Number of slice registers: 3122 out of  5280 (59%)
+   Number of slice registers: 3123 out of  5280 (59%)
    Number of I/O registers:      1 out of   117 (1%)
-   Number of LUT4s:           3636 out of  5280 (69%)
-      Number of logic LUT4s:             2405
+   Number of LUT4s:           3640 out of  5280 (69%)
+      Number of logic LUT4s:             2409
       Number of inserted feedthru LUT4s: 1011
       Number of replicated LUT4s:          2
       Number of ripple logic:            109 (218 LUT4s)
-   Number of IO sites used:   7 out of 39 (18%)
-      Number of IO sites used for general PIO: 7
+   Number of IO sites used:   6 out of 39 (15%)
+      Number of IO sites used for general PIO: 6
       Number of IO sites used for I3C: 0 out of 2 (0%)
       (note: If I3C is not used, its site can be used as general PIO)
-      Number of IO sites used for PIO+I3C: 7 out of 36 (19%)
+      Number of IO sites used for PIO+I3C: 6 out of 36 (17%)
       Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
       (note: If RGB LED drivers are not used, sites can be used as OD outputs,
        see TN1288 iCE40 LED Driver Usage Guide)
-      Number of IO sites used for PIO+I3C+OD+RGB: 7 out of 39 (18%)
+      Number of IO sites used for PIO+I3C+OD+RGB: 6 out of 39 (15%)
    Number of DSPs:             4 out of 8 (50%)
    Number of I2Cs:             0 out of 2 (0%)
-   Number of High Speed OSCs:  0 out of 1 (0%)
+   Number of High Speed OSCs:  1 out of 1 (100%)
    Number of Low Speed OSCs:   0 out of 1 (0%)
    Number of RGB PWM:          0 out of 1 (0%)
    Number of RGB Drivers:      0 out of 1 (0%)
@@ -45,21 +46,20 @@ Design Summary
    Number of SPIs:             0 out of 2 (0%)
    Number of EBRs:             10 out of 30 (33%)
    Number of PLLs:             0 out of 1 (0%)
-   Number of Clocks:  4
-      Net clk_c: 18 loads, 18 rising, 0 falling (Driver: Port clk)
-      Net slow_clk: 2074 loads, 1046 rising, 1028 falling (Driver: Pin
-     clk_counter_68__i1/Q)
+   Number of Clocks:  5
+      Net done_all: 1 loads, 1 rising, 0 falling (Driver: Pin
+     fftoutReg.i11458_2_lut/Z)
+      Net clk: 18 loads, 18 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
       Net clk_counter[0]: 2 loads, 2 rising, 0 falling (Driver: Pin
-     clk_counter_68__i0/Q)
+     clk_counter_78__i0/Q)
+      Net slow_clk: 2074 loads, 1046 rising, 1028 falling (Driver: Pin
+     clk_counter_78__i1/Q)
       Net sck_c: 1033 loads, 1024 rising, 9 falling (Driver: Port sck)
    Number of Clock Enables:  10
-      Net VCC_net: 30 loads, 0 SLICEs
-      Net processing_N_3141: 4 loads, 4 SLICEs
-      Net n2320: 4 loads, 4 SLICEs
-      Net n12627: 992 loads, 992 SLICEs
-      Net fftinReg.n11547: 1000 loads, 1000 SLICEs
-      Net fftinReg.maxfan_replicated_net_23: 24 loads, 24 SLICEs
-      Net write_0: 4 loads, 0 SLICEs
+      Net VCC_net: 31 loads, 0 SLICEs
+      Net processing_N_3144: 4 loads, 4 SLICEs
+      Net n2329: 992 loads, 992 SLICEs
+      Net n2331: 4 loads, 4 SLICEs
 
                                     Page 1
 
@@ -69,36 +69,42 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
-      Net fftUnit.n12755: 6 loads, 6 SLICEs
-      Net fftUnit.n12742: 4 loads, 4 SLICEs
+      Net fftinReg.n11580: 1000 loads, 1000 SLICEs
+      Net fftinReg.maxfan_replicated_net_23: 24 loads, 24 SLICEs
+      Net write_0: 4 loads, 0 SLICEs
       Net fftUnit.write_1: 4 loads, 0 SLICEs
-   Number of LSRs:  4
-      Pin reset: 25 loads, 25 SLICEs (Net: reset_c)
-      Net fftinReg.n9497: 4 loads, 4 SLICEs
-      Net fftinReg.n11550: 16 loads, 16 SLICEs
-      Pin full_reset: 996 loads, 996 SLICEs (Net: fftoutReg.full_reset_c)
+      Net n12796: 6 loads, 6 SLICEs
+      Net n12783: 4 loads, 4 SLICEs
+   Number of LSRs:  5
+      Pin reset: 26 loads, 26 SLICEs (Net: reset_c)
+      Net fftinReg.n9531: 4 loads, 4 SLICEs
+      Net fftinReg.n11582: 16 loads, 16 SLICEs
+      Net fftoutReg.cnt_6__N_3129: 4 loads, 4 SLICEs
+      Pin full_reset: 992 loads, 992 SLICEs (Net: fftoutReg.full_reset_c)
    Top 10 highest fanout non-clock nets:
       Net currState: 1034 loads
-      Net fftoutReg.full_reset_c: 1030 loads
+      Net fftoutReg.full_reset_c: 1027 loads
       Net cnt[10]: 1000 loads
-      Net fftinReg.n11547: 1000 loads
-      Net n17: 1000 loads
-      Net n12627: 992 loads
+      Net fftinReg.n11580: 1000 loads
+      Net n29: 1000 loads
+      Net n2329: 992 loads
+      Net fft_level[0]: 83 loads
       Net fft_processing: 83 loads
-      Net fft_level[0]: 82 loads
       Net fftinReg.maxfan_replicated_net_57: 58 loads
-      Net VCC_net: 42 loads
+      Net VCC_net: 44 loads
 
 
 
 
-   Number of warnings:  0
+   Number of warnings:  1
    Number of errors:    0
 
 Design Errors/Warnings
 ----------------------
 
-   No errors or warnings present.
+WARNING - map: The clock port [sck] is assigned to a non clock dedicated pin
+     [21], which might affect the clock performance. Use dedicated clock
+     resources for the port.
 
 IO (PIO) Attributes
 -------------------
@@ -109,23 +115,17 @@ IO (PIO) Attributes
 +---------------------+-----------+-----------+-------+-------+-----------+
 | reset               | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| full_reset          | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| sck                 | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| clk                 | INPUT     |           |       |       |           |
+| full_reset          | INPUT     | LVCMOS33  |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | sdi                 | INPUT     |           | I     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sck                 | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | done                | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | sdo                 | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 
-Removed logic
--------------
-
-Block fftoutReg/full_reset_pad_lut_buf_1 was optimized away.
 
                                     Page 2
 
@@ -133,21 +133,35 @@ Block fftoutReg/full_reset_pad_lut_buf_1 was optimized away.
 
 
 
-Removed logic (cont)
---------------------
+Removed logic
+-------------
+
+Block fftoutReg/full_reset_pad_lut_buf_1 was optimized away.
 Block fftoutReg/full_reset_pad_lut_buf_2 was optimized away.
-Block i4_1_lut_adj_57 was optimized away.
+Block i4_1_lut_adj_1082 was optimized away.
 Block i4_1_lut was optimized away.
 Block i1 was optimized away.
+
+OSC Summary
+-----------
+
+OSC 1:                                 Pin/Node Value
+  OSC Instance Name:                            hf_osc
+  Power UP:                            NODE     VCC_net
+  Enable Signal:                       NODE     VCC_net
+  OSC Output:                          NODE     clk
+  DIV Setting:                                  10
 
 ASIC Components
 ---------------
 
+Instance Name: hf_osc
+         Type: HFOSC
 Instance Name: spi/fft_in_i0
          Type: IOLOGIC
-Instance Name: fftUnit/twiddle_gen/mux_10
+Instance Name: fftUnit/twiddle_gen/mux_14
          Type: EBR
-Instance Name: fftUnit/twiddle_gen/mux_9
+Instance Name: fftUnit/twiddle_gen/mux_13
          Type: EBR
 Instance Name: fftUnit/ram1_b/mem1
          Type: EBR
@@ -178,22 +192,74 @@ Run Time and Memory Usage
 -------------------------
 
    Total CPU Time: 0 secs
-   Total REAL Time: 0 secs
-   Peak Memory Usage: 119 MB
-
-
-
-
-
-
-
-
-
-
-
-
 
                                     Page 3
+
+
+
+
+
+Run Time and Memory Usage (cont)
+--------------------------------
+   Total REAL Time: 0 secs
+   Peak Memory Usage: 125 MB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 4
 
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
