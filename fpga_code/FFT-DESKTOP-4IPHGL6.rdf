@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RadiantProject version="4.2" radiant="3.2.0.18.0" title="FFT" device="iCE40UP5K-SG48I" performance_grade="High-Performance_1.2V" default_implementation="fft">
+    <Options/>
+    <Implementation title="fft" dir="fft" description="fft" synthesis="lse" default_strategy="Strategy1">
+        <Options def_top="fft" top="fft"/>
+        <Source name="address_gen.sv" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="System Verilog"/>
+        </Source>
+        <Source name="fft_controller.sv" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="System Verilog"/>
+        </Source>
+        <Source name="memory_units.sv" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="System Verilog"/>
+        </Source>
+        <Source name="multiplication.sv" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="System Verilog"/>
+        </Source>
+        <Source name="spi.sv" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="System Verilog"/>
+        </Source>
+        <Source name="fft.sv" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="System Verilog" top_module="fft"/>
+        </Source>
+        <Source name="pins.pdc" type="Physical Constraints File" type_short="PDC">
+            <Options/>
+        </Source>
+        <Source name="source/fft.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="FFT1.sty"/>
+</RadiantProject>

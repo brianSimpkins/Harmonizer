@@ -1,0 +1,216 @@
+----------------------------------------------------------------------
+Report for cell fft.TECH
+Register bits:  3123 of 5280 (59.148%)
+I/O cells:      4
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B        10          100.0
+                               CCU2       109          100.0
+                            FD1P3XZ      3123          100.0
+                         HSOSC_CORE         1          100.0
+                                 IB         4          100.0
+                                INV         2          100.0
+                              IOL_B         1          100.0
+                               LUT4      2409          100.0
+                              MAC16         4          100.0
+                                 OB         2          100.0
+SUB MODULES
+                                agu         1
+                     butterfly_unit         1
+                 complex_multiplier         1
+                     fft_controller         1
+                        fft_counter         1
+                        fft_in_flop         1
+                       fft_out_flop         1
+                            fft_spi         1
+                         multiplier         1
+                      multiplier_U0         1
+                      multiplier_U1         1
+                      multiplier_U2         1
+                     processing_agu         1
+                                ram         1
+                             ram_U3         1
+                             ram_U4         1
+                             ram_U5         1
+                        twiddle_rom         1
+                              TOTAL      5683
+----------------------------------------------------------------------
+Report for cell fft_spi.v1
+Instance Path : spi
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         6            5.5
+                            FD1P3XZ      1036           33.2
+                              IOL_B         1          100.0
+                               LUT4      1028           42.7
+                              TOTAL      2071
+----------------------------------------------------------------------
+Report for cell fft_in_flop.v1
+Instance Path : fftinReg
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         4            3.7
+                            FD1P3XZ      1034           33.1
+                               LUT4      1047           43.5
+                              TOTAL      2085
+----------------------------------------------------------------------
+Report for cell fft_controller.v1
+Instance Path : fftUnit
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B        10          100.0
+                                FA2        95           87.2
+                            FD1P3XZ        19            0.6
+                                 IB         1           25.0
+                               LUT4       285           11.8
+                              MAC16         4          100.0
+SUB MODULES
+                                agu         1
+                     butterfly_unit         1
+                 complex_multiplier         1
+                        fft_counter         1
+                         multiplier         1
+                      multiplier_U0         1
+                      multiplier_U1         1
+                      multiplier_U2         1
+                     processing_agu         1
+                                ram         1
+                             ram_U3         1
+                             ram_U4         1
+                             ram_U5         1
+                        twiddle_rom         1
+                              TOTAL       428
+----------------------------------------------------------------------
+Report for cell twiddle_rom.v1
+Instance Path : fftUnit.twiddle_gen
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         2           20.0
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell ram.v1
+Instance Path : fftUnit.ram1_b
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         2           20.0
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell ram_U3.v1
+Instance Path : fftUnit.ram1_a
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         2           20.0
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell ram_U4.v1
+Instance Path : fftUnit.ram0_b
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         2           20.0
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell ram_U5.v1
+Instance Path : fftUnit.ram0_a
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         2           20.0
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell fft_counter.v1
+Instance Path : fftUnit.counter
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         8            7.3
+                            FD1P3XZ        12            0.4
+                                 IB         1           25.0
+                              TOTAL        21
+----------------------------------------------------------------------
+Report for cell butterfly_unit.v1
+Instance Path : fftUnit.butt
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        79           72.5
+                               LUT4       115            4.8
+                              MAC16         4          100.0
+SUB MODULES
+                 complex_multiplier         1
+                         multiplier         1
+                      multiplier_U0         1
+                      multiplier_U1         1
+                      multiplier_U2         1
+                              TOTAL       203
+----------------------------------------------------------------------
+Report for cell complex_multiplier.v1
+Instance Path : fftUnit.butt.mult
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        45           41.3
+                               LUT4        19            0.8
+                              MAC16         4          100.0
+SUB MODULES
+                         multiplier         1
+                      multiplier_U0         1
+                      multiplier_U1         1
+                      multiplier_U2         1
+                              TOTAL        72
+----------------------------------------------------------------------
+Report for cell multiplier.v1
+Instance Path : fftUnit.butt.mult.m_real_twiddle
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        18           16.5
+                               LUT4         2            0.1
+                              MAC16         1           25.0
+                              TOTAL        21
+----------------------------------------------------------------------
+Report for cell multiplier_U0.v1
+Instance Path : fftUnit.butt.mult.m_real_b
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              MAC16         1           25.0
+                              TOTAL         1
+----------------------------------------------------------------------
+Report for cell multiplier_U1.v1
+Instance Path : fftUnit.butt.mult.m_real
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        18           16.5
+                               LUT4         1            0.0
+                              MAC16         1           25.0
+                              TOTAL        20
+----------------------------------------------------------------------
+Report for cell multiplier_U2.v1
+Instance Path : fftUnit.butt.mult.m_imag
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         9            8.3
+                              MAC16         1           25.0
+                              TOTAL        10
+----------------------------------------------------------------------
+Report for cell agu.v1
+Instance Path : fftUnit.address_generator
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         4            3.7
+                               LUT4        60            2.5
+SUB MODULES
+                     processing_agu         1
+                              TOTAL        65
+----------------------------------------------------------------------
+Report for cell processing_agu.v1
+Instance Path : fftUnit.address_generator.standard_logic
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         4            3.7
+                               LUT4        48            2.0
+                              TOTAL        52
+----------------------------------------------------------------------
+Report for cell fft_out_flop.v1
+Instance Path : fftoutReg
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         4            3.7
+                            FD1P3XZ      1031           33.0
+                                 IB         1           25.0
+                               LUT4        11            0.5
+                              TOTAL      1047

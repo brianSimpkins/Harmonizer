@@ -1,0 +1,104 @@
+
+tmcheck -par "FFT_fft.par" 
+
+bitgen -w "FFT_fft.udb" -f "FFT_fft.t2b" 
+Loading FFT_fft.udb ...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Design:  fft
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+Successfully loading design udb and device data from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
+
+
+
+BITGEN: Bitstream Generator Radiant Software (64-bit) 3.2.0.18.0
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+Saving bit stream in "C:\Users\bsimpkins\Documents\Harmonizer-main\fpga_code\fft\FFT_fft.bin".
+    <postMsg mid="1009992" type="Info" dynamic="1" navigation="0" arg0="Bitstream authenticated."  />
+Bitstream generation complete!
+
+Total CPU Time: 1 secs 
+Total REAL Time: 8 secs 
+Peak Memory Usage: 158 MB
+
+
+ibisgen "FFT_fft.udb" "C:/lscc/radiant/3.2/cae_library/ibis/iCE40UP.ibs"
+IBIS Models Generator: Lattice Radiant Software (64-bit) 3.2.0.18.0
+
+Sun Dec  4 20:53:58 2022
+
+Loading FFT_fft.udb ...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Design:  fft
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+Successfully loading design udb and device data from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
+
+Created design models.
+
+
+Generating: C:\Users\bsimpkins\Documents\Harmonizer-main\fpga_code\fft\IBIS\FFT_fft.ibs
+
+
+    <postMsg mid="1191031" type="Info" dynamic="0" navigation="0"  />
+
+backanno "FFT_fft.udb"  -o "FFT_fft_vo.vo"      -sp "High-Performance_1.2V"  -w -neg
+backanno: version Radiant Software (64-bit) 3.2.0.18.0
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Loading udb::Database ...
+Design:  fft
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Writing a verilog netlist based on the FFT_fft design file.
+
+Writing Verilog netlist to file FFT_fft_vo.vo
+Writing SDF timing to file FFT_fft_vo.sdf
+Backanno finished with 0 posted error messages.
+Total CPU Time: 4 secs 
+Total REAL Time: 5 secs 
+Peak Memory Usage: 235 MB

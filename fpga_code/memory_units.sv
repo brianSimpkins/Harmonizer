@@ -1,4 +1,4 @@
-// based on Edwards from Columbia and Harris from E85
+// based on Harris & Harris from E85
 // 6-bit addresses for 64-point FFT
 // will introduce 1 cycle of lag
 module ram (input logic          clk, write,

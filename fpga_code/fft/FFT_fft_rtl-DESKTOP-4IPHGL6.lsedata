@@ -1,0 +1,21 @@
+<top name = "fft"  library = "work"  arch = ""  entry = "Verilog">
+
+<clocks>
+    <clockitem name = "sck"  type = "port" />
+    <clockitem name = "done_all"  type = "net" />
+    <clockitem name = "clk"  type = "net" />
+    <clockitem name = "clk_counter[0]"  type = "net" />
+    <clockitem name = "slow_clk"  type = "net" />
+</clocks>
+
+<!--
+    //=============================================================
+    //  Number of Clocks processed: 5
+    //
+    //  If a clock cannot be found in the top level pins section,
+    //  that means it is an internal clock.
+    //
+    //=============================================================
+-->
+
+</top>
